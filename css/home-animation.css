@@ -1,0 +1,411 @@
+/* =========================================
+   APPAREL HERO BANNER
+========================================= */
+
+.ah-apparel-banner {
+    position: relative;
+    width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    background: radial-gradient(
+            circle at 50% 45%,
+            rgba(54, 28, 125, 0.32) 0%,
+            rgba(18, 18, 70, 0.18) 35%,
+            transparent 65%
+        ),
+        linear-gradient(
+            135deg,
+            #160d39 0%,
+            #11123e 42%,
+            #101842 72%,
+            #0c1535 100%
+        );
+    display: flex;
+    align-items: center;
+    padding: 25px 0 72px;
+    isolation: isolate;
+}
+
+
+/* -----------------------------------------
+   BACKGROUND GLOWS
+----------------------------------------- */
+
+.ah-apparel-glow {
+    position: absolute;
+    pointer-events: none;
+    z-index: -1;
+    border-radius: 50%;
+    filter: blur(65px);
+}
+
+
+/* Left Purple Glow */
+.ah-apparel-glow-left {
+    width: 350px;
+    height: 350px;
+    left: -130px;
+    top: 145px;
+    background: #fb40ad6b;
+    opacity: 0.75;
+}
+
+
+/* Right Blue Glow */
+.ah-apparel-glow-right {
+    width: 350px;
+    height: 350px;
+    right: -130px;
+    bottom: 0px;
+    background: #51e2ff57;
+    opacity: 0.75;
+}
+
+
+/* Center Soft Glow */
+.ah-apparel-glow-center {
+    width: 540px;
+    height: 530px;
+    left: 50%;
+    top: -40px;
+    transform: translateX(-50%);
+    background: #5d1ea954;
+    filter: blur(40px);
+    border-radius: 140%;
+}
+
+/* -----------------------------------------
+   LOGO
+----------------------------------------- */
+
+.ah-apparel-logo-wrap {
+    position: relative;
+    width: 302px;
+    height: 292px;
+    margin: 0 auto 7px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+
+.ah-apparel-logo-wrap::before {
+    content: "";
+
+    position: absolute;
+
+    width: 52px;
+    height: 52px;
+
+    border-radius: 50%;
+
+    background: rgba(151, 67, 255, 0.20);
+
+    filter: blur(22px);
+
+    z-index: -1;
+}
+
+
+.ah-apparel-logo {
+    height: 100%;
+
+    object-fit: contain;
+
+    display: block;
+
+    filter:
+        drop-shadow(0 0 4px rgba(191, 97, 255, 0.7))
+        drop-shadow(0 0 12px rgba(79, 93, 255, 0.35));
+}
+
+
+/* -----------------------------------------
+   HEADING
+----------------------------------------- */
+
+.ah-apparel-title {
+    margin: 0;
+    color: #ffffff;
+    font-size: clamp(60px, 5vw, 97px);
+    font-weight: 700;
+    letter-spacing: 32px;
+    line-height: 1.1;
+    text-indent: 12px;
+    text-shadow: 0 0 10px rgba(255, 255, 255, 0.05);
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+
+/* -----------------------------------------
+   DESCRIPTION
+----------------------------------------- */
+
+.ah-apparel-description {
+    max-width: 50%;
+    margin: 7px auto 13px;
+    color: rgba(255, 255, 255, 0.48);
+    font-size: 15px;
+    line-height: 1.55;
+    font-weight: 400;
+    letter-spacing: 0.15px;
+}
+
+
+/* -----------------------------------------
+   SHOP BUTTON
+----------------------------------------- */
+
+.ah-apparel-btn {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
+    /* height: 23px; */
+    padding: 14px 44px;
+    border-radius: 50px;
+    background: linear-gradient(
+            90deg,
+            #923df4 0%,
+            #db2d91 100%
+        );
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(181, 50, 255, 0.25),
+        0 0 20px rgba(219, 45, 145, 0.10);
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+    font-family: var(--para-font);
+    font-weight: 500;
+}
+
+
+.ah-apparel-btn:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px rgba(181, 50, 255, 0.55),
+        0 0 25px rgba(219, 45, 145, 0.25);
+}
+
+
+/* -----------------------------------------
+   CATEGORY AREA
+----------------------------------------- */
+
+.ah-apparel-categories {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 85px;
+    margin-top: 27px;
+}
+
+
+/* -----------------------------------------
+   CATEGORY ITEM
+----------------------------------------- */
+
+.ah-apparel-category {
+    display: block;
+
+    text-decoration: none;
+
+    transition:
+        transform 0.3s ease;
+}
+
+
+.ah-apparel-category:hover {
+    transform: translateY(-4px);
+}
+
+
+/* -----------------------------------------
+   CATEGORY CIRCLE
+----------------------------------------- */
+
+.ah-apparel-category-circle {
+    position: relative;
+    width: 90px;
+    height: 90px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    border: 1px solid rgba(255, 255, 255, 0.13);
+    background: radial-gradient(
+            circle,
+            rgba(255, 255, 255, 0.035),
+            rgba(255, 255, 255, 0.005)
+        );
+    box-shadow: inset 0 0 15px rgba(255, 255, 255, 0.015);
+    transition: border-color 0.3s ease,
+        box-shadow 0.3s ease,
+        background 0.3s ease;
+}
+
+
+/* Subtle inner ring */
+
+
+
+/* Category Images */
+.ah-apparel-category-circle img {
+    position: relative;
+    width: 54px;
+    height: 45px;
+    object-fit: contain;
+    display: block;
+    /* opacity: 0.88; */
+    transition: transform 0.3s ease,
+        opacity 0.3s ease,
+        filter 0.3s ease;
+}
+
+
+/* Hover */
+.ah-apparel-category:hover
+.ah-apparel-category-circle {
+    border-color: rgba(167, 88, 255, 0.5);
+
+    background:
+        radial-gradient(
+            circle,
+            rgba(137, 53, 255, 0.10),
+            rgba(255, 255, 255, 0.02)
+        );
+
+    box-shadow:
+        0 0 10px rgba(126, 65, 255, 0.20),
+        inset 0 0 15px rgba(126, 65, 255, 0.08);
+}
+
+
+.ah-apparel-category:hover
+.ah-apparel-category-circle img {
+    transform: scale(1.12);
+
+    opacity: 1;
+
+    filter:
+        drop-shadow(0 0 5px rgba(126, 97, 255, 0.65));
+}
+
+
+/* -----------------------------------------
+   DIFFERENT IMAGE GLOW TONES
+   Since every category is an image
+----------------------------------------- */
+
+.ah-apparel-category:nth-child(1) img {
+    filter:
+        drop-shadow(0 0 4px rgba(255, 70, 190, 0.35));
+}
+
+
+.ah-apparel-category:nth-child(2) img {
+    filter:
+        drop-shadow(0 0 4px rgba(30, 220, 255, 0.35));
+}
+
+
+.ah-apparel-category:nth-child(3) img {
+    filter:
+        drop-shadow(0 0 4px rgba(181, 150, 255, 0.35));
+}
+
+
+.ah-apparel-category:nth-child(4) img {
+    filter:
+        drop-shadow(0 0 4px rgba(255, 198, 50, 0.35));
+}
+
+
+.ah-apparel-category:nth-child(5) img {
+    filter:
+        drop-shadow(0 0 4px rgba(70, 210, 255, 0.35));
+}
+
+
+.ah-apparel-category:nth-child(6) img {
+    filter:
+        drop-shadow(0 0 4px rgba(205, 165, 255, 0.35));
+}
+
+
+/* -----------------------------------------
+   RESPONSIVE
+----------------------------------------- */
+
+@media (max-width: 767.98px) {
+
+    .ah-apparel-banner {
+        min-height: 400px;
+
+        padding: 45px 0 30px;
+    }
+
+
+    .ah-apparel-title {
+        font-size: 28px;
+
+        letter-spacing: 8px;
+
+        text-indent: 8px;
+    }
+
+
+    .ah-apparel-description {
+        font-size: 8px;
+
+        max-width: 270px;
+    }
+
+
+    .ah-apparel-categories {
+        gap: 13px;
+
+        margin-top: 30px;
+
+        flex-wrap: wrap;
+
+        max-width: 330px;
+
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+
+    .ah-apparel-category-circle {
+        width: 48px;
+        height: 48px;
+    }
+}
+
+
+@media (max-width: 400px) {
+
+    .ah-apparel-categories {
+        gap: 10px;
+    }
+
+
+    .ah-apparel-category-circle {
+        width: 45px;
+        height: 45px;
+    }
+
+
+    .ah-apparel-category-circle img {
+        width: 22px;
+        height: 22px;
+    }
+}

@@ -1,0 +1,138 @@
+/* Font cdn starts here */
+/* Imported Google Fonts: Plus Jakarta Sans & Manrope */
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+/* Font cdn ends here */
+
+:root {
+    /* Typography starts here */
+    --heading-font: "Plus Jakarta Sans", sans-serif;
+    --para-font: "Manrope", sans-serif;
+
+    --secondary-regular-font: var(--para-font);
+    --secondary-medium-font: var(--para-font);
+    --secondary-semibold-font: var(--para-font);
+    --secondary-light-font: var(--para-font);
+    --secondary-bold-font: var(--heading-font);
+    --secondary-italic-font: var(--para-font);
+    
+    --primary-regular-font: var(--para-font);
+    --primary-bold-font: var(--heading-font);
+    --primary-semibold-font: var(--heading-font);
+    --primary-medium-font: var(--para-font);
+    --primary-light-font: var(--para-font);
+    --primary-italic-font: var(--para-font);
+
+    --sub-font: var(--heading-font);
+    /* Typography ends here */
+}
+
+body {
+    font-family: var(--para-font);
+}
+
+.primary-font,
+.heading-font,
+.secondary-bold-font,
+.heading-bold {
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+.secondary-regular-font,
+.para-font,
+.primary-regular-font,
+.text-font {
+    font-family: var(--para-font);
+    font-weight: 400;
+}
+
+.heading-semibold,
+.secondary-semibold-font,
+.primary-semibold-font {
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+
+.heading-medium,
+.secondary-medium-font,
+.primary-medium-font {
+    font-family: var(--para-font);
+    font-weight: 500;
+}
+
+.heading-light,
+.secondary-light-font,
+.primary-light-font {
+    font-family: var(--para-font);
+    font-weight: 300;
+}
+
+.sub-font,
+.sub-heading-font {
+    font-family: var(--heading-font);
+    font-weight: 600;
+}
+
+/* Font Sizes Here */
+.level-1 {
+    font-size: 92px;
+}
+
+.level-2-lg {
+    font-size: 52px;
+}
+
+.level-2 {
+    font-size: 46px;
+}
+
+.level-3-lg {
+    font-size: 34px;
+}
+
+.level-3-md {
+    font-size: 30px;
+}
+
+.level-3 {
+    font-size: 27px;
+}
+
+.level-4 {
+    font-size: 22px;
+}
+
+.level-5-lg {
+    font-size: 20px;
+}
+
+.level-5 {
+    font-size: 18px;
+}
+
+.level-6 {
+    font-size: 16px;
+}
+
+.level-7 {
+    font-size: 14px;
+}
+.level-8 {
+    font-size: 12px;
+}
+
+.level-9 {
+    font-size: 11px;
+}
+
+.level-10 {
+    font-size: 10px;
+}
+
+.level-11 {
+    font-size: 9px;
+}
+
+.level-12 {
+    font-size: 7px;
+}
