@@ -20,7 +20,6 @@
         padding: 60px 0;
     }
 
-    /* Glow Elements */
     .tj-auth-glow {
         position: absolute;
         width: 350px;
@@ -33,7 +32,6 @@
     .tj-auth-glow-1 { top: 10%; left: 20%; background: var(--tj-purple); }
     .tj-auth-glow-2 { bottom: 10%; right: 20%; background: var(--tj-pink); }
 
-    /* Auth Card Box */
     .tj-auth-card {
         background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
         border: 1px solid var(--tj-border);
@@ -62,7 +60,6 @@
         margin-bottom: 30px;
     }
 
-    /* Form Inputs */
     .tj-form-label {
         color: rgba(255, 255, 255, 0.7);
         font-size: 10px;
@@ -83,7 +80,7 @@
         width: 100%;
         outline: none;
         transition: 0.3s;
-        margin-bottom: 20px;
+        margin-bottom: 25px;
     }
 
     .tj-auth-input::placeholder {
@@ -95,24 +92,6 @@
         box-shadow: 0 0 15px rgba(233, 54, 167, 0.15);
     }
 
-    .tj-forgot-link {
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 10.5px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: 0.3s;
-        display: inline-block;
-        margin-top: -10px;
-        margin-bottom: 25px;
-    }
-
-    .tj-forgot-link:hover {
-        color: var(--tj-pink);
-    }
-
-    /* Buttons */
     .tj-gradient-btn {
         background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
         border: none;
@@ -127,38 +106,13 @@
         cursor: pointer;
         transition: 0.3s;
         box-shadow: 0 4px 15px rgba(125, 53, 232, 0.3);
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
 
     .tj-gradient-btn:hover {
         opacity: 0.9;
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(233, 54, 167, 0.4);
-    }
-
-    .tj-google-btn {
-        background: rgba(17, 17, 43, 0.8);
-        border: 1px solid var(--tj-border);
-        border-radius: 50px;
-        padding: 12px;
-        color: #fff;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        width: 100%;
-        cursor: pointer;
-        transition: 0.3s;
-        text-decoration: none;
-        display: block;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .tj-google-btn:hover {
-        border-color: rgba(255, 255, 255, 0.3);
-        background: rgba(25, 25, 55, 0.9);
-        color: #fff;
     }
 
     .tj-auth-footer-text {
@@ -191,31 +145,20 @@
     <div class="container d-flex justify-content-center">
         <div class="tj-auth-card">
             
-            <h2 class="tj-auth-title">Welcome Back, TJ.</h2>
-            <p class="tj-auth-desc">Sign in to track orders, save gear and check out faster.</p>
+            <h2 class="tj-auth-title">Forgot Password</h2>
+            <p class="tj-auth-desc">Enter your registered email address and we'll send you a verification code to reset your password.</p>
 
-            <form action="profile.php" method="POST">
+            <form action="verify-otp.php" method="POST">
                 <div>
-                    <label class="tj-form-label">Email *</label>
+                    <label class="tj-form-label">Email Address *</label>
                     <input type="email" class="tj-auth-input" placeholder="John@email.com" required>
                 </div>
 
-                <div>
-                    <label class="tj-form-label">Password *</label>
-                    <input type="password" class="tj-auth-input" placeholder="********" required>
-                </div>
-
-                <div class="text-end">
-                    <a href="forgot-password.php" class="tj-forgot-link">Forgot Password?</a>
-                </div>
-
-                <button type="submit" class="tj-gradient-btn">Sign In <i class="fa-solid fa-arrow-right ms-1"></i></button>
+                <button type="submit" class="tj-gradient-btn">Send OTP Code <i class="fa-solid fa-arrow-right ms-1"></i></button>
             </form>
 
-            <a href="#" class="tj-google-btn">Continue with Google</a>
-
             <div class="tj-auth-footer-text">
-                New here? <a href="register.php">Create Account</a>
+                Remember your password? <a href="login.php">Sign In</a>
             </div>
 
         </div>

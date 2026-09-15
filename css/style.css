@@ -95,3 +95,244 @@
 }
 /* header Css  */
 
+/* =========================================
+   TJ INNER PAGE BANNER STYLES (LINEAR GRADIENT)
+========================================= */
+
+.tj-inner-banner {
+    position: relative;
+    background: linear-gradient(to top, #1f195f 0%, #161239 100%);
+    font-family: var(--heading-font, Arial, Helvetica, sans-serif);
+    overflow: hidden;
+    padding: 60px 0;
+    border-bottom: 1px solid rgba(135, 120, 255, 0.1);
+}
+
+/* Ambient Glow Effects */
+.tj-inner-banner .tj-banner-glow {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(120px);
+    z-index: 1;
+}
+
+.tj-inner-banner .tj-banner-glow-1 {
+    width: 760px;
+    height: 110px;
+    top: -20%;
+    left: -4%;
+    background: #0e0f39;
+}
+
+.tj-inner-banner .tj-banner-glow-2 {
+    width: 400px;
+    height: 400px;
+    bottom: -30%;
+    right: 15%;
+    background: rgba(220, 53, 160, 0.08);
+}
+
+/* Breadcrumbs Styling */
+.tj-inner-banner .tj-breadcrumb .breadcrumb-item {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+}
+
+.tj-inner-banner .tj-breadcrumb .breadcrumb-item a {
+    color: rgba(255, 255, 255, 0.6);
+    transition: color 0.3s ease;
+}
+
+.tj-inner-banner .tj-breadcrumb .breadcrumb-item a:hover {
+    color: #e5b33d;
+}
+
+.tj-inner-banner .tj-breadcrumb .breadcrumb-item.active {
+    color: #ffffff;
+}
+
+.tj-inner-banner .tj-breadcrumb .breadcrumb-item + .breadcrumb-item::before {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+/* Typography */
+.tj-inner-banner .tj-banner-subtitle {
+    color: #e5b33d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.tj-inner-banner .tj-banner-title {
+    color: #ffffff;
+    font-size: clamp(32px, 3.5vw, 44px);
+    letter-spacing: -0.5px;
+}
+
+.tj-inner-banner .tj-banner-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 600px;
+}
+
+/* =========================================
+   TJ COLLECTIONS SECTION STYLES (SCOPED)
+========================================= */
+
+.tj-product-parent {
+    background: radial-gradient(circle at 20% 50%, #161239 0%, #08081c 70%);
+    font-family: var(--heading-font, Arial, Helvetica, sans-serif);
+}
+
+/* Sidebar Box Styling */
+.tj-product-parent .tj-filter-sidebar {
+    background: linear-gradient(135deg, rgba(20, 20, 48, 0.9) 0%, rgba(10, 10, 28, 0.95) 100%);
+    border: 1px solid rgba(135, 120, 255, 0.12);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+/* Size Badges */
+.tj-product-parent .tj-size-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 32px;
+    height: 32px;
+    padding: 0 8px;
+    background: rgba(20, 20, 48, 0.8);
+    border: 1px solid rgba(135, 120, 255, 0.2);
+    border-radius: 8px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 11px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+}
+
+.tj-product-parent .tj-size-badge:hover, 
+.tj-product-parent .tj-size-badge.active {
+    background: #e936a7;
+    border-color: #e936a7;
+    color: #ffffff;
+}
+
+/* Custom Search Input & Select */
+.tj-product-parent .tj-collection-input, 
+.tj-product-parent .tj-collection-select {
+    background: rgba(20, 20, 45, 0.65);
+    border: 1px solid rgba(135, 120, 255, 0.15);
+    border-radius: 10px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 10px 15px;
+    transition: all 0.3s ease;
+}
+
+.tj-product-parent .tj-collection-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.tj-product-parent .tj-collection-input:focus, 
+.tj-product-parent .tj-collection-select:focus {
+    background: rgba(25, 25, 55, 0.85);
+    border-color: rgba(145, 92, 255, 0.5);
+    box-shadow: 0 0 15px rgba(125, 53, 232, 0.25);
+    color: #ffffff;
+}
+
+/* View Switch Buttons */
+.tj-product-parent .tj-view-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(20, 20, 45, 0.65);
+    border: 1px solid rgba(135, 120, 255, 0.15);
+    border-radius: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: all 0.3s ease;
+}
+
+.tj-product-parent .tj-view-btn:hover, 
+.tj-product-parent .tj-view-btn.active {
+    background: #e936a7;
+    border-color: #e936a7;
+    color: #ffffff;
+}
+
+/* Product Card Styling */
+.tj-product-parent .tj-product-card {
+    background: linear-gradient(180deg, #121633 0%, #0a0b1e 100%);
+    border: 1px solid rgba(135, 120, 255, 0.15);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tj-product-parent .tj-product-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(233, 54, 167, 0.4);
+}
+
+/* Featured Badge */
+.tj-product-parent .tj-featured-badge {
+    position: absolute;
+    top: 15px;
+    right: 15px;
+    background: linear-gradient(135deg, #e936a7 0%, #7d35e8 100%);
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 12px;
+    border-radius: 50px;
+    z-index: 3;
+}
+
+/* Product Image Linear Gradient Overlay */
+.tj-product-parent .tj-product-img-wrapper .tj-img-overlay {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    height: 60%;
+    background: linear-gradient(to top, #0a0b1e 0%, transparent 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+.tj-product-parent .tj-product-img-wrapper img {
+    transition: transform 0.5s ease;
+}
+
+.tj-product-parent .tj-product-card:hover .tj-product-img-wrapper img {
+    transform: scale(1.05);
+}
+
+/* Color Dots */
+.tj-product-parent .tj-color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+/* View Details Hover Animation */
+.tj-product-parent .tj-view-details-link {
+    transition: color 0.3s ease;
+}
+
+.tj-product-parent .tj-view-details-link:hover {
+    color: #e936a7 !important;
+}
+
+.tj-product-parent .tj-view-details-link i {
+    transition: transform 0.3s ease;
+}
+
+.tj-product-parent .tj-view-details-link:hover i {
+    transform: translateX(4px);
+}

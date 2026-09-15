@@ -20,7 +20,6 @@
         padding: 60px 0;
     }
 
-    /* Glow Elements */
     .tj-auth-glow {
         position: absolute;
         width: 350px;
@@ -33,14 +32,13 @@
     .tj-auth-glow-1 { top: 10%; left: 20%; background: var(--tj-purple); }
     .tj-auth-glow-2 { bottom: 10%; right: 20%; background: var(--tj-pink); }
 
-    /* Auth Card Box */
     .tj-auth-card {
         background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
         border: 1px solid var(--tj-border);
         border-radius: 24px;
         padding: 45px 35px;
         width: 100%;
-        max-width: 440px;
+        max-width: 480px;
         position: relative;
         z-index: 2;
         box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
@@ -59,10 +57,9 @@
         color: rgba(255, 255, 255, 0.55);
         font-size: 13px;
         line-height: 1.5;
-        margin-bottom: 30px;
+        margin-bottom: 25px;
     }
 
-    /* Form Inputs */
     .tj-form-label {
         color: rgba(255, 255, 255, 0.7);
         font-size: 10px;
@@ -83,7 +80,7 @@
         width: 100%;
         outline: none;
         transition: 0.3s;
-        margin-bottom: 20px;
+        margin-bottom: 18px;
     }
 
     .tj-auth-input::placeholder {
@@ -95,24 +92,31 @@
         box-shadow: 0 0 15px rgba(233, 54, 167, 0.15);
     }
 
-    .tj-forgot-link {
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 10.5px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: 0.3s;
-        display: inline-block;
-        margin-top: -10px;
+    /* Custom Checkbox */
+    .tj-checkbox-wrapper {
+        display: flex;
+        align-items: center;
+        gap: 10px;
         margin-bottom: 25px;
     }
 
-    .tj-forgot-link:hover {
-        color: var(--tj-pink);
+    .tj-checkbox-wrapper input[type="checkbox"] {
+        accent-color: var(--tj-pink);
+        width: 15px;
+        height: 15px;
+        cursor: pointer;
     }
 
-    /* Buttons */
+    .tj-checkbox-wrapper label {
+        color: rgba(255, 255, 255, 0.6);
+        font-size: 11.5px;
+    }
+
+    .tj-checkbox-wrapper label a {
+        color: var(--tj-pink);
+        text-decoration: none;
+    }
+
     .tj-gradient-btn {
         background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
         border: none;
@@ -127,38 +131,13 @@
         cursor: pointer;
         transition: 0.3s;
         box-shadow: 0 4px 15px rgba(125, 53, 232, 0.3);
-        margin-bottom: 15px;
+        margin-bottom: 25px;
     }
 
     .tj-gradient-btn:hover {
         opacity: 0.9;
         transform: translateY(-2px);
         box-shadow: 0 6px 20px rgba(233, 54, 167, 0.4);
-    }
-
-    .tj-google-btn {
-        background: rgba(17, 17, 43, 0.8);
-        border: 1px solid var(--tj-border);
-        border-radius: 50px;
-        padding: 12px;
-        color: #fff;
-        font-size: 12px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        width: 100%;
-        cursor: pointer;
-        transition: 0.3s;
-        text-decoration: none;
-        display: block;
-        text-align: center;
-        margin-bottom: 30px;
-    }
-
-    .tj-google-btn:hover {
-        border-color: rgba(255, 255, 255, 0.3);
-        background: rgba(25, 25, 55, 0.9);
-        color: #fff;
     }
 
     .tj-auth-footer-text {
@@ -191,10 +170,21 @@
     <div class="container d-flex justify-content-center">
         <div class="tj-auth-card">
             
-            <h2 class="tj-auth-title">Welcome Back, TJ.</h2>
-            <p class="tj-auth-desc">Sign in to track orders, save gear and check out faster.</p>
+            <h2 class="tj-auth-title">Join the Brotherhood</h2>
+            <p class="tj-auth-desc">Early access to drops, rider-only pricing and stories from the road.</p>
 
-            <form action="profile.php" method="POST">
+            <form action="#" method="POST">
+                <div class="row">
+                    <div class="col-md-6">
+                        <label class="tj-form-label">First Name *</label>
+                        <input type="text" class="tj-auth-input" placeholder="John" required>
+                    </div>
+                    <div class="col-md-6">
+                        <label class="tj-form-label">Last Name *</label>
+                        <input type="text" class="tj-app-input tj-auth-input" placeholder="Doe" required>
+                    </div>
+                </div>
+
                 <div>
                     <label class="tj-form-label">Email *</label>
                     <input type="email" class="tj-auth-input" placeholder="John@email.com" required>
@@ -205,17 +195,21 @@
                     <input type="password" class="tj-auth-input" placeholder="********" required>
                 </div>
 
-                <div class="text-end">
-                    <a href="forgot-password.php" class="tj-forgot-link">Forgot Password?</a>
+                <div>
+                    <label class="tj-form-label">Confirm Password *</label>
+                    <input type="password" class="tj-auth-input" placeholder="********" required>
                 </div>
 
-                <button type="submit" class="tj-gradient-btn">Sign In <i class="fa-solid fa-arrow-right ms-1"></i></button>
+                <div class="tj-checkbox-wrapper">
+                    <input type="checkbox" id="termsCheck" required>
+                    <label for="termsCheck">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
+                </div>
+
+                <button type="submit" class="tj-gradient-btn">Create Account <i class="fa-solid fa-arrow-right ms-1"></i></button>
             </form>
 
-            <a href="#" class="tj-google-btn">Continue with Google</a>
-
             <div class="tj-auth-footer-text">
-                New here? <a href="register.php">Create Account</a>
+                Already riding with us? <a href="login.php">Sign In</a>
             </div>
 
         </div>

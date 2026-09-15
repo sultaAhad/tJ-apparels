@@ -194,6 +194,14 @@
         0 0 25px rgba(219, 45, 145, 0.25);
 }
 
+.ah-apparel-btn11:hover {
+    color: #ffffff;
+
+    transform: translateY(-2px);
+
+    box-shadow:
+        0 0 12px rgba(181, 50, 255, 0.55),
+  }
 
 /* -----------------------------------------
    CATEGORY AREA
@@ -408,4 +416,1257 @@
         width: 22px;
         height: 22px;
     }
+}
+
+/* =========================================
+   TJ FAMILY OF BRANDS SECTION STYLES
+========================================= */
+
+.tj-brands-section {
+    position: relative;
+    background: #F6F3FC;
+    overflow: hidden;
+}
+
+/* Section Header Styling */
+.tj-brands-section .tj-section-subtitle {
+    color: #F8D05C;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.tj-brands-section .tj-section-title {
+    color: #29278B;
+    font-size: clamp(28px, 3.5vw, 42px);
+    letter-spacing: -0.5px;
+    font-family: var(--heading-font);
+        font-weight: 900 !important;
+}
+
+.tj-brands-section .tj-section-desc {
+    color: #c3c2de;
+    font-size: 14px;
+    line-height: 1.6;
+    max-width: 520px;
+    margin: 0 auto;
+}
+
+/* Brand Cards General */
+.tj-brands-section .tj-brand-card {
+    border-radius: 24px;
+    transition: transform 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+}
+
+.tj-brands-section .tj-brand-card:hover {
+    transform: translateY(-5px);
+}
+
+/* Light Card (TJ Corp) */
+.tj-brands-section .tj-brand-light {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.04);
+    box-shadow: 0 15px 35px rgba(18, 18, 56, 0.05);
+}
+.tj-brands-section .tj-brand-icon-box {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #F6F3FC;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(51, 79, 255, 0.1);
+    border-radius: 50%;
+}
+
+.tj-brands-section .tj-brand-logo-img {
+    width: 22px;
+    height: 22px;
+    object-fit: contain;
+}
+
+.tj-brands-section .tj-brand-badge {
+    background: #F6F3FC;
+    color: #6333ff;
+    font-size: 10px;
+    font-weight: 700;
+    padding: 6px 14px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    text-transform: uppercase;
+}
+
+.tj-brands-section .tj-brand-light .tj-brand-title {
+    color: #090B29;
+    font-size: 24px;
+      font-family: var(--heading-font);
+}
+
+.tj-brands-section .tj-brand-light .tj-brand-category {
+    color: #5D1EA9;
+    font-size: 12px;
+    font-weight: 600;
+} 
+
+.tj-brands-section .tj-brand-light .tj-brand-text {
+    color: #c3c2de;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+
+/* Dark Card (TJ Biker) */
+.tj-brands-section .tj-brand-dark {
+    background: #090B29;
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.2);
+}
+
+.tj-brands-section .tj-brand-icon-box-dark {
+    width: 44px;
+    height: 44px;
+    border-radius: 12px;
+    background: #1D2254;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #F8D05C;
+    border-radius: 50%;
+}
+
+.tj-brands-section .tj-brand-icon-box-dark i {
+    font-size: 16px;
+}
+
+.tj-brands-section .tj-brand-badge-dark {
+    background: rgba(255, 255, 255, 0.05);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 10px;
+    font-weight: 600;
+    padding: 6px 14px;
+    border-radius: 50px;
+    letter-spacing: 0.5px;
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    text-transform: uppercase;
+}
+
+.tj-brands-section .tj-brand-dark .tj-brand-title {
+    color: #ffffff;
+    font-size: 24px;
+    font-family: var(--heading-font);
+    font-weight: 700;
+}
+
+.tj-brands-section .tj-brand-dark .tj-brand-category {
+    color: #D0C2ED;
+    font-size: 12px;
+    font-weight: 400;
+}
+ 
+.tj-brands-section .tj-brand-dark .tj-brand-text {
+    color: #ADAAC6;
+    font-size: 14px;
+    line-height: 1.7;
+}
+
+/* =========================================
+   TJ SHOP BY CATEGORY SECTION STYLES
+========================================= */
+
+.tj-category-section {
+    position: relative;
+    background: radial-gradient(circle at 50% 20%, #161239 0%, #08081c 70%);
+    overflow: hidden;
+    padding: 110px 0;
+    background: #29278B;
+    background: linear-gradient(90deg, rgb(41 39 139 / 65%) 30%, rgb(63 17 118 / 83%) 80%);
+}
+
+/* Background Ambient Glow Elements */
+.tj-category-section .tj-cat-glow {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(80px);
+    z-index: 1;
+}
+
+.tj-category-section .tj-cat-glow-1 {
+    width: 300px;
+    height: 300px;
+    top: 20%;
+    left: 15%;
+    background: rgba(125, 53, 232, 0.15);
+}
+
+.tj-category-section .tj-cat-glow-2 {
+    width: 350px;
+    height: 350px;
+    bottom: 10%;
+    right: 15%;
+    background: rgba(51, 79, 255, 0.12);
+}
+
+/* Center Glow Behind Main Heading */
+.tj-category-section .tj-header-center-glow {
+    pointer-events: none;
+    z-index: 1;
+    width: 540px;
+    height: 530px;
+    left: 50%;
+    top: -250px;
+    transform: translateX(-50%);
+    background: #5d1ea954;
+    filter: blur(40px);
+    border-radius: 140%;
+    position: absolute;
+}
+
+/* Section Header Styling */
+.tj-category-section .tj-section-subtitle {
+        color: #F8D05C;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+        font-family: var(--heading-font);
+
+}
+
+.tj-category-section .tj-section-title {
+    color: #ffffff;
+        font-size: clamp(28px, 3.5vw, 42px);
+    letter-spacing: -0.5px;
+    font-family: var(--heading-font);
+    font-weight: 900 !important;
+
+}
+
+.tj-category-section .tj-section-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Category Cards Styling */
+.tj-category-section .tj-cat-card {
+    background: #1b1559;
+    border: 1px solid rgba(135, 120, 255, 0.12);
+    border-radius: 20px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Right-Top Glow Inside Each Card */
+.tj-category-section .tj-card-glow-rt {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 170px;
+    height: 170px;
+    background: radial-gradient(circle, rgba(160, 60, 230, 0.25) 0%, rgba(60, 100, 255, 0.1) 65%, transparent 85%);
+    filter: blur(30px);
+    pointer-events: none;
+    z-index: 1;
+}
+ .tj-category-section .tj-card-glow-rt {
+    position: absolute;
+    top: -25px;
+    right: -25px;
+    width: 170px;
+    height: 170px;
+    background: radial-gradient(circle, rgba(160, 60, 230, 0.25) 0%, #522172 65%, transparent 85%);
+    filter: blur(30px);
+    pointer-events: none;
+    z-index: 1;
+}
+.tj-category-section .first-color{
+background: radial-gradient(circle, rgba(160, 60, 230, 0.25) 0%, #522172 65%, transparent 85%) !important;
+}
+
+.tj-category-section .second-color{
+    background: radial-gradient(circle, rgba(160, 60, 230, 0.25) 0%, #2e4989 65%, transparent 85%) !important;
+}
+
+.tj-category-section .third-color{
+    background: radial-gradient(circle, rgba(160, 60, 230, 0.25) 0%, #483e7c 65%, transparent 85%) !important;
+}
+.tj-category-section .tj-cat-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(145, 92, 255, 0.4);
+    box-shadow: 0 20px 45px rgba(113, 34, 204, 0.2);
+}
+
+/* Ensure contents stay above the inner glow */
+.tj-category-section .tj-cat-card-top, 
+.tj-category-section .tj-cat-content {
+    position: relative;
+    z-index: 2;
+}
+
+/* Image Glowing Box */
+.tj-category-section .tj-cat-img-box {
+    width: 52px;
+    height: 52px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    transition: box-shadow 0.3s ease;
+}
+.tj-category-section .tj-cat-img-box.first-color {
+background: #9C2E89;
+background: linear-gradient(130deg, rgba(156, 46, 137, 1) 41%, rgba(120, 40, 123, 1) 64%, rgba(98, 36, 115, 1) 87%) !important;
+}
+.tj-category-section .tj-cat-img-box.second-color {
+background: #3E8BBD;
+background: linear-gradient(130deg, rgba(62, 139, 189, 1) 41%, rgba(56, 115, 171, 1) 64%, rgba(45, 91, 145, 1) 87%) !important;
+}
+.tj-category-section .tj-cat-img-box.third-color {
+background: #887CB3;
+background: linear-gradient(130deg, rgba(136, 124, 179, 1) 41%, rgba(107, 97, 153, 1) 64%, rgba(87, 78, 138, 1) 87%) !important;
+}
+
+.tj-category-section .tj-cat-card:hover .tj-cat-img-box {
+    box-shadow: 0 0 22px rgba(233, 54, 167, 0.5), inset 0 0 10px rgba(125, 53, 232, 0.4);
+}
+
+.tj-category-section .tj-cat-image {
+    width: 40px;
+    height: 31px;
+    object-fit: scale-down;
+    filter: drop-shadow(0 0 4px rgba(255, 255, 255, 0.4));
+}
+
+/* Typography Inside Cards */
+ .tj-category-section .tj-cat-title {
+    color: #ffffff;
+    font-size: 22px;
+    font-weight: 700;
+    font-family: var(--heading-font, Arial, sans-serif);
+}
+.tj-category-section .tj-cat-header-anim.position-relative {
+    padding: 0px 0 50px 0;
+}
+.tj-category-section .tj-cat-subtitle {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    font-weight: 400;
+}
+
+/* Arrow Icon */
+.tj-category-section .tj-cat-arrow-icon {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.6);
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid rgba(255, 255, 255, 0.07);
+    transition: all 0.3s ease;
+}
+
+.tj-category-section .tj-cat-card:hover .tj-cat-arrow-icon {
+    color: #ffffff;
+    background: rgba(125, 53, 232, 0.25);
+    border-color: rgba(125, 53, 232, 0.4);
+    transform: translateX(3px);
+}
+
+.tj-category-section .tj-cat-arrow-icon i {
+    font-size: 11px;
+}
+
+/* =========================================
+   TJ DISCOVER COLLECTIONS SECTION STYLES (SCOPED)
+========================================= */
+
+/* Main Parent Section */
+.tj-collections-section {
+    position: relative;
+    background: radial-gradient(circle at 50% 10%, #161239 0%, #08081c 70%);
+    font-family: var(--heading-font, Arial, Helvetica, sans-serif);
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+/* Background Ambient Glow */
+.tj-collections-section .tj-col-glow {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 1;
+}
+
+.tj-collections-section .tj-col-glow-1 {
+    width: 350px;
+    height: 350px;
+    top: 15%;
+    left: 10%;
+    background: rgba(125, 53, 232, 0.14);
+}
+
+.tj-collections-section .tj-col-glow-2 {
+    width: 400px;
+    height: 400px;
+    top: 30%;
+    right: 5%;
+    background: rgba(220, 53, 160, 0.1);
+}
+
+/* Section Header */
+.tj-collections-section .tj-section-subtitle {
+        color: #F8D05C;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: var(--heading-font);
+}
+
+.tj-collections-section .tj-section-title {
+    color: #ffffff;
+    font-size: clamp(28px, 3.5vw, 42px);
+    letter-spacing: -0.5px;
+    font-family: var(--heading-font);
+    font-weight: 900 !important;
+}
+
+.tj-collections-section .tj-section-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Search Box Styling */
+.tj-collections-section .tj-search-box {
+    position: relative;
+}
+
+.tj-collections-section .tj-search-box i {
+    top: 50%;
+    left: 16px;
+    transform: translateY(-50%);
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 13px;
+    pointer-events: none;
+}
+
+.tj-collections-section .tj-search-input {
+    background: rgba(20, 20, 45, 0.65);
+    border: 1px solid rgba(135, 120, 255, 0.15);
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 12px 16px 12px 44px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tj-collections-section .tj-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.tj-collections-section .tj-search-input:focus {
+    background: rgba(25, 25, 55, 0.85);
+    border-color: rgba(145, 92, 255, 0.5);
+    box-shadow: 0 0 15px rgba(125, 53, 232, 0.25), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+/* Filter Pills Styling */
+.tj-collections-section .tj-filter-pills {
+    padding: 6px;
+    border-radius: 50px;
+}
+
+.tj-collections-section .tj-filter-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 12px;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+    font-family: var(--heading-font, Arial, sans-serif);
+    border: 1px solid #6c757db0;
+}
+
+.tj-collections-section .tj-filter-btn:hover {
+    color: #ffffff;
+}
+
+.tj-collections-section .tj-filter-btn.active {
+    background: #e936a7;
+    color: #ffffff;
+    box-shadow: 0 0 15px rgba(233, 54, 167, 0.4);
+    background: linear-gradient(90deg, #923df4 0%, #db2d91 100%);
+    border: none;
+    font-family: var(--para-font);
+}
+
+/* Layout Toggle Styling */
+.tj-collections-section .tj-view-toggle {
+    background: rgba(15, 15, 35, 0.5);
+    border-radius: 50px;
+}
+
+.tj-collections-section .tj-toggle-btn {
+    background: transparent;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    width: 34px;
+    height: 34px;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: all 0.3s ease;
+        border: 1px solid rgba(135, 120, 255, 0.1);
+
+}
+
+.tj-collections-section .tj-toggle-btn.active, 
+.tj-collections-section .tj-toggle-btn:hover {
+    color: #ffffff;
+        background: linear-gradient(90deg, #923df4 0%, #db2d91 100%);
+}
+
+/* Product Cards Styling */
+.tj-collections-section .tj-product-card {
+    background: #11143f;
+    border: 1px solid rgba(135, 120, 255, 0.12);
+    border-radius: 20px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    transition: transform 0.4s ease, border-color 0.4s ease, box-shadow 0.4s ease;
+}
+
+.tj-collections-section .tj-product-card:hover {
+    transform: translateY(-6px);
+    border-color: rgba(145, 92, 255, 0.4);
+    box-shadow: 0 20px 45px rgba(113, 34, 204, 0.25);
+}
+
+.tj-collections-section .tj-product-img-wrap {
+    overflow: hidden;
+    background: #141428;
+    aspect-ratio: 4 / 5;
+}
+
+.tj-collections-section .tj-product-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.5s ease;
+}
+
+.tj-collections-section .tj-product-card:hover .tj-product-img {
+    transform: scale(1.05);
+}
+
+.tj-collections-section .tj-featured-badge {
+    position: absolute;
+    top: 14px;
+    right: 14px;
+    background: #e936a7;
+    color: #ffffff;
+    font-size: 9px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    padding: 5px 10px;
+    border-radius: 34px;
+    z-index: 3;
+    text-transform: uppercase;
+}
+
+.tj-collections-section .tj-product-title {
+    color: #ffffff;
+    font-size: 17px;
+    font-weight: 700;
+    font-family: var(--heading-font, Arial, sans-serif);
+}
+
+.tj-collections-section .tj-product-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 12px;
+    line-height: 1.5;
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.tj-collections-section .tj-color-dot {
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    display: inline-block;
+    border: 1px solid rgba(255, 255, 255, 0.3);
+}
+
+.tj-collections-section .tj-color-text {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 11px;
+}
+
+.tj-collections-section .tj-product-price {
+    color: #ffffff;
+    font-size: 18px;
+    font-family: var(--heading-font, Arial, sans-serif);
+}
+
+.tj-collections-section .tj-details-link {
+    color: #D0C2ED;
+    font-size: 12px;
+    font-weight: 600;
+    transition: color 0.3s ease;
+}
+
+.tj-collections-section .tj-details-link:hover {
+    color: #e936a7;
+}
+
+.tj-collections-section .tj-details-link i {
+    font-size: 10px;
+}
+
+/* View All Products Button */
+.tj-collections-section .tj-view-all-btn {
+    background: linear-gradient(135deg, #7d35e8 0%, #e936a7 100%);
+    color: #ffffff;
+    border-radius: 50px;
+    font-size: 14px;
+    box-shadow: 0 10px 25px rgba(125, 53, 232, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tj-collections-section .tj-view-all-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(233, 54, 167, 0.5);
+    color: #ffffff;
+}
+.ah-apparel-btn11 {
+    position: relative;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-width: fit-content;
+    /* height: 23px; */
+    padding: 14px 44px;
+    border-radius: 50px;
+    background: linear-gradient(
+            90deg,
+            #923df4 0%,
+            #db2d91 100%
+        );
+    color: #ffffff;
+    font-size: 15px;
+    font-weight: 500;
+    text-decoration: none;
+    box-shadow: 0 0 10px rgba(181, 50, 255, 0.25),
+        0 0 20px rgba(219, 45, 145, 0.10);
+    transition: transform 0.3s ease,
+        box-shadow 0.3s ease;
+    font-family: var(--para-font);
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    width: fit-content;
+    justify-content: center;
+}
+/* =========================================
+   TJ GIFT CARDS SECTION STYLES (SCOPED)
+========================================= */
+
+.tj-gift-card-section {
+    position: relative;
+    overflow: hidden;
+    padding: 80px 0;
+    background: #481C90;
+    background: linear-gradient(90deg, rgba(72, 28, 144, 1) 41%, rgba(59, 26, 130, 1) 64%, rgba(36, 24, 103, 1) 87%);
+}
+
+/* Ambient Glow */
+.tj-gift-card-section .tj-gc-glow {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(90px);
+    z-index: 1;
+}
+
+.tj-gift-card-section .tj-gc-glow-1 {
+    width: 340px;
+    height: 340px;
+    left: -130px;
+    top: 55px;
+    background: #fb40ad6b;
+    opacity: 0.75;
+
+}
+
+.tj-gift-card-section .tj-gc-glow-2 {
+    width: 400px;
+    height: 400px;
+    bottom: 10%;
+    right: 5%;
+    background: rgba(220, 53, 160, 0.1);
+}
+
+/* Typography & Headers */
+.tj-gift-card-section .tj-section-subtitle {
+    color: #F8D05C;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: var(--heading-font);
+}
+
+.tj-gift-card-section .tj-section-title {
+    color: #ffffff;
+    font-size: clamp(28px, 3vw, 38px);
+    letter-spacing: -0.5px;
+    font-family: var(--heading-font);
+}
+
+.tj-gift-card-section .tj-section-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tj-gift-card-section .tj-gc-label {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+.tj-gift-card-section .tj-gc-icon-box.flex-shrink-0 i {
+    color: #D0C2ED;
+}
+/* Feature Icon Boxes */
+.tj-gift-card-section .tj-gc-icon-box {
+    width: 40px;
+    height: 40px;
+    background: transparent;
+    border: 1px solid rgba(135, 120, 255, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a78bfa;
+    font-size: 14px;
+    border-radius: 50%;
+}
+
+/* Container Cards (Glassmorphism) */
+.tj-gift-card-section .tj-gc-card-box {
+    background: #221864;
+    border: 1px solid rgba(135, 120, 255, 0.12);
+    border-radius: 24px;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+}
+
+/* Preview Card */
+.tj-gift-card-section .tj-preview-card {
+    border-radius: 16px;
+    min-height: 160px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+    transition: background 0.5s ease;
+}
+
+.tj-gift-card-section .tj-logo-badge {
+    width: 26px;
+    height: 26px;
+    background: rgba(255, 255, 255, 0.15);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 11px;
+    color: #ffffff;
+}
+
+/* Design Swatches */
+.tj-gift-card-section .tj-design-option {
+    background: rgba(15, 15, 35, 0.5);
+    border: 1px solid rgba(135, 120, 255, 0.15);
+    border-radius: 12px;
+    padding: 8px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.tj-gift-card-section .tj-design-option:hover,
+.tj-gift-card-section .tj-design-option.active {
+    border-color: #e936a7;
+    background: rgba(25, 25, 55, 0.9);
+    box-shadow: 0 0 12px rgba(233, 54, 167, 0.25);
+}
+
+.tj-gift-card-section .tj-swatch-bg {
+    height: 36px;
+    border-radius: 8px;
+}
+
+.tj-gift-card-section .tj-design-option.active span {
+    color: #ffffff !important;
+    font-weight: 600;
+}
+
+/* Amount Checkboxes & Pills Styling */
+.tj-gift-card-section .tj-amount-label {
+    cursor: pointer;
+    margin-bottom: 0;
+}
+
+.tj-gift-card-section .tj-amount-checkbox {
+    position: absolute;
+    opacity: 0;
+    cursor: pointer;
+    height: 0;
+    width: 0;
+}
+
+.tj-gift-card-section .tj-amount-pill {
+    display: inline-block;
+    background: rgba(20, 20, 45, 0.65);
+    border: 1px solid rgba(135, 120, 255, 0.2);
+    color: rgba(255, 255, 255, 0.8);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 16px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.tj-gift-card-section .tj-amount-label:hover .tj-amount-pill {
+    border-color: rgba(145, 92, 255, 0.5);
+    color: #ffffff;
+}
+
+.tj-gift-card-section .tj-amount-label input:checked + .tj-amount-pill {
+    color: #ffffff;
+    box-shadow: 0 0 12px rgba(233, 54, 167, 0.4);
+    background: linear-gradient(135deg, #7d35e8 0%, #e936a7 100%);
+}
+
+/* Form Inputs */
+.tj-gift-card-section .tj-gc-input {
+    background: rgba(20, 20, 45, 0.65);
+    border: 1px solid rgba(135, 120, 255, 0.15);
+    border-radius: 12px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 12px 16px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tj-gift-card-section .tj-gc-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.tj-gift-card-section .tj-gc-input:focus {
+    background: rgba(25, 25, 55, 0.85);
+    border-color: rgba(145, 92, 255, 0.5);
+    box-shadow: 0 0 15px rgba(125, 53, 232, 0.25), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+/* Submit Button */
+.tj-gift-card-section .tj-gc-submit-btn {
+    background: linear-gradient(135deg, #7d35e8 0%, #e936a7 100%);
+    border-radius: 50px;
+    font-size: 14px;
+    box-shadow: 0 10px 25px rgba(125, 53, 232, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.tj-gift-card-section .tj-gc-submit-btn:hover {
+    transform: translateY(-3px);
+    box-shadow: 0 15px 30px rgba(233, 54, 167, 0.5);
+}
+/* =========================================
+   TJ FASHION INSIGHTS SECTION STYLES
+========================================= */
+
+.tj-blog-section {
+    position: relative;
+    background: #151655;
+    font-family: var(--heading-font, Arial, Helvetica, sans-serif);
+    overflow: hidden;
+    padding: 80px 0;
+}
+
+/* Ambient Glow */
+.tj-blog-section .tj-blog-glow {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 1;
+}
+
+.tj-blog-section .tj-blog-glow-1 {
+    width: 400px;
+    height: 400px;
+    top: 5%;
+    left: 10%;
+    background: rgba(125, 53, 232, 0.12);
+}
+
+.tj-blog-section .tj-blog-glow-2 {
+
+    width: 350px;
+    height: 350px;
+    right: -130px;
+    background: #51e2ff57;
+    opacity: 0.75;
+    top: 0;
+}
+
+/* Typography & Titles */
+.tj-blog-section .tj-section-subtitle {
+    color: #F8D05C;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    font-family: var(--heading-font);
+}
+
+.tj-blog-section .tj-section-title {
+    color: #ffffff;
+    font-size: clamp(28px, 3vw, 38px);
+    letter-spacing: -0.5px;
+    font-family: var(--heading-font);
+}
+
+.tj-blog-section .tj-section-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+/* Search Input Styling */
+.tj-blog-section .tj-search-wrapper {
+    min-width: 240px;
+}
+
+.tj-blog-section .tj-blog-search-input {
+    background: rgba(20, 20, 45, 0.65);
+    border: 1px solid rgba(135, 120, 255, 0.15);
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 10px 16px 10px 40px;
+    transition: all 0.3s ease;
+}
+
+.tj-blog-section .tj-blog-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.tj-blog-section .tj-blog-search-input:focus {
+    background: rgba(25, 25, 55, 0.85);
+    border-color: rgba(145, 92, 255, 0.5);
+    box-shadow: 0 0 15px rgba(125, 53, 232, 0.25);
+    color: #ffffff;
+}
+
+/* Filter Buttons */
+.tj-blog-section .tj-filter-btn {
+    background: rgba(20, 20, 45, 0.65);
+    border: 1px solid rgba(135, 120, 255, 0.2);
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 13px;
+    font-weight: 600;
+    padding: 8px 20px;
+    border-radius: 50px;
+    transition: all 0.3s ease;
+}
+
+.tj-blog-section .tj-filter-btn:hover {
+    border-color: rgba(145, 92, 255, 0.5);
+    color: #ffffff;
+}
+
+.tj-blog-section .tj-filter-btn.active {
+    box-shadow: 0 10px 25px rgba(125, 53, 232, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 0 15px rgba(233, 54, 167, 0.4);
+    background: linear-gradient(90deg, #923df4 0%, #db2d91 100%);
+}
+.border-bottom {
+    border-bottom: 1px solid #ADAAC6!important;
+}
+/* Blog Cards */
+.tj-blog-section .tj-blog-card {
+    background: #11143f;
+    border: 1px solid rgba(135, 120, 255, 0.12);
+    border-radius: 24px;
+    overflow: hidden;
+    box-shadow: 0 15px 35px rgba(0, 0, 0, 0.35);
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.tj-blog-section .tj-blog-card:hover {
+    transform: translateY(-5px);
+    border-color: rgba(233, 54, 167, 0.3);
+}
+
+/* Card Images */
+.tj-blog-section .tj-blog-img-wrapper {
+    height: 180px;
+    overflow: hidden;
+}
+
+.tj-blog-section .tj-blog-img-wrapper img {
+    height: 100%;
+    transition: transform 0.5s ease;
+    position: relative;
+}
+
+.tj-blog-section .tj-blog-card:hover .tj-blog-img-wrapper img {
+    transform: scale(1.08);
+}
+
+/* Card Badge */
+.tj-blog-section .tj-blog-badge {
+    background: rgba(15, 15, 35, 0.85);
+    border: 1px solid rgba(135, 120, 255, 0.2);
+    color: #D0C2ED;
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    padding: 4px 10px;
+    border-radius: 50px;
+    backdrop-filter: blur(5px);
+    text-transform: uppercase;
+    z-index: 1;
+}
+
+/* Card Meta & Typography */
+.tj-blog-section .tj-blog-meta {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1px;
+}
+
+.tj-blog-section .tj-blog-title {
+    display: -webkit-box;
+    -webkit-line-clamp: 2;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    height: 2.4em;
+    line-height: 1.2em;
+}
+
+.tj-blog-section .tj-blog-excerpt {
+    display: -webkit-box;
+    -webkit-line-clamp: 3;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+    line-height: 1.5;
+}
+
+/* Tag Pills */
+.tj-blog-section .tj-tag-pill {
+    background: transparent;
+    border: 1px solid rgba(135, 120, 255, 0.15);
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 10px;
+    padding: 3px 7px;
+    border-radius: 36px;
+}
+
+/* Read More Link */
+.tj-blog-section .tj-read-more {
+    color: #D0C2ED;
+    transition: color 0.3s ease;
+}
+
+.tj-blog-section .tj-read-more:hover {
+    color: #ff6bc9;
+}
+
+.tj-blog-section .tj-blog-img-wrapper::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgb(12 21 53 / 82%) 0%, rgb(255 255 255 / 0%) 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+/* =========================================
+   TJ STAY CONNECTED SECTION STYLES
+========================================= */
+
+.tj-connect-section {
+    position: relative;
+    background: radial-gradient(circle at 50% 10%, #161239 0%, #08081c 70%);
+    font-family: var(--heading-font, Arial, Helvetica, sans-serif);
+    overflow: hidden;
+    padding: 80px 0;
+    background: #211D6B;
+    background: linear-gradient(90deg, rgba(33, 29, 107, 1) 41%, rgba(45, 27, 113, 1) 64%, rgba(56, 25, 120, 1) 87%);
+}
+
+/* Ambient Glow */
+.tj-connect-section .tj-connect-glow {
+    position: absolute;
+    pointer-events: none;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 1;
+}
+
+.tj-connect-section .tj-connect-glow-1 {
+    width: 350px;
+    height: 350px;
+    top: 10%;
+    left: 5%;
+    background: rgba(125, 53, 232, 0.12);
+}
+
+.tj-connect-section .tj-connect-glow-2 {
+    width: 400px;
+    height: 400px;
+    bottom: 10%;
+    right: 5%;
+    background: rgba(220, 53, 160, 0.08);
+}
+
+/* Typography */
+.tj-connect-section .tj-section-subtitle {
+    color: #e5b33d;
+    font-size: 11px;
+    font-weight: 700;
+    letter-spacing: 2.5px;
+}
+
+.tj-connect-section .tj-section-title {
+    color: #ffffff;
+    font-size: clamp(28px, 3vw, 38px);
+    letter-spacing: -0.5px;
+}
+
+.tj-connect-section .tj-section-desc {
+    color: rgba(255, 255, 255, 0.55);
+    font-size: 14px;
+    line-height: 1.6;
+}
+
+.tj-connect-section .tj-gc-label {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 10px;
+    font-weight: 700;
+    letter-spacing: 1.5px;
+}
+
+/* Newsletter Form Input & Button */
+.tj-connect-section .tj-connect-input {
+    background: rgba(20, 20, 45, 0.65);
+    border: 1px solid rgba(135, 120, 255, 0.15);
+    border-radius: 50px;
+    color: #ffffff;
+    font-size: 13px;
+    padding: 14px 20px;
+    box-shadow: inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s ease;
+}
+
+.tj-connect-section .tj-connect-input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.tj-connect-section .tj-connect-input:focus {
+    background: rgba(25, 25, 55, 0.85);
+    border-color: rgba(145, 92, 255, 0.5);
+    box-shadow: 0 0 15px rgba(125, 53, 232, 0.25), inset 0 2px 4px rgba(0, 0, 0, 0.2);
+    color: #ffffff;
+}
+
+.tj-connect-section .tj-connect-submit-btn {
+    background: linear-gradient(135deg, #7d35e8 0%, #e936a7 100%);
+    border-radius: 50px;
+    font-size: 13px;
+    padding: 14px 28px;
+    box-shadow: 0 10px 25px rgba(125, 53, 232, 0.4);
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    white-space: nowrap;
+}
+
+.tj-connect-section .tj-connect-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 15px 30px rgba(233, 54, 167, 0.5);
+}
+
+/* Feature Icon Boxes */
+.tj-connect-section .tj-connect-icon-box {
+    width: 36px;
+    height: 36px;
+    background: rgba(20, 20, 48, 0.8);
+    border: 1px solid rgba(135, 120, 255, 0.2);
+    border-radius: 10px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #a78bfa;
+    font-size: 13px;
+}
+
+/* Right Big Card Styling */
+.tj-connect-section .tj-connect-card-box {
+    border-radius: 24px;
+}
+
+/* Image Gradient Overlay (Bottom Solid Dark Navy, Top Faded) */
+.tj-connect-section .tj-connect-overlay {
+    background: linear-gradient(to top, #22025ffa 0%, #3819784d 60%, #cccccc4d 100%);
+    z-index: 2;
+    pointer-events: none;
+}
+
+/* Social Icon Round Buttons */
+.tj-connect-section .tj-social-icon-btn {
+    width: 40px;
+    height: 40px;
+    background: rgba(20, 20, 45, 0.7);
+    border: 1px solid rgba(135, 120, 255, 0.25);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #ffffff;
+    font-size: 14px;
+    text-decoration: none;
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+}
+
+.tj-connect-section .tj-social-icon-btn:hover {
+    background: #e936a7;
+    border-color: #e936a7;
+    color: #ffffff;
+    transform: translateY(-3px);
+    box-shadow: 0 0 15px rgba(233, 54, 167, 0.5);
 }
