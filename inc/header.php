@@ -11,9 +11,9 @@
     <div class="tj-header-bg-glow tj-header-bg-glow-right"></div>
 
     <!-- =====================================
-         DESKTOP / MAIN HEADER
-    ====================================== -->
-    <div class="tj-apparel-header-main">
+         DESKTOP / MAIN HEADER (NAVBAR)
+    ===================================== -->
+    <div class="tj-apparel-header-main" id="tjHeaderMain">
 
         <div class="container">
 
@@ -23,145 +23,74 @@
                      LOGO
                 =========================== -->
                 <div class="tj-apparel-brand">
-
                     <a href="./" class="tj-apparel-brand-link">
-
-                        <img
-                            src="img/logo.png"
-                            class="tj-apparel-logo"
-                            alt="TJ Apparels">
-
+                        <img src="img/logo.png" class="tj-apparel-logo" alt="TJ Apparels">
                     </a>
-
                 </div>
-
 
                 <!-- ==========================
                      DESKTOP NAVIGATION
                 =========================== -->
                 <nav class="tj-apparel-navigation">
-
                     <ul class="tj-apparel-nav-list list-unstyled mb-0" id="tjNavList">
-
                         <li class="tj-apparel-nav-item">
-                            <a href="./" class="tj-apparel-nav-link active">
-                                Home
-                            </a>
+                            <a href="./" class="tj-apparel-nav-link active">Home</a>
                         </li>
-
                         <li class="tj-apparel-nav-item">
-                            <a href="shop" class="tj-apparel-nav-link">
-                                Shop
-                            </a>
+                            <a href="shop" class="tj-apparel-nav-link">Shop</a>
                         </li>
-
                         <li class="tj-apparel-nav-item">
-                            <a href="#" class="tj-apparel-nav-link">
-                                Featured
-                            </a>
+                            <a href="#" class="tj-apparel-nav-link">Featured</a>
                         </li>
-
                         <li class="tj-apparel-nav-item">
-                            <a href="#" class="tj-apparel-nav-link">
-                                Design Apparel
-                            </a>
+                            <a href="#" class="tj-apparel-nav-link">Design Apparel</a>
                         </li>
-
                         <li class="tj-apparel-nav-item">
-                            <a href="about" class="tj-apparel-nav-link">
-                                About
-                            </a>
+                            <a href="about" class="tj-apparel-nav-link">About</a>
                         </li>
-
                         <li class="tj-apparel-nav-item">
-                            <a href="#" class="tj-apparel-nav-link">
-                                Women
-                            </a>
+                            <a href="#" class="tj-apparel-nav-link">Women</a>
                         </li>
-
                         <li class="tj-apparel-nav-item">
-                            <a href="#" class="tj-apparel-nav-link">
-                                Men
-                            </a>
+                            <a href="#" class="tj-apparel-nav-link">Men</a>
                         </li>
-
                         <li class="tj-apparel-nav-item">
-                            <a href="#" class="tj-apparel-nav-link">
-                                Kids
-                            </a>
+                            <a href="#" class="tj-apparel-nav-link">Kids</a>
                         </li>
-
                         <!-- Dynamic GSAP Indicator Bar -->
                         <div class="tj-nav-indicator" id="tjNavIndicator"></div>
                     </ul>
-
                 </nav>
-
 
                 <!-- ==========================
                      HEADER ACTIONS
                 =========================== -->
                 <div class="tj-apparel-actions">
-
-                    <!-- Search -->
-                    <a
-                        href="#"
-                        class="tj-header-action"
-                        aria-label="Search">
-
+                    <!-- Search Trigger Icon -->
+                    <a href="#" class="tj-header-action" id="tjSearchToggleBtn" aria-label="Search">
                         <i class="fa-solid fa-magnifying-glass"></i>
-
                     </a>
-
 
                     <!-- Account -->
-                    <a
-                        href="login"
-                        class="tj-header-action"
-                        aria-label="Account">
-
+                    <a href="login" class="tj-header-action" aria-label="Account">
                         <i class="fa-regular fa-user"></i>
-
                     </a>
-
 
                     <!-- Wishlist -->
-                    <a
-                        href="Wishlist"
-                        class="tj-header-action"
-                        aria-label="Wishlist">
-
+                    <a href="Wishlist" class="tj-header-action" aria-label="Wishlist">
                         <i class="fa-regular fa-heart"></i>
-
                     </a>
-
 
                     <!-- Cart -->
-                    <a
-                        href="cart"
-                        class="tj-header-action tj-header-cart"
-                        aria-label="Cart">
-
+                    <a href="cart" class="tj-header-action tj-header-cart" aria-label="Cart">
                         <i class="fa-solid fa-bag-shopping"></i>
-
-                        <span class="tj-cart-count">
-                            3
-                        </span>
-
+                        <span class="tj-cart-count">3</span>
                     </a>
 
-
                     <!-- Mobile Hamburger -->
-                    <button
-                        type="button"
-                        class="tj-mobile-menu-btn"
-                     id="tjMobileMenuBtn"
-                        aria-label="Open menu">
-
+                    <button type="button" class="tj-mobile-menu-btn" id="tjMobileMenuBtn" aria-label="Open menu">
                         <i class="fa-solid fa-bars"></i>
-
                     </button>
-
                 </div>
 
             </div>
@@ -172,287 +101,105 @@
 
 
     <!-- =====================================
-         MOBILE SIDEBAR OVERLAY
-    ====================================== -->
-    <div
-        class="tj-mobile-overlay"
-        id="tjMobileOverlay">
+         ADVANCED SLIDE-DOWN SEARCH BAR WRAPPER
+    ===================================== -->
+    <div class="tj-advanced-search-bar" id="tjAdvancedSearchBar">
+        <div class="container">
+            <div class="tj-search-bar-inner">
+                
+                <!-- Search Icon Left -->
+                <div class="tj-search-icon-prefix">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </div>
+
+                <!-- Form -->
+                <form action="shop" method="GET" class="tj-inline-search-form">
+                    <input 
+                        type="text" 
+                        name="s" 
+                        id="tjAdvancedSearchInput" 
+                        placeholder="Search for hoodies, oversized tees, winter jackets..." 
+                        autocomplete="off">
+                </form>
+
+                <!-- Quick Inline Tags inside Bar -->
+                <div class="tj-search-quick-tags">
+                    <span class="tj-quick-title">Trending:</span>
+                    <a href="shop?s=hoodie">Hoodie</a>
+                    <a href="shop?s=jacket">Jacket</a>
+                    <a href="shop?s=denim">Denim</a>
+                </div>
+
+                <!-- Close / Back Button -->
+                <button type="button" class="tj-search-close-trigger" id="tjSearchCloseBtn" aria-label="Close Search">
+                    <i class="fa-solid fa-xmark"></i>
+                    <span>Close</span>
+                </button>
+
+            </div>
+        </div>
     </div>
 
 
     <!-- =====================================
+         MOBILE SIDEBAR OVERLAY
+    ===================================== -->
+    <div class="tj-mobile-overlay" id="tjMobileOverlay"></div>
+
+
+    <!-- =====================================
          MOBILE SIDEBAR
-    ====================================== -->
-    <aside
-        class="tj-mobile-sidebar"
-        id="tjMobileSidebar">
-
-        <!-- Sidebar Header -->
+    ===================================== -->
+    <aside class="tj-mobile-sidebar" id="tjMobileSidebar">
         <div class="tj-sidebar-header">
-
             <a href="./" class="tj-sidebar-logo">
-
-                <img
-                    src="img/logo.png"
-                    alt="TJ Apparels">
-
-                <span>
-                    TJ APPARELS
-                </span>
-
+                <img src="img/logo.png" alt="TJ Apparels">
+                <span>TJ APPARELS</span>
             </a>
-
-
-            <button
-                type="button"
-                class="tj-sidebar-close"
-                id="tjSidebarClose"
-                aria-label="Close menu">
-
+            <button type="button" class="tj-sidebar-close" id="tjSidebarClose" aria-label="Close menu">
                 <i class="fa-solid fa-xmark"></i>
-
             </button>
-
         </div>
 
-
-        <!-- Sidebar Search -->
         <div class="tj-sidebar-search">
-
             <div class="tj-sidebar-search-box">
-
-                <input
-                    type="text"
-                    placeholder="Search products...">
-
-                <button type="button">
-
-                    <i class="fa-solid fa-magnifying-glass"></i>
-
-                </button>
-
+                <input type="text" placeholder="Search products...">
+                <button type="button"><i class="fa-solid fa-magnifying-glass"></i></button>
             </div>
-
         </div>
 
-
-        <!-- Sidebar Navigation -->
         <nav class="tj-sidebar-navigation">
-
             <ul class="list-unstyled mb-0">
-
-                <li>
-                    <a href="./" class="active">
-
-                        <span>
-                            <i class="fa-solid fa-house"></i>
-                            Home
-                        </span>
-
-                        <i class="fa-solid fa-chevron-right"></i>
-
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="shop">
-
-                        <span>
-                            <i class="fa-solid fa-bag-shopping"></i>
-                            Shop
-                        </span>
-
-                        <i class="fa-solid fa-chevron-right"></i>
-
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-
-                        <span>
-                            <i class="fa-solid fa-star"></i>
-                            Featured
-                        </span>
-
-                        <i class="fa-solid fa-chevron-right"></i>
-
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-
-                        <span>
-                            <i class="fa-solid fa-shirt"></i>
-                            Design Apparel
-                        </span>
-
-                        <i class="fa-solid fa-chevron-right"></i>
-
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-
-                        <span>
-                            <i class="fa-regular fa-circle-user"></i>
-                            About
-                        </span>
-
-                        <i class="fa-solid fa-chevron-right"></i>
-
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-
-                        <span>
-                            <i class="fa-solid fa-person-dress"></i>
-                            Women
-                        </span>
-
-                        <i class="fa-solid fa-chevron-right"></i>
-
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-
-                        <span>
-                            <i class="fa-solid fa-person"></i>
-                            Men
-                        </span>
-
-                        <i class="fa-solid fa-chevron-right"></i>
-
-                    </a>
-                </li>
-
-
-                <li>
-                    <a href="#">
-
-                        <span>
-                            <i class="fa-solid fa-child"></i>
-                            Kids
-                        </span>
-
-                        <i class="fa-solid fa-chevron-right"></i>
-
-                    </a>
-                </li>
-
+                <li><a href="./" class="active"><span><i class="fa-solid fa-house"></i>Home</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="shop"><span><i class="fa-solid fa-bag-shopping"></i>Shop</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#"><span><i class="fa-solid fa-star"></i>Featured</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#"><span><i class="fa-solid fa-shirt"></i>Design Apparel</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#"><span><i class="fa-regular fa-circle-user"></i>About</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#"><span><i class="fa-solid fa-person-dress"></i>Women</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#"><span><i class="fa-solid fa-person"></i>Men</span><i class="fa-solid fa-chevron-right"></i></a></li>
+                <li><a href="#"><span><i class="fa-solid fa-child"></i>Kids</span><i class="fa-solid fa-chevron-right"></i></a></li>
             </ul>
-
         </nav>
 
-
-        <!-- Sidebar Bottom -->
         <div class="tj-sidebar-account-area">
-
-            <a href="#">
-
-                <i class="fa-regular fa-user"></i>
-
-                <span>
-                    My Account
-                </span>
-
-            </a>
-
-
-            <a href="#">
-
-                <i class="fa-regular fa-heart"></i>
-
-                <span>
-                    Wishlist
-                </span>
-
-            </a>
-
+            <a href="#"><i class="fa-regular fa-user"></i><span>My Account</span></a>
+            <a href="#"><i class="fa-regular fa-heart"></i><span>Wishlist</span></a>
         </div>
-
     </aside>
 
 
     <!-- =====================================
          MOBILE BOTTOM APP BAR
-    ====================================== -->
+    ===================================== -->
     <div class="tj-mobile-bottom-bar">
-
-        <a href="./" class="tj-bottom-item active">
-
-            <i class="fa-solid fa-house"></i>
-
-            <span>
-                Home
-            </span>
-
-        </a>
-
-
-        <a href="shop" class="tj-bottom-item">
-
-            <i class="fa-solid fa-bag-shopping"></i>
-
-            <span>
-                Shop
-            </span>
-
-        </a>
-
-
-        <a href="#" class="tj-bottom-item">
-
-            <i class="fa-regular fa-heart"></i>
-
-            <span>
-                Wishlist
-            </span>
-
-        </a>
-
-
-        <a href="#" class="tj-bottom-item">
-
-            <i class="fa-regular fa-user"></i>
-
-            <span>
-                Account
-            </span>
-
-        </a>
-
-
+        <a href="./" class="tj-bottom-item active"><i class="fa-solid fa-house"></i><span>Home</span></a>
+        <a href="shop" class="tj-bottom-item"><i class="fa-solid fa-bag-shopping"></i><span>Shop</span></a>
+        <a href="#" class="tj-bottom-item"><i class="fa-regular fa-heart"></i><span>Wishlist</span></a>
+        <a href="#" class="tj-bottom-item"><i class="fa-regular fa-user"></i><span>Account</span></a>
         <a href="#" class="tj-bottom-item tj-bottom-cart">
-
-            <span class="tj-bottom-cart-icon">
-
-                <i class="fa-solid fa-cart-shopping"></i>
-
-                <b>
-                    3
-                </b>
-
-            </span>
-
-            <span>
-                Cart
-            </span>
-
+            <span class="tj-bottom-cart-icon"><i class="fa-solid fa-cart-shopping"></i><b>3</b></span>
+            <span>Cart</span>
         </a>
-
     </div>
 
 </header>
@@ -462,19 +209,15 @@
 ========================================= -->
 
 <style>
-    /* =========================================
-   TJ APPARELS HEADER
-    MAIN PARENT
+/* =========================================
+   TJ APPARELS HEADER MAIN PARENT
 ========================================= */
-
 .tj-apparel-header {
     --tj-bg-main: #08081c;
     --tj-bg-secondary: #0b0b25;
     --tj-border: rgba(135, 120, 255, 0.16);
-
     --tj-text: #ffffff;
     --tj-muted: rgba(255, 255, 255, 0.52);
-
     --tj-purple: #7d35e8;
     --tj-blue: #334fff;
     --tj-pink: #e936a7;
@@ -482,24 +225,20 @@
     position: relative;
     width: 100%;
     z-index: 9999;
-
     background: #000;
-
     font-family: Arial, Helvetica, sans-serif;
+    overflow: hidden;
 }
 
-
 /* =========================================
-   MAIN HEADER
+   MAIN HEADER (NAVBAR)
 ========================================= */
-
 .tj-apparel-header-main {
     position: relative;
     width: 100%;
     height: 59px;
     display: flex;
     align-items: center;
-    overflow: hidden;
     background: linear-gradient(
         90deg,
         #10102d 0%,
@@ -509,13 +248,12 @@
     );
     border-top: 1px solid rgba(255, 255, 255, 0.025);
     border-bottom: 1px solid var(--tj-border);
+    z-index: 5;
 }
-
 
 /* =========================================
    BACKGROUND GLOW
 ========================================= */
-
 .tj-header-bg-glow {
     position: absolute;
     pointer-events: none;
@@ -540,11 +278,6 @@
     background: rgba(42, 73, 219, 0.18);
 }
 
-
-/* =========================================
-   HEADER INNER
-========================================= */
-
 .tj-apparel-header-inner {
     position: relative;
     z-index: 2;
@@ -554,11 +287,7 @@
     justify-content: space-between;
 }
 
-
-/* =========================================
-   BRAND
-========================================= */
-
+/* BRAND */
 .tj-apparel-brand {
     flex-shrink: 0;
 }
@@ -575,15 +304,10 @@
     height: 100%;
     object-fit: scale-down;
     display: block;
-    filter: drop-shadow(0 0 4px rgba(113, 75, 255, 0.55))
-        drop-shadow(0 0 8px rgba(98, 51, 255, 0.18));
+    filter: drop-shadow(0 0 4px rgba(113, 75, 255, 0.55));
 }
 
-
-/* =========================================
-   DESKTOP NAVIGATION WITH GSAP INDICATOR
-========================================= */
-
+/* DESKTOP NAVIGATION */
 .tj-apparel-navigation {
     position: relative;
 }
@@ -617,28 +341,19 @@
     color: #ffffff;
 }
 
-/* GSAP Animated Bottom Indicator Bar */
 .tj-nav-indicator {
     position: absolute;
     bottom: 13px;
     left: 0;
     height: 2px;
-    background: linear-gradient(
-        90deg,
-        var(--tj-purple),
-        var(--tj-pink)
-    );
+    background: linear-gradient(90deg, var(--tj-purple), var(--tj-pink));
     box-shadow: 0 0 8px rgba(178, 62, 255, 0.6);
     pointer-events: none;
     z-index: 5;
     border-radius: 2px;
 }
 
-
-/* =========================================
-   HEADER ACTIONS
-========================================= */
-
+/* HEADER ACTIONS */
 .tj-apparel-actions {
     display: flex;
     align-items: center;
@@ -658,7 +373,7 @@
     border: 1px solid rgba(255, 255, 255, 0.10);
     background: rgba(255, 255, 255, 0.015);
     text-decoration: none;
-    transition: color 0.3s ease, border-color 0.3s ease, background 0.3s ease, box-shadow 0.3s ease;
+    transition: all 0.3s ease;
 }
 
 .tj-header-action i {
@@ -672,11 +387,7 @@
     box-shadow: 0 0 10px rgba(108, 55, 255, 0.18);
 }
 
-
-/* =========================================
-   CART BADGE
-========================================= */
-
+/* CART BADGE */
 .tj-header-cart {
     overflow: visible;
 }
@@ -699,10 +410,113 @@
     box-shadow: 0 0 7px rgba(255, 48, 158, 0.45);
 }
 
-
 /* =========================================
-   MOBILE MENU BUTTON & SIDEBAR STYLES (Kept intact)
+   ADVANCED SLIDE-DOWN SEARCH BAR STYLES
 ========================================= */
+.tj-advanced-search-bar {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 59px;
+    background: linear-gradient(90deg, #100f28 0%, #0d0b24 100%);
+    border-bottom: 1px solid rgba(135, 120, 255, 0.3);
+    z-index: 6;
+    display: flex;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transform: translateY(-100%);
+}
+
+.tj-search-bar-inner {
+    display: flex;
+    align-items: center;
+    width: 100%;
+    height: 100%;
+    gap: 15px;
+}
+
+.tj-search-icon-prefix {
+    color: var(--tj-purple);
+    font-size: 14px;
+    display: flex;
+    align-items: center;
+}
+
+.tj-inline-search-form {
+    flex-grow: 1;
+    height: 100%;
+    display: flex;
+    align-items: center;
+}
+
+.tj-inline-search-form input {
+    width: 100%;
+    background: transparent;
+    border: none;
+    outline: none;
+    color: #ffffff;
+    font-size: 14px;
+    font-weight: 400;
+}
+
+.tj-inline-search-form input::placeholder {
+    color: rgba(255, 255, 255, 0.35);
+}
+
+.tj-search-quick-tags {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    flex-shrink: 0;
+}
+
+.tj-quick-title {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tj-search-quick-tags a {
+    padding: 4px 12px;
+    background: rgba(255, 255, 255, 0.04);
+    border: 1px solid rgba(255, 255, 255, 0.08);
+    border-radius: 15px;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 11px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+}
+
+.tj-search-quick-tags a:hover {
+    background: rgba(125, 53, 232, 0.2);
+    border-color: var(--tj-purple);
+    color: #ffffff;
+}
+
+.tj-search-close-trigger {
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: #ffffff;
+    padding: 6px 14px;
+    border-radius: 20px;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    font-size: 11px;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    flex-shrink: 0;
+}
+
+.tj-search-close-trigger:hover {
+    background: rgba(233, 54, 167, 0.2);
+    border-color: var(--tj-pink);
+}
+
+/* MOBILE MENU BUTTON & SIDEBAR */
 .tj-mobile-menu-btn {
     display: none;
     width: 34px;
@@ -714,11 +528,6 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
-    transition: border-color 0.3s ease, background 0.3s ease;
-}
-
-.tj-mobile-menu-btn i {
-    font-size: 13px;
 }
 
 .tj-mobile-overlay {
@@ -746,9 +555,8 @@
     z-index: 99999;
     display: flex;
     flex-direction: column;
-    background: radial-gradient(circle at 100% 0%, rgba(113, 44, 207, 0.16), transparent 35%), linear-gradient(180deg, #0c0b25 0%, #08091b 100%);
+    background: linear-gradient(180deg, #0c0b25 0%, #08091b 100%);
     border-left: 1px solid rgba(134, 87, 255, 0.20);
-    box-shadow: -15px 0 50px rgba(0, 0, 0, 0.55);
     transform: translateX(105%);
     transition: transform 0.4s cubic-bezier(0.77, 0, 0.18, 1);
     overflow-y: auto;
@@ -794,7 +602,6 @@
     color: rgba(255, 255, 255, 0.7);
     background: rgba(255, 255, 255, 0.025);
     cursor: pointer;
-    transition: 0.3s ease;
 }
 
 .tj-sidebar-search {
@@ -847,7 +654,6 @@
     color: rgba(255, 255, 255, 0.60);
     text-decoration: none;
     font-size: 12px;
-    transition: color 0.3s ease, padding-left 0.3s ease;
 }
 
 .tj-sidebar-navigation li a span {
@@ -857,10 +663,7 @@
 }
 
 .tj-sidebar-navigation li a span i {
-    width: 18px;
-    text-align: center;
     color: rgba(145, 92, 255, 0.75);
-    font-size: 12px;
 }
 
 .tj-sidebar-account-area {
@@ -884,7 +687,6 @@
     border: 1px solid rgba(255, 255, 255, 0.06);
     text-decoration: none;
     font-size: 11px;
-    transition: 0.3s ease;
 }
 
 .tj-mobile-bottom-bar {
@@ -893,9 +695,10 @@
 
 @media (max-width: 991.98px) {
     .tj-apparel-header-main { height: 64px; }
-    .tj-apparel-header-inner { min-height: 64px; }
+    .tj-apparel-advanced-search-bar { height: 64px; }
     .tj-apparel-navigation { display: none; }
     .tj-mobile-menu-btn { display: flex; }
+    .tj-search-quick-tags { display: none; } /* Hide quick tags on small screens */
 
     .tj-mobile-bottom-bar {
         position: fixed;
@@ -923,7 +726,7 @@
 }
 </style>
 
-<!-- Ensure GSAP is included before your script tag if not already added -->
+<!-- Ensure GSAP is included -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 
 <script>
@@ -957,11 +760,6 @@ document.addEventListener("DOMContentLoaded", function () {
         if (event.key === "Escape") closeMobileMenu();
     });
 
-    const sidebarLinks = document.querySelectorAll(".tj-sidebar-navigation a");
-    sidebarLinks.forEach(function (link) {
-        link.addEventListener("click", closeMobileMenu);
-    });
-
 
     /* ==========================================
         GSAP DYNAMIC NAV HOVER/ACTIVE INDICATOR
@@ -971,13 +769,10 @@ document.addEventListener("DOMContentLoaded", function () {
     const indicator = document.getElementById("tjNavIndicator");
 
     if (navList && indicator && navLinks.length > 0) {
-        
-        // 1. Current URL detect karke automatically 'active' class assign karna
-        const currentPath = window.location.pathname.split("/").pop(); // e.g., 'shop' or '' (for home)
+        const currentPath = window.location.pathname.split("/").pop();
         
         navLinks.forEach(link => {
             const href = link.getAttribute("href");
-            // Check agar current path link ke href se match karta hai
             if (href === currentPath || (currentPath === "" && (href === "./" || href === "/"))) {
                 navLinks.forEach(l => l.classList.remove("active"));
                 link.classList.add("active");
@@ -986,42 +781,77 @@ document.addEventListener("DOMContentLoaded", function () {
 
         const activeLink = document.querySelector(".tj-apparel-nav-link.active") || navLinks[0];
 
-        // Function to set the indicator position to a specific link
         function moveIndicator(link, instant = false) {
             const listRect = navList.getBoundingClientRect();
             const linkRect = link.getBoundingClientRect();
-            
             const left = linkRect.left - listRect.left;
             const width = linkRect.width;
 
             if (instant) {
                 gsap.set(indicator, { x: left, width: width });
             } else {
-                gsap.to(indicator, {
-                    x: left,
-                    width: width,
-                    duration: 0.4,
-                    ease: "power3.out"
-                });
+                gsap.to(indicator, { x: left, width: width, duration: 0.4, ease: "power3.out" });
             }
         }
 
-        // Initialize position on load based on active link
         moveIndicator(activeLink, true);
 
-        // Hover events
         navLinks.forEach(link => {
-            link.addEventListener("mouseenter", function() {
-                moveIndicator(this);
-            });
+            link.addEventListener("mouseenter", function() { moveIndicator(this); });
         });
 
-        // Reset to active link when mouse leaves nav list
         navList.addEventListener("mouseleave", function() {
             const currentActive = document.querySelector(".tj-apparel-nav-link.active") || activeLink;
             moveIndicator(currentActive);
         });
     }
+
+
+    /* ==========================================
+        ADVANCED SLIDE-DOWN SEARCH BAR LOGIC
+    ========================================== */
+    const searchToggleBtn = document.getElementById("tjSearchToggleBtn");
+    const searchCloseBtn = document.getElementById("tjSearchCloseBtn");
+    const headerMain = document.getElementById("tjHeaderMain");
+    const searchBar = document.getElementById("tjAdvancedSearchBar");
+    const searchInput = document.getElementById("tjAdvancedSearchInput");
+
+    function openAdvancedSearch(e) {
+        if (e) e.preventDefault();
+
+        // Make search bar visible and animate transition
+        gsap.set(searchBar, { visibility: "visible" });
+        
+        const tl = gsap.timeline();
+        tl.to(headerMain, { y: -60, opacity: 0, duration: 0.3, ease: "power2.in" })
+          .to(searchBar, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, "-=0.1");
+
+        if (searchInput) {
+            setTimeout(() => { searchInput.focus(); }, 200);
+        }
+    }
+
+    function closeAdvancedSearch(e) {
+        if (e) e.preventDefault();
+
+        const tl = gsap.timeline();
+        tl.to(searchBar, { y: -60, opacity: 0, duration: 0.3, ease: "power2.in", onComplete: () => {
+            gsap.set(searchBar, { visibility: "hidden" });
+        }})
+          .to(headerMain, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, "-=0.1");
+
+        if (searchInput) searchInput.value = "";
+    }
+
+    if (searchToggleBtn) searchToggleBtn.addEventListener("click", openAdvancedSearch);
+    if (searchCloseBtn) searchCloseBtn.addEventListener("click", closeAdvancedSearch);
+
+    // Close on Escape key
+    document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && searchBar.style.visibility === "visible") {
+            closeAdvancedSearch();
+        }
+    });
 
 });
 </script>

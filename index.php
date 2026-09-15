@@ -294,6 +294,159 @@ include 'inc/app.php'; ?>
 <!-- =========================================
      TJ SHOP BY CATEGORY SECTION END
 ========================================= -->
+<?php
+// Collections Products Data Array
+$collection_products = [
+    [
+        "id" => 1,
+        "title" => "Silk Designer Blouse",
+        "desc" => "Elegant silk blouse with pearl buttons and flowing sleeves",
+        "image" => "img/shop.png",
+        "price" => 129.99,
+        "old_price" => null,
+        "rating" => "4.9",
+        "reviews" => "38",
+        "is_featured" => true,
+        "category" => "featured women",
+        "edit" => "edit-1",
+        "size" => "m",
+        "colors" => [
+            ["name" => "Ivory", "hex" => "#f3efe9"],
+            ["name" => "Rose Gold", "hex" => "#e0b8ab"]
+        ]
+    ],
+    [
+        "id" => 2,
+        "title" => "High-Waisted Palazzo",
+        "desc" => "Flowy wide-leg palazzo pants in premium crepe fabric",
+        "image" => "img/shop1.png",
+        "price" => 89.99,
+        "old_price" => null,
+        "rating" => "4.7",
+        "reviews" => "24",
+        "is_featured" => false,
+        "category" => "trending women",
+        "edit" => "edit-1",
+        "size" => "l",
+        "colors" => [
+            ["name" => "Emerald", "hex" => "#19583c"],
+            ["name" => "Navy", "hex" => "#23314a"]
+        ]
+    ],
+    [
+        "id" => 3,
+        "title" => "Utility Cargo Pants",
+        "desc" => "Stylish cargo pants with multiple pockets and adjustable waist",
+        "image" => "img/shop2.png",
+        "price" => 74.99,
+        "old_price" => null,
+        "rating" => "4.8",
+        "reviews" => "42",
+        "is_featured" => true,
+        "category" => "featured women",
+        "edit" => "edit-2",
+        "size" => "m",
+        "colors" => [
+            ["name" => "Olive", "hex" => "#737554"],
+            ["name" => "Black", "hex" => "#1b1b1b"]
+        ]
+    ],
+    [
+        "id" => 4,
+        "title" => "Floral Midi Summer Dress",
+        "desc" => "Beautiful floral print midi dress perfect for any occasion",
+        "image" => "img/shop3.png",
+        "price" => 119.99,
+        "old_price" => null,
+        "rating" => "4.9",
+        "reviews" => "56",
+        "is_featured" => true,
+        "category" => "trending women",
+        "edit" => "edit-2",
+        "size" => "s",
+        "colors" => [
+            ["name" => "Floral Multi", "hex" => "#e6ccd0"],
+            ["name" => "Solid Navy", "hex" => "#192a4a"]
+        ]
+    ],
+    [
+        "id" => 5,
+        "title" => "High-Rise Denim Jeans",
+        "desc" => "Sustainable high-rise jeans with perfect stretch and fit",
+        "image" => "img/shop4.png",
+        "price" => 99.99,
+        "old_price" => null,
+        "rating" => "4.6",
+        "reviews" => "31",
+        "is_featured" => false,
+        "category" => "featured women",
+        "edit" => "edit-1",
+        "size" => "m",
+        "colors" => [
+            ["name" => "Dark Indigo", "hex" => "#212c42"],
+            ["name" => "Light Wash", "hex" => "#9ab4cb"]
+        ]
+    ],
+    [
+        "id" => 6,
+        "title" => "Elegant Jumpsuit",
+        "desc" => "Sophisticated sleeveless jumpsuit with wide legs and belt",
+        "image" => "img/shop5.png",
+        "price" => 149.99,
+        "old_price" => null,
+        "rating" => "5.0",
+        "reviews" => "19",
+        "is_featured" => true,
+        "category" => "trending women",
+        "edit" => "edit-1",
+        "size" => "l",
+        "colors" => [
+            ["name" => "Navy", "hex" => "#17213b"],
+            ["name" => "Black", "hex" => "#121212"]
+        ]
+    ],
+    [
+        "id" => 7,
+        "title" => "Classic Button-Down Shirt",
+        "desc" => "Crisp white cotton shirt perfect for professional or casual wear",
+        "image" => "img/shop6.png",
+        "price" => 69.99,
+        "old_price" => null,
+        "rating" => "4.8",
+        "reviews" => "27",
+        "is_featured" => false,
+        "category" => "men",
+        "edit" => "edit-2",
+        "size" => "l",
+        "colors" => [
+            ["name" => "White", "hex" => "#ffffff"],
+            ["name" => "Light Blue", "hex" => "#b5d1e8"]
+        ]
+    ],
+    [
+        "id" => 8,
+        "title" => "A-Line Mini Skirt",
+        "desc" => "Versatile A-line skirt in premium fabric with side pockets",
+        "image" => "img/shop7.png",
+        "price" => 59.99,
+        "old_price" => null,
+        "rating" => "4.7",
+        "reviews" => "35",
+        "is_featured" => true,
+        "category" => "featured women",
+        "edit" => "edit-2",
+        "size" => "s",
+        "colors" => [
+            ["name" => "Black", "hex" => "#1f1f1f"],
+            ["name" => "Navy", "hex" => "#1c2838"]
+        ]
+    ]
+];
+?>
+
+<!-- =========================================
+     TJ DISCOVER COLLECTIONS SECTION START
+========================================= -->
 <!-- =========================================
      TJ DISCOVER COLLECTIONS SECTION START
 ========================================= -->
@@ -351,227 +504,29 @@ include 'inc/app.php'; ?>
             </div>
         </div>
 
-        <!-- Products Grid (4 Columns) -->
+        <!-- Products Grid (4 Columns on Home Page: col-xl-3) -->
         <div class="row g-4 tj-products-container" id="tjProductsGrid">
-            
-            <!-- Card 1 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 tj-product-col" data-category="featured women">
-                <div class="tj-product-card h-100">
-                    <div class="tj-product-img-wrap position-relative">
-                        <span class="tj-featured-badge">FEATURED</span>
-                        <img src="img/shop.png" alt="Silk Designer Blouse" class="tj-product-img w-100">
-                    </div>
-                    <div class="tj-product-body p-4">
-                        <h3 class="tj-product-title fw-bold mb-1">Silk Designer Blouse</h3>
-                        <p class="tj-product-desc mb-3">Elegant silk blouse with pearl buttons and flowing sleeves</p>
-                        <div class="tj-product-colors d-flex align-items-center gap-2 mb-4">
-                            <span class="tj-color-dot" style="background: #f3efe9;" title="Ivory"></span>
-                            <span class="tj-color-text">Ivory</span>
-                            <span class="tj-color-dot ms-2" style="background: #e0b8ab;" title="Rose Gold"></span>
-                            <span class="tj-color-text">Rose Gold</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-10">
-                            <span class="tj-product-price fw-bold">$129.99</span>
-                            <a href="#" class="tj-details-link text-decoration-none d-flex align-items-center gap-1">
-                                View Details <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 2 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 tj-product-col" data-category="trending women">
-                <div class="tj-product-card h-100">
-                    <div class="tj-product-img-wrap position-relative">
-                        <img src="img/shop1.png" alt="High-Waisted Palazzo Pants" class="tj-product-img w-100">
-                    </div>
-                    <div class="tj-product-body p-4">
-                        <h3 class="tj-product-title fw-bold mb-1">High-Waisted Palazzo</h3>
-                        <p class="tj-product-desc mb-3">Flowy wide-leg palazzo pants in premium crepe fabric</p>
-                        <div class="tj-product-colors d-flex align-items-center gap-2 mb-4">
-                            <span class="tj-color-dot" style="background: #19583c;" title="Emerald"></span>
-                            <span class="tj-color-text">Emerald</span>
-                            <span class="tj-color-dot ms-2" style="background: #23314a;" title="Navy"></span>
-                            <span class="tj-color-text">Navy</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-10">
-                            <span class="tj-product-price fw-bold">$89.99</span>
-                            <a href="#" class="tj-details-link text-decoration-none d-flex align-items-center gap-1">
-                                View Details <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 3 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 tj-product-col" data-category="featured women">
-                <div class="tj-product-card h-100">
-                    <div class="tj-product-img-wrap position-relative">
-                        <span class="tj-featured-badge">FEATURED</span>
-                        <img src="img/shop2.png" alt="Women's Utility Cargo Pants" class="tj-product-img w-100">
-                    </div>
-                    <div class="tj-product-body p-4">
-                        <h3 class="tj-product-title fw-bold mb-1">Utility Cargo Pants</h3>
-                        <p class="tj-product-desc mb-3">Stylish cargo pants with multiple pockets and adjustable waist</p>
-                        <div class="tj-product-colors d-flex align-items-center gap-2 mb-4">
-                            <span class="tj-color-dot" style="background: #737554;" title="Olive"></span>
-                            <span class="tj-color-text">Olive</span>
-                            <span class="tj-color-dot ms-2" style="background: #1b1b1b;" title="Black"></span>
-                            <span class="tj-color-text">Black</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-10">
-                            <span class="tj-product-price fw-bold">$74.99</span>
-                            <a href="#" class="tj-details-link text-decoration-none d-flex align-items-center gap-1">
-                                View Details <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 4 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 tj-product-col" data-category="trending women">
-                <div class="tj-product-card h-100">
-                    <div class="tj-product-img-wrap position-relative">
-                        <span class="tj-featured-badge">FEATURED</span>
-                        <img src="img/shop3.png" alt="Floral Midi Summer Dress" class="tj-product-img w-100">
-                    </div>
-                    <div class="tj-product-body p-4">
-                        <h3 class="tj-product-title fw-bold mb-1">Floral Midi Summer Dress</h3>
-                        <p class="tj-product-desc mb-3">Beautiful floral print midi dress perfect for any occasion</p>
-                        <div class="tj-product-colors d-flex align-items-center gap-2 mb-4">
-                            <span class="tj-color-dot" style="background: #e6ccd0;" title="Floral Multi"></span>
-                            <span class="tj-color-text">Floral Multi</span>
-                            <span class="tj-color-dot ms-2" style="background: #192a4a;" title="Solid Navy"></span>
-                            <span class="tj-color-text">Solid Navy</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-10">
-                            <span class="tj-product-price fw-bold">$119.99</span>
-                            <a href="#" class="tj-details-link text-decoration-none d-flex align-items-center gap-1">
-                                View Details <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 5 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 tj-product-col" data-category="featured women">
-                <div class="tj-product-card h-100">
-                    <div class="tj-product-img-wrap position-relative">
-                        <img src="img/shop4.png" alt="Premium Denim High-Rise Jeans" class="tj-product-img w-100">
-                    </div>
-                    <div class="tj-product-body p-4">
-                        <h3 class="tj-product-title fw-bold mb-1">High-Rise Denim Jeans</h3>
-                        <p class="tj-product-desc mb-3">Sustainable high-rise jeans with perfect stretch and fit</p>
-                        <div class="tj-product-colors d-flex align-items-center gap-2 mb-4">
-                            <span class="tj-color-dot" style="background: #212c42;" title="Dark Indigo"></span>
-                            <span class="tj-color-text">Dark Indigo</span>
-                            <span class="tj-color-dot ms-2" style="background: #9ab4cb;" title="Light Wash"></span>
-                            <span class="tj-color-text">Light Wash</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-10">
-                            <span class="tj-product-price fw-bold">$99.99</span>
-                            <a href="#" class="tj-details-link text-decoration-none d-flex align-items-center gap-1">
-                                View Details <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 6 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 tj-product-col" data-category="trending women">
-                <div class="tj-product-card h-100">
-                    <div class="tj-product-img-wrap position-relative">
-                        <span class="tj-featured-badge">FEATURED</span>
-                        <img src="img/shop5.png" alt="Elegant Jumpsuit" class="tj-product-img w-100">
-                    </div>
-                    <div class="tj-product-body p-4">
-                        <h3 class="tj-product-title fw-bold mb-1">Elegant Jumpsuit</h3>
-                        <p class="tj-product-desc mb-3">Sophisticated sleeveless jumpsuit with wide legs and belt</p>
-                        <div class="tj-product-colors d-flex align-items-center gap-2 mb-4">
-                            <span class="tj-color-dot" style="background: #17213b;" title="Navy"></span>
-                            <span class="tj-color-text">Navy</span>
-                            <span class="tj-color-dot ms-2" style="background: #121212;" title="Black"></span>
-                            <span class="tj-color-text">Black</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-10">
-                            <span class="tj-product-price fw-bold">$149.99</span>
-                            <a href="#" class="tj-details-link text-decoration-none d-flex align-items-center gap-1">
-                                View Details <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 7 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 tj-product-col" data-category="men">
-                <div class="tj-product-card h-100">
-                    <div class="tj-product-img-wrap position-relative">
-                        <img src="img/shop6.png" alt="Classic Button-Down Shirt" class="tj-product-img w-100">
-                    </div>
-                    <div class="tj-product-body p-4">
-                        <h3 class="tj-product-title fw-bold mb-1">Classic Button-Down Shirt</h3>
-                        <p class="tj-product-desc mb-3">Crisp white cotton shirt perfect for professional or casual wear</p>
-                        <div class="tj-product-colors d-flex align-items-center gap-2 mb-4">
-                            <span class="tj-color-dot" style="background: #ffffff;" title="White"></span>
-                            <span class="tj-color-text">White</span>
-                            <span class="tj-color-dot ms-2" style="background: #b5d1e8;" title="Light Blue"></span>
-                            <span class="tj-color-text">Light Blue</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-10">
-                            <span class="tj-product-price fw-bold">$69.99</span>
-                            <a href="#" class="tj-details-link text-decoration-none d-flex align-items-center gap-1">
-                                View Details <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-            <!-- Card 8 -->
-            <div class="col-xl-3 col-lg-4 col-md-6 tj-product-col" data-category="featured women">
-                <div class="tj-product-card h-100">
-                    <div class="tj-product-img-wrap position-relative">
-                        <span class="tj-featured-badge">FEATURED</span>
-                        <img src="img/shop7.png" alt="A-Line Mini Skirt" class="tj-product-img w-100">
-                    </div>
-                    <div class="tj-product-body p-4">
-                        <h3 class="tj-product-title fw-bold mb-1">A-Line Mini Skirt</h3>
-                        <p class="tj-product-desc mb-3">Versatile A-line skirt in premium fabric with side pockets</p>
-                        <div class="tj-product-colors d-flex align-items-center gap-2 mb-4">
-                            <span class="tj-color-dot" style="background: #1f1f1f;" title="Black"></span>
-                            <span class="tj-color-text">Black</span>
-                            <span class="tj-color-dot ms-2" style="background: #1c2838;" title="Navy"></span>
-                            <span class="tj-color-text">Navy</span>
-                        </div>
-                        <div class="d-flex align-items-center justify-content-between pt-2 border-top border-secondary border-opacity-10">
-                            <span class="tj-product-price fw-bold">$59.99</span>
-                            <a href="#" class="tj-details-link text-decoration-none d-flex align-items-center gap-1">
-                                View Details <i class="fa-solid fa-arrow-right"></i>
-                            </a>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
+            <?php foreach ($collection_products as $prod) {
+                // Set 4 columns layout for home page
+                $colClass = "col-xl-3 col-lg-4 col-md-6 tj-product-col";
+                include 'inc/product-card.php';
+            } ?>
         </div>
 
         <!-- Bottom View All Button -->
         <div class="row justify-content-center mt-5">
             <div class="col-auto text-center">
                 <a href="#" class="ah-apparel-btn11">
-                    View All Products (53) <i class="fa-solid fa-arrow-right"></i>
+                    View All Products (<?php echo count($collection_products); ?>) <i class="fa-solid fa-arrow-right"></i>
                 </a>
             </div>
         </div>
 
     </div>
 </section>
+<!-- =========================================
+     TJ DISCOVER COLLECTIONS SECTION END
+========================================= -->
 <!-- =========================================
      TJ DISCOVER COLLECTIONS SECTION END
 ========================================= -->
@@ -1010,73 +965,8 @@ include 'inc/app.php'; ?>
 <!-- Include GSAP and ScrollTrigger if not already loaded -->
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/ScrollTrigger.min.js"></script>
+<!-- collection script -->
 
-<script>
-document.addEventListener("DOMContentLoaded", function () {
-   
-    // Filter Buttons Functionality
-    const filterBtns = document.querySelectorAll(".tj-filter-btn");
-    const productCols = document.querySelectorAll(".tj-product-col");
-
-    filterBtns.forEach(btn => {
-        btn.addEventListener("click", function () {
-            filterBtns.forEach(b => b.classList.remove("active"));
-            this.classList.add("active");
-
-            const filterValue = this.getAttribute("data-filter");
-
-            productCols.forEach(col => {
-                const categories = col.getAttribute("data-category");
-                if (filterValue === "all" || categories.includes(filterValue)) {
-                    col.style.display = "block";
-                } else {
-                    col.style.display = "none";
-                }
-            });
-        });
-    });
-
-    // Search Bar Filtering Functionality
-    const searchInput = document.getElementById("tjProductSearch");
-    searchInput.addEventListener("input", function () {
-        const query = this.value.toLowerCase().trim();
-
-        productCols.forEach(col => {
-            const title = col.querySelector(".tj-product-title").innerText.toLowerCase();
-            const desc = col.querySelector(".tj-product-desc").innerText.toLowerCase();
-
-            if (title.includes(query) || desc.includes(query)) {
-                col.style.display = "block";
-            } else {
-                col.style.display = "none";
-            }
-        });
-    });
-
-    // Grid / List Layout Toggle
-    const gridViewBtn = document.getElementById("tjGridViewBtn");
-    const listViewBtn = document.getElementById("tjListViewBtn");
-    const productsGrid = document.getElementById("tjProductsGrid");
-
-    gridViewBtn.addEventListener("click", function () {
-        gridViewBtn.classList.add("active");
-        listViewBtn.classList.remove("active");
-        productsGrid.classList.remove("list-view-mode");
-        productCols.forEach(col => {
-            col.className = "col-xl-3 col-lg-4 col-md-6 tj-product-col";
-        });
-    });
-
-    listViewBtn.addEventListener("click", function () {
-        listViewBtn.classList.add("active");
-        gridViewBtn.classList.remove("active");
-        productsGrid.classList.add("list-view-mode");
-        productCols.forEach(col => {
-            col.className = "col-12 tj-product-col";
-        });
-    });
-});
-</script>
 <script>
 document.addEventListener("DOMContentLoaded", function () {
     const amountCheckboxes = document.querySelectorAll(".tj-amount-checkbox");

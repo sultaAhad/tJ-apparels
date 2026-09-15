@@ -1670,3 +1670,12 @@ background: linear-gradient(130deg, rgba(136, 124, 179, 1) 41%, rgba(107, 97, 15
     transform: translateY(-3px);
     box-shadow: 0 0 15px rgba(233, 54, 167, 0.5);
 }
+
+.list-view-mode .tj-product-card {
+    flex-direction: row !important;
+}
+
+.list-view-mode .tj-product-img-wrapper{
+    height: 250px !important;
+    width: 270px !important;
+}

@@ -182,7 +182,6 @@
 ========================================= */
 
 .tj-product-parent {
-    background: radial-gradient(circle at 20% 50%, #161239 0%, #08081c 70%);
     font-family: var(--heading-font, Arial, Helvetica, sans-serif);
 }
 
@@ -264,20 +263,21 @@
 }
 
 /* Product Card Styling */
-.tj-product-parent .tj-product-card {
-    background: linear-gradient(180deg, #121633 0%, #0a0b1e 100%);
+.tj-product-card {
+    background: #11143f;
     border: 1px solid rgba(135, 120, 255, 0.15);
     box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease, border-color 0.3s ease;
+    border-radius: 20px;
 }
 
-.tj-product-parent .tj-product-card:hover {
+ .tj-product-card:hover {
     transform: translateY(-5px);
     border-color: rgba(233, 54, 167, 0.4);
 }
 
 /* Featured Badge */
-.tj-product-parent .tj-featured-badge {
+ .tj-featured-badge {
     position: absolute;
     top: 15px;
     right: 15px;
@@ -292,7 +292,7 @@
 }
 
 /* Product Image Linear Gradient Overlay */
-.tj-product-parent .tj-product-img-wrapper .tj-img-overlay {
+ .tj-product-img-wrapper .tj-img-overlay {
     position: absolute;
     bottom: 0;
     left: 0;
@@ -303,16 +303,16 @@
     pointer-events: none;
 }
 
-.tj-product-parent .tj-product-img-wrapper img {
+ .tj-product-img-wrapper img {
     transition: transform 0.5s ease;
 }
 
-.tj-product-parent .tj-product-card:hover .tj-product-img-wrapper img {
+ .tj-product-card:hover .tj-product-img-wrapper img {
     transform: scale(1.05);
 }
 
 /* Color Dots */
-.tj-product-parent .tj-color-dot {
+ .tj-color-dot {
     width: 12px;
     height: 12px;
     border-radius: 50%;
@@ -321,18 +321,19 @@
 }
 
 /* View Details Hover Animation */
-.tj-product-parent .tj-view-details-link {
+.tj-view-details-link {
     transition: color 0.3s ease;
+    color: #D0C2ED !important;
 }
 
-.tj-product-parent .tj-view-details-link:hover {
+ .tj-view-details-link:hover {
     color: #e936a7 !important;
 }
 
-.tj-product-parent .tj-view-details-link i {
+ .tj-view-details-link i {
     transition: transform 0.3s ease;
 }
 
-.tj-product-parent .tj-view-details-link:hover i {
+ .tj-view-details-link:hover i {
     transform: translateX(4px);
 }

@@ -2,13 +2,13 @@
 body {
 	overflow-x: hidden;
 	font-family: var(--secondary-regular-font);
-	background: var(--body-color);
+	background: #090b29;
 	overflow-y: scroll;
 }
 
 body::-webkit-scrollbar {
 	width: 5px;
-	background: var(--body-color);
+	background: #090b29;
 }
 
 body::-webkit-scrollbar-track {
