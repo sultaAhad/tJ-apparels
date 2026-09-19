@@ -13,88 +13,7 @@ include 'inc/inner-banner.php';
 ?>
 <!-- banner Include Here  -->
 
-<style>
-    .tj-dashboard-section {
-        background-color: #0b0b1a;
-        padding: 50px 0 80px 0;
-    }
 
-    /* Dashboard Cards Style */
-    .tj-stat-card {
-        background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
-        border: 1px solid rgba(135, 120, 255, 0.16);
-        border-radius: 20px;
-        padding: 25px;
-        height: 100%;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-        transition: 0.3s;
-    }
-    .tj-stat-card:hover {
-        border-color: rgba(233, 54, 167, 0.4);
-        transform: translateY(-3px);
-    }
-
-    .tj-stat-icon {
-        color: #e936a7;
-        font-size: 18px;
-        margin-bottom: 15px;
-        display: inline-block;
-    }
-
-    .tj-stat-number {
-        color: #fff;
-        font-size: 28px;
-        font-weight: 800;
-        margin-bottom: 5px;
-    }
-
-    .tj-stat-label {
-        color: rgba(255, 255, 255, 0.55);
-        font-size: 12.5px;
-        font-weight: 500;
-    }
-
-    /* Info & Address Boxes */
-    .tj-info-box-title {
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 10.5px;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        margin-bottom: 15px;
-        display: flex;
-        justify-content: space-between;
-        align-items: center;
-    }
-
-    .tj-edit-btn {
-        background: rgba(125, 53, 232, 0.15);
-        border: 1px solid rgba(135, 120, 255, 0.2);
-        color: #fff;
-        font-size: 11px;
-        padding: 4px 12px;
-        border-radius: 50px;
-        text-decoration: none;
-        transition: 0.3s;
-    }
-    .tj-edit-btn:hover {
-        background: var(--tj-pink, #e936a7);
-        color: #fff;
-    }
-
-    .tj-info-content h5 {
-        color: #fff;
-        font-size: 15px;
-        font-weight: 700;
-        margin-bottom: 6px;
-    }
-
-    .tj-info-content p {
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 13px;
-        margin-bottom: 4px;
-    }
-</style>
 
 <section class="tj-dashboard-section">
     <div class="container">
@@ -144,23 +63,9 @@ include 'inc/inner-banner.php';
                 <div class="row g-4">
                     <div class="col-md-6">
                         <div class="tj-stat-card">
-                            <div class="tj-info-box-title">
-                                <span><i class="fa-solid fa-user me-1"></i> Account Information</span>
-                                <a href="account-info.php" class="tj-edit-btn"><i class="fa-solid fa-pen me-1"></i> Edit</a>
-                            </div>
-                            <div class="tj-info-content">
-                                <h5>Amelia Reyes</h5>
-                                <p>amelia.reyes@example.com</p>
-                                <p>(479) 763-1102</p>
-                            </div>
-                        </div>
-                    </div>
-
-                    <div class="col-md-6">
-                        <div class="tj-stat-card">
                             <div class="tj-info-box-title" style="color: #38bdf8;">
                                 <span><i class="fa-solid fa-location-crosshairs me-1"></i> Default Address</span>
-                                <a href="addresses.php" class="tj-edit-btn"><i class="fa-solid fa-pen me-1"></i> Edit</a>
+                                <a href="edit-address.php" class="tj-edit-btn"><i class="fa-solid fa-pen me-1"></i> Edit</a>
                             </div>
                             <div class="tj-info-content">
                                 <h5>Default Shipping</h5>

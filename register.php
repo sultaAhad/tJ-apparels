@@ -2,166 +2,6 @@
 <?php include 'inc/app.php'; ?>
 <!-- App Include Here -->
 
-<style>
-    :root {
-        --tj-border: rgba(135, 120, 255, 0.16);
-        --tj-purple: #7d35e8;
-        --tj-pink: #e936a7;
-    }
-
-    .tj-auth-section {
-        background-color: #0b0b1a;
-        min-height: 85vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-        padding: 60px 0;
-    }
-
-    .tj-auth-glow {
-        position: absolute;
-        width: 350px;
-        height: 350px;
-        border-radius: 50%;
-        filter: blur(100px);
-        z-index: 1;
-        opacity: 0.15;
-    }
-    .tj-auth-glow-1 { top: 10%; left: 20%; background: var(--tj-purple); }
-    .tj-auth-glow-2 { bottom: 10%; right: 20%; background: var(--tj-pink); }
-
-    .tj-auth-card {
-        background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
-        border: 1px solid var(--tj-border);
-        border-radius: 24px;
-        padding: 45px 35px;
-        width: 100%;
-        max-width: 480px;
-        position: relative;
-        z-index: 2;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    .tj-auth-title {
-        color: #fff;
-        font-size: 22px;
-        font-weight: 800;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    }
-
-    .tj-auth-desc {
-        color: rgba(255, 255, 255, 0.55);
-        font-size: 13px;
-        line-height: 1.5;
-        margin-bottom: 25px;
-    }
-
-    .tj-form-label {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 10px;
-        font-weight: 700;
-        letter-spacing: 1.5px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-        display: block;
-    }
-
-    .tj-auth-input {
-        background: rgba(10, 10, 26, 0.6);
-        border: 1px solid var(--tj-border);
-        border-radius: 10px;
-        padding: 12px 18px;
-        color: #fff;
-        font-size: 13px;
-        width: 100%;
-        outline: none;
-        transition: 0.3s;
-        margin-bottom: 18px;
-    }
-
-    .tj-auth-input::placeholder {
-        color: rgba(255, 255, 255, 0.25);
-    }
-
-    .tj-auth-input:focus {
-        border-color: var(--tj-pink);
-        box-shadow: 0 0 15px rgba(233, 54, 167, 0.15);
-    }
-
-    /* Custom Checkbox */
-    .tj-checkbox-wrapper {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-bottom: 25px;
-    }
-
-    .tj-checkbox-wrapper input[type="checkbox"] {
-        accent-color: var(--tj-pink);
-        width: 15px;
-        height: 15px;
-        cursor: pointer;
-    }
-
-    .tj-checkbox-wrapper label {
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 11.5px;
-    }
-
-    .tj-checkbox-wrapper label a {
-        color: var(--tj-pink);
-        text-decoration: none;
-    }
-
-    .tj-gradient-btn {
-        background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
-        border: none;
-        border-radius: 50px;
-        padding: 13px;
-        color: #fff;
-        font-size: 12.5px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        width: 100%;
-        cursor: pointer;
-        transition: 0.3s;
-        box-shadow: 0 4px 15px rgba(125, 53, 232, 0.3);
-        margin-bottom: 25px;
-    }
-
-    .tj-gradient-btn:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(233, 54, 167, 0.4);
-    }
-
-    .tj-auth-footer-text {
-        text-align: center;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 11px;
-        letter-spacing: 0.5px;
-    }
-
-    .tj-auth-footer-text a {
-        color: #fff;
-        font-weight: 700;
-        text-decoration: none;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-left: 5px;
-        transition: 0.3s;
-    }
-
-    .tj-auth-footer-text a:hover {
-        color: var(--tj-pink);
-    }
-</style>
-
 <!-- Body Content Start Here -->
 <section class="tj-auth-section">
     <div class="tj-auth-glow tj-auth-glow-1"></div>
@@ -175,32 +15,44 @@
 
             <form action="#" method="POST">
                 <div class="row">
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <label class="tj-form-label">First Name *</label>
                         <input type="text" class="tj-auth-input" placeholder="John" required>
                     </div>
-                    <div class="col-md-6">
+                    <div class="col-md-6 mb-3">
                         <label class="tj-form-label">Last Name *</label>
-                        <input type="text" class="tj-app-input tj-auth-input" placeholder="Doe" required>
+                        <input type="text" class="tj-auth-input" placeholder="Doe" required>
                     </div>
                 </div>
 
-                <div>
+                <div class="mb-3">
                     <label class="tj-form-label">Email *</label>
                     <input type="email" class="tj-auth-input" placeholder="John@email.com" required>
                 </div>
 
-                <div>
+                <!-- Password 1 with Eye Toggle -->
+                <div class="mb-3">
                     <label class="tj-form-label">Password *</label>
-                    <input type="password" class="tj-auth-input" placeholder="********" required>
+                    <div class="tj-password-wrap position-relative">
+                        <input type="password" class="tj-auth-input pe-5" placeholder="********" required>
+                        <span class="tj-toggle-password position-absolute top-50 end-0 translate-middle-y me-3" style="cursor: pointer;">
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                    </div>
                 </div>
 
-                <div>
+                <!-- Password 2 with Eye Toggle -->
+                <div class="mb-3">
                     <label class="tj-form-label">Confirm Password *</label>
-                    <input type="password" class="tj-auth-input" placeholder="********" required>
+                    <div class="tj-password-wrap position-relative">
+                        <input type="password" class="tj-auth-input pe-5" placeholder="********" required>
+                        <span class="tj-toggle-password position-absolute top-50 end-0 translate-middle-y me-3" style="cursor: pointer;">
+                            <i class="fa-regular fa-eye"></i>
+                        </span>
+                    </div>
                 </div>
 
-                <div class="tj-checkbox-wrapper">
+                <div class="tj-checkbox-wrapper mb-3">
                     <input type="checkbox" id="termsCheck" required>
                     <label for="termsCheck">I agree to the <a href="#">Terms & Conditions</a> and <a href="#">Privacy Policy</a></label>
                 </div>
@@ -208,7 +60,7 @@
                 <button type="submit" class="tj-gradient-btn">Create Account <i class="fa-solid fa-arrow-right ms-1"></i></button>
             </form>
 
-            <div class="tj-auth-footer-text">
+            <div class="tj-auth-footer-text mt-3">
                 Already riding with us? <a href="login.php">Sign In</a>
             </div>
 

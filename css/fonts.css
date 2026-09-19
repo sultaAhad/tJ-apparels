@@ -1,12 +1,13 @@
 /* Font cdn starts here */
-/* Imported Google Fonts: Plus Jakarta Sans & Manrope */
-@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
+/* Imported Google Fonts: Plus Jakarta Sans, Manrope & Bebas Neue */
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Manrope:wght@300;400;500;600;700&family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap');
 /* Font cdn ends here */
 
 :root {
     /* Typography starts here */
     --heading-font: "Plus Jakarta Sans", sans-serif;
     --para-font: "Manrope", sans-serif;
+    --bebas-font: "Bebas Neue", cursive, sans-serif;
 
     --secondary-regular-font: var(--para-font);
     --secondary-medium-font: var(--para-font);
@@ -23,6 +24,10 @@
     --primary-italic-font: var(--para-font);
 
     --sub-font: var(--heading-font);
+    --bebas-regular: var(--bebas-font);
+    --bebas-medium: var(--bebas-font);
+    --bebas-semibold: var(--bebas-font);
+    --bebas-bold: var(--bebas-font);
     /* Typography ends here */
 }
 
@@ -73,6 +78,31 @@ body {
     font-weight: 600;
 }
 
+/* Bebas Neue Custom Utility Classes */
+.bebas-font,
+.bebas-regular {
+    font-family: var(--bebas-font);
+    font-weight: 400; /* Bebas Neue standard weight */
+}
+
+.bebas-medium {
+    font-family: var(--bebas-font);
+    font-weight: 400; 
+    letter-spacing: 0.5px;
+}
+
+.bebas-semibold {
+    font-family: var(--bebas-font);
+    font-weight: 400;
+    letter-spacing: 1px;
+}
+
+.bebas-bold {
+    font-family: var(--bebas-font);
+    font-weight: 400;
+    letter-spacing: 1.5px;
+}
+
 /* Font Sizes Here */
 .level-1 {
     font-size: 92px;
@@ -117,6 +147,7 @@ body {
 .level-7 {
     font-size: 14px;
 }
+
 .level-8 {
     font-size: 12px;
 }

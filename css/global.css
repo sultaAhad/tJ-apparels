@@ -5,6 +5,9 @@ body {
 	background: #090b29;
 	overflow-y: scroll;
 }
+h1, h2, h3, h4, h5, h6 {
+   font-family: var(--heading-font);
+}
 
 body::-webkit-scrollbar {
 	width: 5px;
@@ -16,7 +19,7 @@ body::-webkit-scrollbar-track {
 }
 
 body::-webkit-scrollbar-thumb {
-	background: linear-gradient(180deg, #ffffff 23%, #dc2626 49%, #dc2626 80%);
+	background: linear-gradient(180deg, #ffffff 23%, #923df4  49%, #db2d91 80%);
 	border-radius: 16px;
 	border: 1px solid var(--extra-color-8);
 }

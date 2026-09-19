@@ -35,8 +35,7 @@
 <script src="js/wow.min.js"></script>
 <!-- AOS ANIMTAION CDN -->
 <script>
-    new WOW().init();
-    // AOS.init();
+new WOW().init();
 </script>
 
 <!-- Animation CDN  -->
@@ -44,7 +43,6 @@
 <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
 <!-- Animation CDN  -->
 
-<!-- Slick Slider CDN -->
 <!-- Three.js -->
 <script type="importmap">
     {
@@ -56,88 +54,88 @@
 
 <!-- navbar active script -->
 <script>
-    document.addEventListener('DOMContentLoaded', function() {
-        const currentLocation = location.href;
-        const menuItems = document.querySelectorAll('.nav-wrapper');
+document.addEventListener('DOMContentLoaded', function() {
+    const currentLocation = location.href;
+    const menuItems = document.querySelectorAll('.nav-wrapper');
 
-        menuItems.forEach(menuItem => {
-            if (menuItem.href === currentLocation) {
-                document.querySelector('.nav-wrapper.active').classList.remove('active');
-                menuItem.classList.add('active');
-            }
-        });
+    menuItems.forEach(menuItem => {
+        if (menuItem.href === currentLocation) {
+            document.querySelector('.nav-wrapper.active').classList.remove('active');
+            menuItem.classList.add('active');
+        }
     });
+});
 </script>
 
 <script>
-    document.querySelectorAll(".ml14 .letters").forEach(function(textWrapper) {
-        textWrapper.innerHTML = textWrapper.textContent.replace(
-            /\S/g,
-            "<span class='letter'>$&</span>",
-        );
-    });
+document.querySelectorAll(".ml14 .letters").forEach(function(textWrapper) {
+    textWrapper.innerHTML = textWrapper.textContent.replace(
+        /\S/g,
+        "<span class='letter'>$&</span>",
+    );
+});
 
-    document.querySelectorAll(".ml14").forEach(function(ml14, index) {
-        var animation = anime
-            .timeline({
-                autoplay: false,
-            })
-            .add({
-                targets: ml14.querySelector(".line"),
-                scaleX: [0, 1],
-                opacity: [0.5, 1],
-                easing: "easeInOutExpo",
-                duration: 100,
-            })
-            .add({
-                targets: ml14.querySelectorAll(".letter"),
-                opacity: [0, 1],
-                translateX: [40, 0],
-                translateZ: 0,
-                scaleX: [0.3, 1],
-                easing: "easeOutExpo",
-                duration: 800,
-                offset: "-=600",
-                delay: function(el, i) {
-                    return 150 + 50 * i;
-                },
-            })
-            .add({
-                targets: ml14,
-                opacity: 1,
-                duration: 1000,
-                easing: "easeOutExpo",
-                delay: 500,
-            });
-        const observer = new IntersectionObserver(
-            (entries, observer) => {
-                entries.forEach((entry) => {
-                    if (entry.isIntersecting) {
-                        animation.play();
-                        observer.unobserve(entry.target);
-                    }
-                });
-            }, {
-                threshold: 0.2,
+document.querySelectorAll(".ml14").forEach(function(ml14, index) {
+    var animation = anime
+        .timeline({
+            autoplay: false,
+        })
+        .add({
+            targets: ml14.querySelector(".line"),
+            scaleX: [0, 1],
+            opacity: [0.5, 1],
+            easing: "easeInOutExpo",
+            duration: 100,
+        })
+        .add({
+            targets: ml14.querySelectorAll(".letter"),
+            opacity: [0, 1],
+            translateX: [40, 0],
+            translateZ: 0,
+            scaleX: [0.3, 1],
+            easing: "easeOutExpo",
+            duration: 800,
+            offset: "-=600",
+            delay: function(el, i) {
+                return 150 + 50 * i;
             },
-        );
+        })
+        .add({
+            targets: ml14,
+            opacity: 1,
+            duration: 1000,
+            easing: "easeOutExpo",
+            delay: 500,
+        });
+    const observer = new IntersectionObserver(
+        (entries, observer) => {
+            entries.forEach((entry) => {
+                if (entry.isIntersecting) {
+                    animation.play();
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, {
+            threshold: 0.2,
+        },
+    );
 
-        observer.observe(ml14);
-    });
+    observer.observe(ml14);
+});
 </script>
-
+<!-- shop -->
 <script>
-    document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
     const filterBtns = document.querySelectorAll(".tj-filter-btn"); // Home page filter pills
     const filterCheckboxes = document.querySelectorAll(".tj-filter-checkbox"); // Shop page checkboxes
     const sizeBadges = document.querySelectorAll(".tj-size-filter");
     const priceRange = document.getElementById("tjPriceRange");
     const priceOutput = document.getElementById("tjPriceOutput");
     const productCols = document.querySelectorAll(".tj-product-col");
-    
+
     // Handle multiple search inputs (home/shop can have different inputs)
     const searchInputs = document.querySelectorAll("#tjProductSearch");
-    
+
     const productCountEl = document.getElementById("tjProductCount");
     const resetBtn = document.getElementById("tjResetFilters");
     const sortSelect = document.getElementById("tjProductSortSelect");
@@ -157,13 +155,15 @@
         const maxPrice = priceRange ? parseFloat(priceRange.value) : Infinity;
 
         // Checkbox filters (Shop page)
-        const checkedCategories = filterCheckboxes.length > 0 
-            ? Array.from(document.querySelectorAll('.tj-filter-checkbox[data-filter-type="category"]:checked')).map(cb => cb.value)
-            : [];
-            
-        const checkedEdits = filterCheckboxes.length > 0 
-            ? Array.from(document.querySelectorAll('.tj-filter-checkbox[data-filter-type="edit"]:checked')).map(cb => cb.value)
-            : [];
+        const checkedCategories = filterCheckboxes.length > 0 ?
+            Array.from(document.querySelectorAll('.tj-filter-checkbox[data-filter-type="category"]:checked'))
+            .map(cb => cb.value) :
+            [];
+
+        const checkedEdits = filterCheckboxes.length > 0 ?
+            Array.from(document.querySelectorAll('.tj-filter-checkbox[data-filter-type="edit"]:checked')).map(
+                cb => cb.value) :
+            [];
 
         // Active pill filter (Home page)
         const activePillBtn = document.querySelector(".tj-filter-btn.active");
@@ -174,7 +174,7 @@
         productCols.forEach(col => {
             const titleEl = col.querySelector(".tj-product-title");
             const descEl = col.querySelector(".tj-product-desc");
-            
+
             const title = titleEl ? titleEl.innerText.toLowerCase() : "";
             const desc = descEl ? descEl.innerText.toLowerCase() : "";
             const categories = col.getAttribute("data-category") || "";
@@ -185,18 +185,21 @@
 
             // Conditions
             const matchesSearch = title.includes(searchQuery) || desc.includes(searchQuery);
-            
+
             // Pill filter condition (Home page)
             const matchesPill = pillFilterValue === "all" || categories.includes(pillFilterValue);
 
             // Checkbox conditions (Shop page)
-            const matchesCategory = checkedCategories.length === 0 || checkedCategories.some(cat => categories.includes(cat));
+            const matchesCategory = checkedCategories.length === 0 || checkedCategories.some(cat =>
+                categories.includes(cat));
             const matchesEdit = checkedEdits.length === 0 || checkedEdits.some(ed => edit.includes(ed));
-            
-            const matchesSize = selectedSizes.length === 0 || selectedSizes.some(sz => sizes.includes(sz));
+
+            const matchesSize = selectedSizes.length === 0 || selectedSizes.some(sz => sizes.includes(
+                sz));
             const matchesPrice = !priceRange || price <= maxPrice;
 
-            if (matchesSearch && matchesPill && matchesCategory && matchesEdit && matchesSize && matchesPrice) {
+            if (matchesSearch && matchesPill && matchesCategory && matchesEdit && matchesSize &&
+                matchesPrice) {
                 col.style.display = "block";
                 visibleCount++;
             } else {
@@ -213,7 +216,7 @@
 
     // Sorting Logic
     if (sortSelect && productsGrid) {
-        sortSelect.addEventListener("change", function () {
+        sortSelect.addEventListener("change", function() {
             let colsArray = Array.from(productCols);
             const sortVal = this.value;
 
@@ -236,7 +239,7 @@
 
     // 1. Home page filter pills event
     filterBtns.forEach(btn => {
-        btn.addEventListener("click", function () {
+        btn.addEventListener("click", function() {
             filterBtns.forEach(b => b.classList.remove("active"));
             this.classList.add("active");
             filterProducts();
@@ -250,16 +253,18 @@
 
     // 3. Search inputs synchronization & event
     searchInputs.forEach(input => {
-        input.addEventListener("input", function () {
+        input.addEventListener("input", function() {
             // Sync values if multiple search boxes exist on the page
-            searchInputs.forEach(si => { if (si !== input) si.value = input.value; });
+            searchInputs.forEach(si => {
+                if (si !== input) si.value = input.value;
+            });
             filterProducts();
         });
     });
 
     // 4. Size badges event
     sizeBadges.forEach(badge => {
-        badge.addEventListener("click", function () {
+        badge.addEventListener("click", function() {
             this.classList.toggle("active");
             const sizeVal = this.getAttribute("data-size").toLowerCase();
 
@@ -274,7 +279,7 @@
 
     // 5. Price range event
     if (priceRange) {
-        priceRange.addEventListener("input", function () {
+        priceRange.addEventListener("input", function() {
             if (priceOutput) {
                 priceOutput.innerText = "$" + parseFloat(this.value).toFixed(2);
             }
@@ -284,7 +289,7 @@
 
     // 6. Reset filters button event
     if (resetBtn) {
-        resetBtn.addEventListener("click", function () {
+        resetBtn.addEventListener("click", function() {
             filterCheckboxes.forEach(cb => cb.checked = false);
             sizeBadges.forEach(b => b.classList.remove("active"));
             selectedSizes = [];
@@ -308,9 +313,10 @@
 
     if (gridViewBtn && listViewBtn && productsGrid) {
         const isHomePageGrid = productCols.length > 0 && productCols[0].classList.contains("col-xl-3");
-        const gridColClass = isHomePageGrid ? "col-xl-3 col-lg-4 col-md-6 tj-product-col" : "col-xl-4 col-md-6 tj-product-col";
+        const gridColClass = isHomePageGrid ? "col-xl-3 col-lg-4 col-md-6 tj-product-col" :
+            "col-xl-4 col-md-6 tj-product-col";
 
-        gridViewBtn.addEventListener("click", function () {
+        gridViewBtn.addEventListener("click", function() {
             gridViewBtn.classList.add("active");
             listViewBtn.classList.remove("active");
             productsGrid.classList.remove("list-view-mode");
@@ -319,7 +325,7 @@
             });
         });
 
-        listViewBtn.addEventListener("click", function () {
+        listViewBtn.addEventListener("click", function() {
             listViewBtn.classList.add("active");
             gridViewBtn.classList.remove("active");
             productsGrid.classList.add("list-view-mode");
@@ -332,7 +338,7 @@
 </script>
 
 <script>
-document.addEventListener("DOMContentLoaded", function () {
+document.addEventListener("DOMContentLoaded", function() {
 
     /* ==========================================
         MOBILE MENU LOGIC
@@ -358,7 +364,7 @@ document.addEventListener("DOMContentLoaded", function () {
     if (closeBtn) closeBtn.addEventListener("click", closeMobileMenu);
     if (overlay) overlay.addEventListener("click", closeMobileMenu);
 
-    document.addEventListener("keydown", function (event) {
+    document.addEventListener("keydown", function(event) {
         if (event.key === "Escape") closeMobileMenu();
     });
 
@@ -372,7 +378,7 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (navList && indicator && navLinks.length > 0) {
         const currentPath = window.location.pathname.split("/").pop();
-        
+
         navLinks.forEach(link => {
             const href = link.getAttribute("href");
             if (href === currentPath || (currentPath === "" && (href === "./" || href === "/"))) {
@@ -390,16 +396,26 @@ document.addEventListener("DOMContentLoaded", function () {
             const width = linkRect.width;
 
             if (instant) {
-                gsap.set(indicator, { x: left, width: width });
+                gsap.set(indicator, {
+                    x: left,
+                    width: width
+                });
             } else {
-                gsap.to(indicator, { x: left, width: width, duration: 0.4, ease: "power3.out" });
+                gsap.to(indicator, {
+                    x: left,
+                    width: width,
+                    duration: 0.4,
+                    ease: "power3.out"
+                });
             }
         }
 
         moveIndicator(activeLink, true);
 
         navLinks.forEach(link => {
-            link.addEventListener("mouseenter", function() { moveIndicator(this); });
+            link.addEventListener("mouseenter", function() {
+                moveIndicator(this);
+            });
         });
 
         navList.addEventListener("mouseleave", function() {
@@ -422,14 +438,28 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e) e.preventDefault();
 
         // Make search bar visible and animate transition
-        gsap.set(searchBar, { visibility: "visible" });
-        
+        gsap.set(searchBar, {
+            visibility: "visible"
+        });
+
         const tl = gsap.timeline();
-        tl.to(headerMain, { y: -60, opacity: 0, duration: 0.3, ease: "power2.in" })
-          .to(searchBar, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, "-=0.1");
+        tl.to(headerMain, {
+                y: -60,
+                opacity: 0,
+                duration: 0.3,
+                ease: "power2.in"
+            })
+            .to(searchBar, {
+                y: 0,
+                opacity: 1,
+                duration: 0.4,
+                ease: "power3.out"
+            }, "-=0.1");
 
         if (searchInput) {
-            setTimeout(() => { searchInput.focus(); }, 200);
+            setTimeout(() => {
+                searchInput.focus();
+            }, 200);
         }
     }
 
@@ -437,10 +467,23 @@ document.addEventListener("DOMContentLoaded", function () {
         if (e) e.preventDefault();
 
         const tl = gsap.timeline();
-        tl.to(searchBar, { y: -60, opacity: 0, duration: 0.3, ease: "power2.in", onComplete: () => {
-            gsap.set(searchBar, { visibility: "hidden" });
-        }})
-          .to(headerMain, { y: 0, opacity: 1, duration: 0.4, ease: "power3.out" }, "-=0.1");
+        tl.to(searchBar, {
+                y: -60,
+                opacity: 0,
+                duration: 0.3,
+                ease: "power2.in",
+                onComplete: () => {
+                    gsap.set(searchBar, {
+                        visibility: "hidden"
+                    });
+                }
+            })
+            .to(headerMain, {
+                y: 0,
+                opacity: 1,
+                duration: 0.4,
+                ease: "power3.out"
+            }, "-=0.1");
 
         if (searchInput) searchInput.value = "";
     }
@@ -449,11 +492,225 @@ document.addEventListener("DOMContentLoaded", function () {
     if (searchCloseBtn) searchCloseBtn.addEventListener("click", closeAdvancedSearch);
 
     // Close on Escape key
-    document.addEventListener("keydown", function (event) {
+    document.addEventListener("keydown", function(event) {
         if (event.key === "Escape" && searchBar.style.visibility === "visible") {
             closeAdvancedSearch();
         }
     });
 
 });
+</script>
+<!-- preloader -->
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+    const preloader = document.querySelector(".preloader");
+    const scene = document.querySelector(".preloader .scene");
+    if (!preloader || !scene) return;
+    const particles = scene.querySelector(".particles");
+    if (particles) {
+        particles.innerHTML = "";
+        const fragment = document.createDocumentFragment();
+
+        for (let i = 0; i < 50; i++) {
+            const particle = document.createElement("i");
+            const size = Math.random() > 0.85 ? 3 : 2;
+            particle.style.cssText = `
+        position: absolute;
+        width: ${size}px;
+        height: ${size}px;
+        left: ${Math.random() * 100}%;
+        top: ${Math.random() * 100}%;
+        background: #d946ef;
+        border-radius: 50%;
+        opacity: ${0.2 + Math.random() * 0.6};
+        box-shadow: 0 0 8px rgba(217, 70, 239, 0.7);
+      `;
+            fragment.appendChild(particle);
+            particle.animate(
+                [{
+                        transform: "translate3d(0,0,0) scale(0.6)",
+                        opacity: 0.1
+                    },
+                    {
+                        transform: `translate3d(${Math.random() * 80 - 40}px, ${Math.random() * 80 - 40}px, 0) scale(1.4)`,
+                        opacity: 0.85
+                    },
+                    {
+                        transform: "translate3d(0,0,0) scale(0.6)",
+                        opacity: 0.1
+                    }
+                ], {
+                    duration: 3000 + Math.random() * 3000,
+                    delay: -Math.random() * 3000,
+                    iterations: Infinity,
+                    easing: "ease-in-out"
+                }
+            );
+        }
+        particles.appendChild(fragment);
+    }
+    scene.querySelectorAll(".tool").forEach((tool, index) => {
+        const dir = index % 2 === 0 ? 1 : -1;
+        tool.animate(
+            [{
+                    transform: "translate3d(0,0,0) rotate(0deg)",
+                    opacity: 0.3
+                },
+                {
+                    transform: `translate3d(${12 * dir}px, -18px, 0) rotate(${25 * dir}deg)`,
+                    opacity: 0.8
+                },
+                {
+                    transform: "translate3d(0,0,0) rotate(0deg)",
+                    opacity: 0.3
+                }
+            ], {
+                duration: 3500 + index * 300,
+                delay: index * 120,
+                iterations: Infinity,
+                easing: "ease-in-out"
+            }
+        );
+    });
+    scene.querySelectorAll(".gauge").forEach((gauge, index) => {
+        const needle = gauge.querySelector("i");
+        if (needle) {
+            needle.animate(
+                [{
+                        transform: "rotate(-60deg)"
+                    },
+                    {
+                        transform: "rotate(55deg)"
+                    },
+                    {
+                        transform: "rotate(-10deg)"
+                    },
+                    {
+                        transform: "rotate(-60deg)"
+                    }
+                ], {
+                    duration: 3200 + index * 350,
+                    delay: index * 200,
+                    iterations: Infinity,
+                    easing: "ease-in-out"
+                }
+            );
+        }
+    });
+    scene.querySelectorAll(".ring").forEach((ring, index) => {
+        ring.animate(
+            [{
+                    transform: "rotate(0deg) scale(0.9)",
+                    opacity: 0.3
+                },
+                {
+                    transform: "rotate(180deg) scale(1.05)",
+                    opacity: 0.85
+                },
+                {
+                    transform: "rotate(360deg) scale(0.9)",
+                    opacity: 0.3
+                }
+            ], {
+                duration: 3200 + index * 400,
+                delay: index * 150,
+                iterations: Infinity,
+                easing: "ease-in-out"
+            }
+        );
+    });
+    scene.querySelectorAll(".engine").forEach((piston, index) => {
+        piston.animate(
+            [{
+                    transform: "translateY(0)"
+                },
+                {
+                    transform: "translateY(-14px)"
+                },
+                {
+                    transform: "translateY(0)"
+                }
+            ], {
+                duration: 1800 + index * 200,
+                delay: index * 150,
+                iterations: Infinity,
+                easing: "ease-in-out"
+            }
+        );
+    });
+    scene.querySelectorAll(".piston-rod").forEach((rod, index) => {
+        rod.animate(
+            [{
+                    transform: "translateY(0) rotate(0deg)"
+                },
+                {
+                    transform: "translateY(-10px) rotate(6deg)"
+                },
+                {
+                    transform: "translateY(0) rotate(0deg)"
+                }
+            ], {
+                duration: 2000 + index * 300,
+                iterations: Infinity,
+                easing: "ease-in-out"
+            }
+        );
+    });
+    const loaderBar = scene.querySelector(".loader div");
+    if (loaderBar) {
+        loaderBar.animate(
+            [{
+                    width: "0%"
+                },
+                {
+                    width: "35%",
+                    offset: 0.3
+                },
+                {
+                    width: "70%",
+                    offset: 0.7
+                },
+                {
+                    width: "100%"
+                }
+            ], {
+                duration: 2800,
+                easing: "cubic-bezier(0.4, 0, 0.2, 1)",
+                fill: "forwards"
+            }
+        );
+    }
+    window.addEventListener("load", () => {
+        setTimeout(() => {
+            preloader.classList.add("preloader-hidden");
+        }, 600);
+    });
+});
+</script>
+
+<!-- eye -->
+ <script>
+    document.addEventListener("DOMContentLoaded", function() {
+        // Yeh script page ke sare password fields ko automatically dhoond legi jinke sath toggle icon hoga
+        const toggleIcons = document.querySelectorAll(".tj-toggle-password");
+
+        toggleIcons.forEach(icon => {
+            icon.addEventListener("click", function() {
+                // Icon ke andar ka 'i' tag ya input target find karein
+                const inputWrap = this.closest('.tj-password-wrap');
+                const passwordInput = inputWrap.querySelector("input");
+                const iconElement = this.querySelector("i");
+
+                if (passwordInput.type === "password") {
+                    passwordInput.type = "text";
+                    iconElement.classList.remove("fa-eye");
+                    iconElement.classList.add("fa-eye-slash");
+                } else {
+                    passwordInput.type = "password";
+                    iconElement.classList.remove("fa-eye-slash");
+                    iconElement.classList.add("fa-eye");
+                }
+            });
+        });
+    });
 </script>

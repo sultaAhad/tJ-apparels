@@ -1,4 +1,4 @@
-<!-- App Include Here -->
+App Include Here -->
 <?php include 'inc/app.php'; ?>
 <!-- App Include Here -->
 
@@ -14,129 +14,7 @@ include 'inc/inner-banner.php';
 ?>
 <!-- banner Include Here  -->
 
-<style>
-    .tj-editaddress-section {
-        background-color: #0b0b1a;
-        padding: 50px 0 80px 0;
-    }
 
-    /* Form Card Container */
-    .tj-form-card {
-        background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
-        border: 1px solid rgba(135, 120, 255, 0.16);
-        border-radius: 20px;
-        padding: 40px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Form Fields Styling */
-    .tj-form-group {
-        margin-bottom: 20px;
-    }
-
-    .tj-form-label {
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 12px;
-        font-weight: 600;
-        margin-bottom: 8px;
-        display: block;
-        letter-spacing: 0.5px;
-    }
-
-    .tj-form-control {
-        width: 100%;
-        background: rgba(11, 11, 26, 0.8);
-        border: 1px solid rgba(135, 120, 255, 0.2);
-        border-radius: 12px;
-        padding: 12px 18px;
-        color: #fff;
-        font-size: 14px;
-        transition: 0.3s;
-    }
-
-    .tj-form-control:focus {
-        outline: none;
-        border-color: #e936a7;
-        box-shadow: 0 0 10px rgba(233, 54, 167, 0.2);
-        background: rgba(11, 11, 26, 0.95);
-    }
-
-    .tj-form-control::placeholder {
-        color: rgba(255, 255, 255, 0.3);
-    }
-
-    /* Checkbox Styling */
-    .tj-checkbox-wrap {
-        display: flex;
-        align-items: center;
-        gap: 10px;
-        margin-top: 15px;
-        margin-bottom: 25px;
-    }
-
-    .tj-checkbox-wrap input[type="checkbox"] {
-        width: 18px;
-        height: 18px;
-        accent-color: #e936a7;
-        cursor: pointer;
-    }
-
-    .tj-checkbox-wrap label {
-        color: rgba(255, 255, 255, 0.8);
-        font-size: 13.5px;
-        cursor: pointer;
-        user-select: none;
-    }
-
-    /* Form Buttons */
-    .tj-form-buttons {
-        display: flex;
-        gap: 15px;
-        align-items: center;
-    }
-
-    .tj-save-btn {
-        background: linear-gradient(135deg, #7d35e8, #e936a7);
-        border: none;
-        border-radius: 50px;
-        padding: 12px 35px;
-        color: #fff;
-        font-size: 13px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        cursor: pointer;
-        transition: 0.3s;
-        box-shadow: 0 4px 15px rgba(125, 53, 232, 0.3);
-    }
-
-    .tj-save-btn:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(233, 54, 167, 0.4);
-    }
-
-    .tj-cancel-btn {
-        background: transparent;
-        border: 1px solid rgba(135, 120, 255, 0.3);
-        border-radius: 50px;
-        padding: 12px 30px;
-        color: rgba(255, 255, 255, 0.7);
-        font-size: 13px;
-        font-weight: 600;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        text-decoration: none;
-        transition: 0.3s;
-        text-align: center;
-    }
-
-    .tj-cancel-btn:hover {
-        background: rgba(135, 120, 255, 0.1);
-        color: #fff;
-        border-color: rgba(135, 120, 255, 0.5);
-    }
-</style>
 
 <section class="tj-editaddress-section">
     <div class="container">
@@ -226,4 +104,4 @@ include 'inc/inner-banner.php';
 
 <!-- Footer Include Here -->
 <?php include 'inc/footer.php'; ?>
-<!-- Footer Include Here -->
+<!-- Footer Include Here

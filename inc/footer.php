@@ -64,10 +64,10 @@
                         <a href="contact" class="level-8 para-font extra-color-6 text-decoration-none">Contact Us</a>
                     </li>
                     <li>
-                        <a href="#" class="level-8 para-font extra-color-6 text-decoration-none">Size Guide</a>
+                        <a href="size-chart" class="level-8 para-font extra-color-6 text-decoration-none">Size Guide</a>
                     </li>
                     <li>
-                        <a href="#" class="level-8 para-font extra-color-6 text-decoration-none">Return Policy</a>
+                        <a href="legal.php" class="level-8 para-font extra-color-6 text-decoration-none">Return Policy</a>
                     </li>
                      <li>
                         <a href="help" class="level-8 para-font extra-color-6 text-decoration-none">faqs</a>

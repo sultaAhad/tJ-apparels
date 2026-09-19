@@ -4,8 +4,7 @@
 
 <!-- banner Include Here  -->
 <?php 
-$order_id = isset($_GET['id']) ? $_GET['id'] : '10248';
-$subtitle = "Account";
+$order_id = isset($_GET['id']) ? $_GET['id'] : '10248';$subtitle = "Account";
 $title = "My Order Detail";
 $desc = "Review your order status, purchased items, and delivery details.";
 $currentPage = "My Orders";
@@ -14,129 +13,6 @@ include 'inc/inner-banner.php';
 ?>
 <!-- banner Include Here  -->
 
-<style>
-    .tj-orderdetail-section {
-        background-color: #0b0b1a;
-        padding: 50px 0 80px 0;
-    }
-
-    .text-theme-primary { color: #e936a7 !important; }
-    .heading-italic-font { font-style: italic; font-weight: 800; }
-
-    /* Custom Info Cards */
-    .info-card {
-        background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
-        border: 1px solid rgba(135, 120, 255, 0.16);
-        border-radius: 20px;
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    }
-
-    .info-circle-icon {
-        width: 45px;
-        height: 45px;
-        background: rgba(135, 120, 255, 0.1);
-        border-radius: 50%;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-    }
-
-    .order-detail-line {
-        color: rgba(255, 255, 255, 0.6);
-        font-size: 13px;
-        margin-bottom: 5px;
-    }
-
-    /* Custom Table */
-    .custom-detail-table th {
-        background: transparent;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 12px;
-        text-transform: uppercase;
-        border-bottom: 1px solid rgba(135, 120, 255, 0.2);
-        padding-bottom: 15px;
-    }
-
-    .custom-detail-table td {
-        background: transparent;
-        border-bottom: 1px solid rgba(135, 120, 255, 0.1);
-        padding: 15px 10px;
-    }
-
-    .prod-thumb {
-        width: 55px;
-        height: 55px;
-        border-radius: 10px;
-        overflow: hidden;
-        border: 1px solid rgba(135, 120, 255, 0.2);
-    }
-
-    .prod-thumb img {
-        width: 100%;
-        height: 100%;
-        object-fit: cover;
-    }
-
-    /* Variant Chips */
-    .variant-details-line {
-        display: flex;
-        gap: 8px;
-        margin-top: 5px;
-        flex-wrap: wrap;
-    }
-
-    .variant-chip {
-        background: rgba(135, 120, 255, 0.1);
-        border: 1px solid rgba(135, 120, 255, 0.2);
-        padding: 2px 8px;
-        border-radius: 20px;
-        font-size: 11px;
-        color: rgba(255, 255, 255, 0.8);
-        display: inline-flex;
-        align-items: center;
-        gap: 5px;
-    }
-
-    .variant-swatch {
-        width: 10px;
-        height: 10px;
-        border-radius: 50%;
-        display: inline-block;
-    }
-
-    /* Payment Summary Card */
-    .payment-summary-card {
-        background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
-        border: 1px solid rgba(135, 120, 255, 0.16);
-        box-shadow: 0 15px 35px rgba(0, 0, 0, 0.3);
-    }
-
-    /* Buttons */
-    .btn-review-purple {
-        background: linear-gradient(135deg, #7d35e8, #e936a7);
-        border: none;
-        color: #fff;
-        font-weight: 700;
-        font-size: 13px;
-        text-transform: uppercase;
-    }
-
-    .btn-theme-gradient {
-        background: linear-gradient(135deg, #7d35e8, #e936a7);
-        border: none;
-        color: #fff;
-        font-weight: 700;
-        border-radius: 50px;
-        padding: 8px 25px;
-    }
-
-    /* Custom Radio styling matching theme */
-    .custom-radio {
-        accent-color: #e936a7;
-        transform: scale(1.2);
-        cursor: pointer;
-    }
-</style>
 
 <section class="tj-orderdetail-section">
     <div class="container">
@@ -154,7 +30,7 @@ include 'inc/inner-banner.php';
                     <!-- Order Top Bar Header -->
                     <div class="d-flex flex-sm-row flex-column gap-sm-0 gap-2 justify-content-between align-items-center mb-3">
                         <div>
-                            <h3 class="heading-italic-font text-theme-primary mb-1">MY ORDER DETAIL</h3>
+                            <h3 class=" text-white font-bold  mb-1">MY ORDER DETAIL</h3>
                             <span class="text-secondary fw-semibold">#ORD-1788888300-GCIYJZ</span>
                         </div>
                         
@@ -166,11 +42,50 @@ include 'inc/inner-banner.php';
 
                     <hr class="border-secondary opacity-25 mb-4">
 
+                    <!-- Order Tracking Progress Bar (Added at the top) -->
+                    <div class="order-tracking-card info-card h-auto p-4 rounded-4 mb-4" style=" border: 1px solid rgba(255, 255, 255, 0.05);">
+                        <div class="row text-center justify-content-between position-relative">
+                            
+                            <!-- Progress Step 1: Order Placed -->
+                            <div class="col-3 position-relative">
+                                <div class="mx-auto slide-proper d-flex align-items-center justify-content-center rounded-circle mb-2" style="width: 45px; height: 45px;     background: linear-gradient(135deg, #7d35e8, #e936a7); color: #fff; z-index: 2; position: relative;">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span class="d-block text-white small fw-semibold">Order Placed</span>
+                            </div>
+
+                            <!-- Progress Step 2: Processing -->
+                            <div class="col-3 position-relative">
+                                <div class="mx-auto slide-proper d-flex align-items-center justify-content-center rounded-circle mb-2" style="width: 45px; height: 45px; background:     background: linear-gradient(135deg, #7d35e8, #e936a7); color: #fff; z-index: 2; position: relative;">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span class="d-block text-white small fw-semibold">Processing</span>
+                            </div>
+
+                            <!-- Progress Step 3: Shipped -->
+                            <div class="col-3 position-relative">
+                                <div class="mx-auto slide-proper d-flex align-items-center justify-content-center rounded-circle mb-2" style="width: 45px; height: 45px;     background: linear-gradient(135deg, #7d35e8, #e936a7); color: #fff; z-index: 2; position: relative;">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span class="d-block text-white small fw-semibold">Shipped</span>
+                            </div>
+
+                            <!-- Progress Step 4: Delivered -->
+                            <div class="col-3 position-relative">
+                                <div class="mx-auto slide-proper d-flex align-items-center justify-content-center rounded-circle mb-2" style="width: 45px; height: 45px;     background: linear-gradient(135deg, #7d35e8, #e936a7); color: #fff; z-index: 2; position: relative;">
+                                    <i class="fas fa-check"></i>
+                                </div>
+                                <span class="d-block text-white small fw-semibold">Delivered</span>
+                            </div>
+
+                        </div>
+                    </div>
+
                     <!-- Info blocks grid -->
                     <div class="row g-3 mb-5">
                         <!-- Shipping Info -->
-                        <div class="col-md-4">
-                            <div class="info-card p-3 h-100 d-flex align-items-start gap-3" style="background: rgba(11, 11, 26, 0.4);">
+                        <div class="col-md-6">
+                            <div class="info-card p-3 h-100 d-flex align-items-start gap-3" >
                                 <div class="info-circle-icon flex-shrink-0">
                                     <i class="fas fa-shipping-fast text-theme-primary"></i>
                                 </div>
@@ -186,8 +101,8 @@ include 'inc/inner-banner.php';
                         </div>
 
                         <!-- Billing Info -->
-                        <div class="col-md-4">
-                            <div class="info-card p-3 h-100 d-flex align-items-start gap-3" style="background: rgba(11, 11, 26, 0.4);">
+                        <div class="col-md-6">
+                            <div class="info-card p-3 h-100 d-flex align-items-start gap-3" >
                                 <div class="info-circle-icon flex-shrink-0">
                                     <i class="fas fa-file-invoice text-theme-primary"></i>
                                 </div>
@@ -203,8 +118,8 @@ include 'inc/inner-banner.php';
                         </div>
 
                         <!-- Order Info -->
-                        <div class="col-md-4">
-                            <div class="info-card p-3 h-100 d-flex align-items-start gap-3" style="background: rgba(11, 11, 26, 0.4);">
+                        <div class="col-md-12">
+                            <div class="info-card p-3 h-100 d-flex align-items-start gap-3" >
                                 <div class="info-circle-icon flex-shrink-0">
                                     <i class="fas fa-info-circle text-theme-primary"></i>
                                 </div>

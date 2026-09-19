@@ -1,0 +1,1746 @@
+/* =========================================================
+   GLOBAL VARIABLES (shared by all pages)
+   ========================================================= */
+:root {
+    --tj-border: rgba(135, 120, 255, 0.16);
+    --tj-purple: #7d35e8;
+    --tj-pink: #e936a7;
+    --tj-bg-dark: #090b29;
+}
+
+/* =========================================================
+   1. ABOUT US PAGE
+   ========================================================= */
+.tj-about-wrapper {
+    background-color: var(--tj-bg-dark);
+    position: relative;
+}
+
+/* --- Section 1: Story & Stats --- */
+.tj-story-img-wrap {
+    position: relative;
+    border-radius: 24px;
+    overflow: hidden;
+    border: 1px solid var(--tj-border);
+    background: #11112b;
+}
+
+.tj-story-img-wrap img {
+    width: 100%;
+    height: 520px;
+    object-fit: cover;
+}
+
+.tj-floating-badge {
+    position: absolute;
+    bottom: 20px;
+    left: 20px;
+    background: #292a50;
+    backdrop-filter: blur(10px);
+    border: 1px solid var(--tj-border);
+    padding: 15px 20px;
+    border-radius: 24px;
+    max-width: 240px;
+}
+
+.tj-floating-badge i {
+    color: #D0C2ED;
+    font-size: 14px;
+    margin-bottom: 6px;
+    display: block;
+}
+
+.tj-floating-badge h6 {
+    font-size: 12px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 3px;
+}
+
+.tj-floating-badge p {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+.tj-section-sub {
+    font-size: 11px;
+    letter-spacing: 2px;
+    color: #fff;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 8px;
+}
+
+.tj-section-title {
+    font-size: 32px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+    line-height: 1.3;
+}
+
+.tj-section-desc {
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 13.5px;
+    line-height: 1.7;
+    margin-bottom: 15px;
+}
+
+.tj-stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 15px;
+    margin-top: 30px;
+}
+
+.tj-stat-card {
+    background: #0f1136;
+    border: 1px solid var(--tj-border);
+    border-radius: 16px;
+    padding: 20px;
+    transition: 0.3s;
+}
+
+.tj-stat-card:hover {
+    border-color: rgba(125, 53, 232, 0.4);
+}
+
+.tj-stat-card h3 {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 4px;
+    font-family: var(--para-font);
+}
+
+.tj-stat-card p {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+/* --- Section 2: Commitments / Values --- */
+.tj-stand-card {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 30px;
+    padding: 25px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.tj-stand-card:hover {
+    border-color: var(--tj-pink);
+    box-shadow: 0 4px 20px rgba(233, 54, 167, 0.15);
+}
+
+.tj-stand-icon {
+    width: 40px;
+    height: 40px;
+    border-radius: 40px;
+    background: rgba(125, 53, 232, 0.1);
+    border: 1px solid rgba(125, 53, 232, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D0C2ED;
+    font-size: 15px;
+    margin-bottom: 15px;
+}
+
+.tj-stand-card h5 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.tj-stand-card p {
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Section 3: Milestones --- */
+.tj-milestone-card {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 28px;
+    padding: 22px;
+    height: 100%;
+}
+
+.tj-milestone-year {
+    font-size: 12px;
+    font-weight: 700;
+    color: #00d2ff;
+    margin-bottom: 10px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.tj-milestone-card h6 {
+    font-size: 14px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.tj-milestone-card p {
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    margin: 0;
+}
+
+/* --- Section 4: Team Members --- */
+.tj-team-card {
+    border-radius: 20px;
+    overflow: hidden;
+    border: 1px solid var(--tj-border);
+    background: #11143f;
+    height: 100%;
+}
+
+.tj-team-img {
+    width: 100%;
+    height: 380px;
+    object-fit: cover;
+}
+
+.tj-team-info {
+    padding: 20px;
+}
+
+.tj-team-info h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.tj-team-info p {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.5);
+    margin: 0;
+}
+
+/* --- Section 5: CTA Banner --- */
+.tj-cta-banner {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 24px;
+    padding: 40px;
+    position: relative;
+    overflow: hidden;
+}
+
+.tj-cta-banner h3 {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 10px;
+}
+
+.tj-cta-banner p {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+    margin: 0;
+    max-width: 600px;
+}
+
+.tj-btn-primary-custom {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    border: none;
+    border-radius: 50px;
+    padding: 12px 28px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-block;
+    box-shadow: 0 4px 15px rgba(125, 53, 232, 0.35);
+    transition: 0.3s;
+}
+
+.tj-btn-primary-custom:hover {
+    opacity: 0.9;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(233, 54, 167, 0.5);
+}
+
+.tj-btn-outline-custom {
+    background: transparent;
+    border: 1px solid var(--tj-border);
+    border-radius: 50px;
+    padding: 12px 28px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    text-decoration: none;
+    display: inline-block;
+    transition: 0.3s;
+}
+
+.tj-btn-outline-custom:hover {
+    border-color: var(--tj-pink);
+    color: #fff;
+    background: rgba(233, 54, 167, 0.1);
+}
+
+section#tj-about-values {
+    background: #151655;
+}
+
+.tj-security-badges {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 40px;
+    gap: 30px;
+}
+
+/* About Us Responsive */
+@media (max-width: 768px) {
+    .tj-story-img-wrap img {
+        height: 350px;
+    }
+
+    .tj-team-img {
+        height: 300px;
+    }
+}
+
+/* =========================================================
+   2. BLOG DETAIL PAGE
+   ========================================================= */
+.tj-blog-detail-section {
+    background-color: #090b29;
+    position: relative;
+    overflow: hidden;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.tj-blog-detail-wrap {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Meta & Header Info */
+.tj-blog-sub-category {
+    color: var(--tj-pink);
+    font-size: 11.5px;
+    font-weight: 700;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    margin-bottom: 12px;
+    display: block;
+}
+
+.tj-blog-main-title {
+    color: #fff;
+    font-size: 36px;
+    font-weight: 800;
+    line-height: 1.25;
+    margin-bottom: 15px;
+    text-transform: uppercase;
+}
+
+.tj-blog-lead-desc {
+    color: rgba(255, 255, 255, 0.85);
+    font-size: 15px;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+.tj-blog-published-date {
+    color: rgba(255, 255, 255, 0.4);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+    display: block;
+}
+
+/* Images Styling */
+.tj-blog-featured-img {
+    width: 100%;
+    border-radius: 14px;
+    overflow: hidden;
+    margin-bottom: 40px;
+    border: 1px solid var(--tj-border);
+}
+
+.tj-blog-featured-img img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+/* Content Typography */
+.tj-blog-content p {
+    font-size: 13.5px;
+    line-height: 1.8;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 25px;
+}
+
+.tj-blog-content h3 {
+    color: #fff;
+    font-size: 18px;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    margin-top: 40px;
+    margin-bottom: 15px;
+    font-family: var(--bebas-font);
+}
+
+/* Blockquote */
+.tj-blog-quote {
+    border-left: 3px solid var(--tj-pink);
+    padding-left: 20px;
+    margin: 35px 0;
+    font-style: italic;
+    color: #fff;
+    font-size: 15px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+/* Bullet Points */
+.tj-blog-bullet-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 30px;
+}
+
+.tj-blog-bullet-list li {
+    position: relative;
+    padding-left: 18px;
+    font-size: 13.5px;
+    color: rgba(255, 255, 255, 0.6);
+    margin-bottom: 10px;
+}
+
+.tj-blog-bullet-list li::before {
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 9px;
+    width: 5px;
+    height: 5px;
+    background-color: var(--tj-pink);
+    border-radius: 50%;
+}
+
+/* Share Section */
+.tj-blog-share-wrap {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 50px;
+    padding-top: 25px;
+    border-top: 1px solid var(--tj-border);
+}
+
+.tj-blog-share-label {
+    font-size: 11px;
+    text-transform: uppercase;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.4);
+    font-weight: 700;
+}
+
+.tj-share-icons {
+    display: flex;
+    gap: 10px;
+}
+
+.tj-share-icon-btn {
+    width: 32px;
+    height: 32px;
+    border-radius: 50%;
+    background: linear-gradient(145deg, rgba(17, 17, 43, 0.8), rgba(10, 10, 26, 0.9));
+    border: 1px solid var(--tj-border);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.tj-share-icon-btn:hover {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    border-color: transparent;
+    color: #fff;
+}
+
+/* =========================================================
+   3. BLOG LISTING PAGE
+   ========================================================= */
+.tj-blog-section {
+    background-color: #090b29;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Glow Background Elements */
+.tj-blog-glow {
+    position: absolute;
+    width: 350px;
+    height: 350px;
+    border-radius: 50%;
+    filter: blur(100px);
+    z-index: 1;
+    opacity: 0.15;
+}
+
+.tj-blog-glow-1 {
+    top: 10%;
+    left: -5%;
+    background: var(--tj-purple);
+}
+
+.tj-blog-glow-2 {
+    bottom: 10%;
+    right: -5%;
+    background: var(--tj-pink);
+}
+
+/* Section Headings */
+.tj-section-subtitle {
+    color: var(--tj-pink);
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing: 2px;
+}
+
+.tj-section-title {
+    color: #fff;
+    font-size: 28px;
+}
+
+.tj-section-desc {
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 13.5px;
+}
+
+/* Search & Filter Styling */
+.tj-blog-search-input {
+    background: linear-gradient(145deg, rgba(17, 17, 43, 0.8), rgba(10, 10, 26, 0.9));
+    border: 1px solid var(--tj-border);
+    border-radius: 50px;
+    padding: 12px 20px 12px 45px;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    transition: 0.3s;
+    width: 250px;
+}
+
+.tj-blog-search-input::placeholder {
+    color: rgba(255, 255, 255, 0.3);
+}
+
+.tj-blog-search-input:focus {
+    border-color: var(--tj-pink);
+    box-shadow: 0 0 15px rgba(233, 54, 167, 0.2);
+}
+
+.tj-filter-btn {
+    background: linear-gradient(145deg, rgba(17, 17, 43, 0.8), rgba(10, 10, 26, 0.9));
+    border: 1px solid var(--tj-border);
+    border-radius: 50px;
+    padding: 10px 22px;
+    color: rgba(255, 255, 255, 0.7);
+    font-size: 12.5px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tj-filter-btn:hover,
+.tj-filter-btn.active {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(125, 53, 232, 0.3);
+}
+
+/* Blog Card Styling */
+.tj-blog-card {
+    background: linear-gradient(145deg, rgba(17, 17, 43, 0.85), rgba(10, 10, 26, 0.9));
+    border: 1px solid var(--tj-border);
+    border-radius: 16px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    height: 100%;
+}
+
+.tj-blog-card:hover {
+    border-color: rgba(125, 53, 232, 0.4);
+    transform: translateY(-5px);
+    box-shadow: 0 12px 30px rgba(0, 0, 0, 0.4);
+}
+
+.tj-blog-img-wrapper {
+    height: 200px;
+    overflow: hidden;
+}
+
+.tj-blog-img-wrapper img {
+    height: 100%;
+    transition: transform 0.4s ease;
+}
+
+.tj-blog-card:hover .tj-blog-img-wrapper img {
+    transform: scale(1.05);
+}
+
+.tj-blog-badge {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    color: #fff;
+    font-size: 10.5px;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 50px;
+    z-index: 2;
+}
+
+.tj-blog-meta {
+    color: rgba(255, 255, 255, 0.45);
+    font-size: 11px;
+    font-weight: 600;
+    letter-spacing: 0.5px;
+}
+
+.tj-blog-title {
+    font-size: 14.5px !important;
+    line-height: 1.4;
+    transition: color 0.3s;
+}
+
+.tj-blog-card:hover .tj-blog-title {
+    color: var(--tj-pink) !important;
+}
+
+.tj-tag-pill {
+    background: rgba(135, 120, 255, 0.08);
+    border: 1px solid var(--tj-border);
+    color: rgba(255, 255, 255, 0.65);
+    font-size: 10.5px;
+    padding: 3px 10px;
+    border-radius: 50px;
+}
+
+.tj-read-more {
+    color: var(--tj-pink);
+    transition: 0.3s;
+}
+
+.tj-read-more:hover {
+    color: #fff;
+}
+
+/* =========================================================
+   4. CART PAGE
+   ========================================================= */
+.tj-cart-section {
+    background-color: #090b29;
+    position: relative;
+}
+
+/* Section Title & Item Count */
+.tj-cart-header-title {
+    font-size: 20px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 0;
+}
+
+.tj-cart-item-count {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+/* Cart Item Card */
+.tj-cart-item-card {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 18px;
+    padding: 20px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 20px;
+    transition: 0.3s;
+}
+
+.tj-cart-item-card:hover {
+    border-color: rgba(125, 53, 232, 0.4);
+}
+
+.tj-cart-item-info-wrap {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.tj-cart-item-img {
+    width: 85px;
+    height: 85px;
+    border-radius: 12px;
+    object-fit: cover;
+    border: 1px solid var(--tj-border);
+}
+
+.tj-cart-item-details h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 4px;
+}
+
+.tj-cart-item-details p {
+    font-size: 11.5px;
+    color: rgba(255, 255, 255, 0.45);
+    margin-bottom: 12px;
+}
+
+/* Quantity Controls & Action Links */
+.tj-cart-actions-row {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    flex-wrap: wrap;
+}
+
+.tj-qty-selector {
+    display: flex;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--tj-border);
+    border-radius: 50px;
+    padding: 4px 12px;
+    gap: 12px;
+}
+
+.tj-qty-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.6);
+    font-size: 12px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.tj-qty-btn:hover {
+    color: #fff;
+}
+
+.tj-qty-val {
+    font-size: 13px;
+    font-weight: 600;
+    color: #fff;
+}
+
+.tj-cart-action-btn {
+    background: none;
+    border: none;
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 12px;
+    display: inline-flex;
+    align-items: center;
+    gap: 6px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: 0.2s;
+    padding: 0;
+}
+
+.tj-cart-action-btn:hover {
+    color: var(--tj-pink);
+}
+
+.tj-cart-item-price {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    text-align: right;
+}
+
+/* Promo Code Box */
+.tj-promo-box {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 18px;
+    padding: 20px;
+    margin-top: 10px;
+}
+
+.tj-promo-box label {
+    font-size: 12px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    display: block;
+    margin-bottom: 12px;
+}
+
+.tj-promo-input-group {
+    display: flex;
+    gap: 10px;
+}
+
+.tj-promo-input {
+    flex: 1;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--tj-border);
+    border-radius: 50px;
+    padding: 10px 18px;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.tj-promo-input::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.tj-promo-input:focus {
+    border-color: var(--tj-pink);
+    background: rgba(255, 255, 255, 0.05);
+}
+
+.tj-apply-btn {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    border: none;
+    border-radius: 50px;
+    padding: 10px 24px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13px;
+    cursor: pointer;
+    transition: 0.3s;
+    box-shadow: 0 4px 15px rgba(125, 53, 232, 0.3);
+}
+
+.tj-apply-btn:hover {
+    opacity: 0.9;
+}
+
+/* Order Summary Card */
+.tj-summary-card {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 20px;
+    padding: 25px;
+    position: sticky;
+    top: 20px;
+}
+
+.tj-summary-title {
+    font-size: 18px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 20px;
+}
+
+.tj-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 14px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tj-summary-row span:last-child {
+    color: #fff;
+    font-weight: 500;
+}
+
+.tj-summary-divider {
+    height: 1px;
+    background: var(--tj-border);
+    margin: 18px 0;
+}
+
+.tj-summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 22px;
+}
+
+.tj-summary-total span:first-child {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.tj-summary-total span:last-child {
+    font-size: 20px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.tj-checkout-btn {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    padding: 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(125, 53, 232, 0.35);
+    transition: 0.3s;
+    text-decoration: none;
+    margin-bottom: 12px;
+}
+
+.tj-checkout-btn:hover {
+    opacity: 0.9;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(233, 54, 167, 0.5);
+}
+
+.tj-continue-btn {
+    background: transparent;
+    border: 1px solid var(--tj-border);
+    border-radius: 50px;
+    width: 100%;
+    padding: 11px;
+    color: rgba(255, 255, 255, 0.8);
+    font-weight: 600;
+    font-size: 13px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: 0.3s;
+    text-decoration: none;
+    margin-bottom: 20px;
+}
+
+.tj-continue-btn:hover {
+    border-color: var(--tj-pink);
+    color: #fff;
+    background: rgba(233, 54, 167, 0.05);
+}
+
+.tj-security-badges {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 20px;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+}
+
+.tj-security-badges span {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+}
+
+/* Cart Responsive */
+@media (max-width: 991px) {
+    .tj-cart-item-card {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .tj-cart-item-price {
+        align-self: flex-end;
+        margin-top: -10px;
+    }
+}
+
+/* =========================================================
+   5. CHECKOUT PAGE
+   ========================================================= */
+.tj-checkout-section {
+    background-color: #0b0b1a;
+    position: relative;
+}
+
+/* Checkout Main Headings */
+.tj-checkout-main-title {
+    font-size: 26px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 6px;
+}
+
+.tj-checkout-main-desc {
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 30px;
+}
+
+/* Step Heading Style */
+.tj-step-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 18px;
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.tj-step-num {
+    width: 24px;
+    height: 24px;
+    border-radius: 50%;
+    background: var(--tj-purple);
+    color: #fff;
+    font-size: 11px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 700;
+}
+
+/* Form Controls */
+.tj-input-group-custom {
+    margin-bottom: 18px;
+}
+
+.tj-input-group-custom label {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 6px;
+    display: block;
+}
+
+.tj-form-control {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--tj-border);
+    border-radius: 12px;
+    padding: 11px 16px;
+    color: #fff;
+    font-size: 13px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.tj-form-control::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.tj-form-control:focus {
+    border-color: var(--tj-pink);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 10px rgba(233, 54, 167, 0.2);
+}
+
+select.tj-form-control option {
+    background: #11112b;
+    color: #fff;
+}
+
+/* Delivery Options Radio Cards */
+.tj-delivery-option {
+    background: linear-gradient(145deg, rgba(17, 17, 43, 0.8), rgba(10, 10, 26, 0.9));
+    border: 1px solid var(--tj-border);
+    border-radius: 14px;
+    padding: 14px 18px;
+    margin-bottom: 12px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tj-delivery-option:hover,
+.tj-delivery-option.active {
+    border-color: var(--tj-pink);
+    background: rgba(233, 54, 167, 0.05);
+}
+
+.tj-delivery-info h6 {
+    font-size: 13.5px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.tj-delivery-info p {
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
+}
+
+.tj-delivery-price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+
+/* Checkbox Style */
+.tj-checkbox-wrap {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.7);
+    cursor: pointer;
+    margin-top: 10px;
+}
+
+.tj-checkbox-wrap input {
+    accent-color: var(--tj-pink);
+    width: 16px;
+    height: 16px;
+    cursor: pointer;
+}
+
+/* Order Summary Sidebar */
+.tj-summary-card {
+    background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
+    border: 1px solid var(--tj-border);
+    border-radius: 20px;
+    padding: 24px;
+    position: sticky;
+    top: 20px;
+}
+
+.tj-summary-title {
+    font-size: 17px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 18px;
+}
+
+.tj-summary-item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 12px;
+    margin-bottom: 14px;
+    padding-bottom: 14px;
+    border-bottom: 1px solid rgba(135, 120, 255, 0.08);
+}
+
+.tj-summary-item-left {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.tj-summary-item img {
+    width: 45px;
+    height: 45px;
+    border-radius: 8px;
+    object-fit: cover;
+    border: 1px solid var(--tj-border);
+}
+
+.tj-summary-item h6 {
+    font-size: 12.5px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 2px;
+}
+
+.tj-summary-item p {
+    font-size: 10.5px;
+    color: rgba(255, 255, 255, 0.45);
+    margin: 0;
+}
+
+.tj-summary-item-price {
+    font-size: 13px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.tj-summary-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 12px;
+    font-size: 12.5px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tj-summary-row span:last-child {
+    color: #fff;
+    font-weight: 500;
+}
+
+.tj-summary-divider {
+    height: 1px;
+    background: var(--tj-border);
+    margin: 16px 0;
+}
+
+.tj-summary-total {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 20px;
+}
+
+.tj-summary-total span:first-child {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+}
+
+.tj-summary-total span:last-child {
+    font-size: 19px;
+    font-weight: 800;
+    color: #fff;
+}
+
+.tj-place-order-btn {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    border: none;
+    border-radius: 50px;
+    width: 100%;
+    padding: 12px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13.5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(125, 53, 232, 0.35);
+    transition: 0.3s;
+    text-decoration: none;
+    margin-bottom: 14px;
+}
+
+.tj-place-order-btn:hover {
+    opacity: 0.9;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(233, 54, 167, 0.5);
+}
+
+.tj-secure-badge-text {
+    text-align: center;
+    font-size: 11px;
+    color: rgba(255, 255, 255, 0.4);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+/* =========================================================
+   6. CONTACT PAGE
+   ========================================================= */
+.tj-contact-section {
+    background-color: #090b29;
+    position: relative;
+}
+
+/* Info Cards Style */
+.tj-contact-info-card {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 26px;
+    padding: 20px 24px;
+    margin-bottom: 20px;
+    display: flex;
+    align-items: flex-start;
+    gap: 18px;
+    transition: 0.3s ease;
+}
+
+.tj-contact-info-card:hover {
+    border-color: rgba(125, 53, 232, 0.4);
+    box-shadow: 0 4px 20px rgba(125, 53, 232, 0.1);
+}
+
+.tj-contact-icon {
+    width: 45px;
+    height: 45px;
+    border-radius: 22px;
+    background: rgba(125, 53, 232, 0.1);
+    border: 1px solid rgba(125, 53, 232, 0.2);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #D0C2ED;
+    font-size: 16px;
+    flex-shrink: 0;
+}
+
+.tj-contact-details label {
+    font-size: 10px;
+    letter-spacing: 1.5px;
+    color: rgba(255, 255, 255, 0.4);
+    text-transform: uppercase;
+    font-weight: 700;
+    display: block;
+    margin-bottom: 4px;
+}
+
+.tj-contact-details span,
+.tj-contact-details a {
+    font-size: 14px;
+    color: #ffffff;
+    font-weight: 500;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+.tj-contact-details a:hover {
+    color: var(--tj-pink);
+}
+
+.tj-faq-card {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 20px;
+    padding: 20px 24px;
+    font-size: 13px;
+    color: rgba(255, 255, 255, 0.7);
+    line-height: 1.5;
+}
+
+.tj-faq-card a {
+    color: #fff;
+    text-decoration: underline;
+    font-weight: 600;
+}
+
+.tj-faq-card a:hover {
+    color: var(--tj-pink);
+}
+
+/* Form Container Style */
+.tj-contact-form-wrapper {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 24px;
+    padding: 40px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.3);
+}
+
+.tj-form-title {
+    font-size: 28px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.tj-form-desc {
+    color: rgba(255, 255, 255, 0.5);
+    font-size: 13.5px;
+    margin-bottom: 30px;
+}
+
+.tj-input-group-custom {
+    margin-bottom: 20px;
+}
+
+.tj-input-group-custom label {
+    font-size: 11.5px;
+    font-weight: 600;
+    color: rgba(255, 255, 255, 0.7);
+    margin-bottom: 8px;
+    display: block;
+}
+
+.tj-form-control {
+    width: 100%;
+    background: rgba(255, 255, 255, 0.03);
+    border: 1px solid var(--tj-border);
+    border-radius: 12px;
+    padding: 12px 16px;
+    color: #fff;
+    font-size: 13.5px;
+    outline: none;
+    transition: 0.3s;
+}
+
+.tj-form-control::placeholder {
+    color: rgba(255, 255, 255, 0.25);
+}
+
+.tj-form-control:focus {
+    border-color: var(--tj-pink);
+    background: rgba(255, 255, 255, 0.05);
+    box-shadow: 0 0 12px rgba(233, 54, 167, 0.25);
+}
+
+textarea.tj-form-control {
+    resize: none;
+    height: 140px;
+}
+
+select.tj-form-control option {
+    background: #11112b;
+    color: #fff;
+}
+
+.tj-submit-btn {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    border: none;
+    border-radius: 50px;
+    padding: 12px 30px;
+    color: #fff;
+    font-weight: 600;
+    font-size: 13.5px;
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    box-shadow: 0 4px 15px rgba(125, 53, 232, 0.35);
+    transition: 0.3s;
+}
+
+.tj-submit-btn:hover {
+    opacity: 0.9;
+    box-shadow: 0 6px 20px rgba(233, 54, 167, 0.5);
+}
+
+@media (max-width: 991px) {
+    .tj-contact-form-wrapper {
+        padding: 25px;
+    }
+}
+
+/* =========================================================
+   7. SIZE GUIDE PAGE
+   ========================================================= */
+.tj-size-wrapper {
+    background-color: var(--tj-bg-dark);
+    position: relative;
+}
+
+/* Category Filter Tabs */
+.tj-size-tabs {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    margin-bottom: 40px;
+}
+
+.tj-size-tab-btn {
+    background: linear-gradient(145deg, rgba(17, 17, 43, 0.8), rgba(10, 10, 26, 0.9));
+    border: 1px solid var(--tj-border);
+    color: rgba(255, 255, 255, 0.6);
+    padding: 10px 24px;
+    border-radius: 50px;
+    font-size: 13px;
+    font-weight: 600;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.tj-size-tab-btn.active,
+.tj-size-tab-btn:hover {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    border-color: transparent;
+    color: #fff;
+    box-shadow: 0 4px 15px rgba(125, 53, 232, 0.35);
+}
+
+/* Unit Switcher (CM / Inches) */
+.tj-unit-switcher {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 15px;
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+.tj-unit-btn {
+    background: #11112b;
+    border: 1px solid var(--tj-border);
+    color: #fff;
+    padding: 5px 12px;
+    border-radius: 6px;
+    cursor: pointer;
+    font-size: 11px;
+    font-weight: 600;
+}
+
+.tj-unit-btn.active {
+    background: var(--tj-purple);
+    border-color: var(--tj-purple);
+}
+
+/* Custom Styled Tables */
+.tj-table-container {
+    background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
+    border: 1px solid var(--tj-border);
+    border-radius: 20px;
+    padding: 25px;
+    overflow-x: auto;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+}
+
+.table.tj-custom-table {
+    color: #fff;
+    margin: 0;
+    white-space: nowrap;
+}
+
+.table.tj-custom-table th {
+    background: rgba(125, 53, 232, 0.15);
+    color: #fff;
+    font-weight: 700;
+    font-size: 12.5px;
+    border-bottom: 1px solid var(--tj-border);
+    padding: 15px;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.table.tj-custom-table td {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.75);
+    font-size: 13px;
+    border-bottom: 1px solid var(--tj-border);
+    padding: 15px;
+    vertical-align: middle;
+}
+
+.table.tj-custom-table tr:last-child td {
+    border-bottom: none;
+}
+
+.table.tj-custom-table tbody tr:hover td {
+    color: #fff;
+    background: rgba(233, 54, 167, 0.04);
+}
+
+/* Measure Guide Cards */
+.tj-measure-card {
+    background: linear-gradient(145deg, rgba(17, 17, 43, 0.8), rgba(10, 10, 26, 0.9));
+    border: 1px solid var(--tj-border);
+    border-radius: 18px;
+    padding: 25px;
+    height: 100%;
+    transition: 0.3s;
+}
+
+.tj-measure-card:hover {
+    border-color: rgba(233, 54, 167, 0.4);
+}
+
+.tj-measure-icon {
+    width: 42px;
+    height: 42px;
+    background: rgba(233, 54, 167, 0.1);
+    border: 1px solid rgba(233, 54, 167, 0.2);
+    border-radius: 12px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: var(--tj-pink);
+    font-size: 16px;
+    margin-bottom: 15px;
+}
+
+.tj-measure-card h5 {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 8px;
+}
+
+.tj-measure-card p {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.55);
+    line-height: 1.6;
+    margin: 0;
+}
+
+.tj-section-title {
+    font-size: 24px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+.tab-content-pane {
+    display: none;
+}
+
+.tab-content-pane.active {
+    display: block;
+}
+
+/* =========================================================
+   8. WISHLIST PAGE
+   ========================================================= */
+.tj-wishlist-section {
+    background-color: #090b29;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Wishlist Card Styling */
+.tj-wishlist-card {
+    background: #11143f;
+    border: 1px solid var(--tj-border);
+    border-radius: 28px;
+    overflow: hidden;
+    transition: 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    position: relative;
+}
+
+.tj-wishlist-card:hover {
+    border-color: rgba(125, 53, 232, 0.4);
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.3);
+}
+
+/* Image Wrapper & Saved Badge */
+.tj-wishlist-img-wrap {
+    position: relative;
+    width: 100%;
+    height: 320px;
+    overflow: hidden;
+}
+
+.tj-wishlist-img-wrap img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.tj-wishlist-card:hover .tj-wishlist-img-wrap img {
+    transform: scale(1.03);
+}
+
+.tj-saved-badge {
+    position: absolute;
+    top: 15px;
+    left: 15px;
+    background: #454a64cf;
+    color: #FB40AD;
+    font-size: 11px;
+    font-weight: 700;
+    padding: 5px 12px;
+    border-radius: 50px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    box-shadow: 0 4px 10px rgba(125, 53, 232, 0.3);
+    z-index: 2;
+}
+
+.tj-saved-badge i {
+    font-size: 10px;
+    color: #FB40AD;
+}
+
+/* Card Body / Content */
+.tj-wishlist-body {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+.tj-wishlist-title {
+    font-size: 15px;
+    font-weight: 700;
+    color: #fff;
+    margin-bottom: 6px;
+    text-decoration: none;
+}
+
+.tj-wishlist-title:hover {
+    color: var(--tj-pink);
+}
+
+.tj-wishlist-color {
+    font-size: 12px;
+    color: rgba(255, 255, 255, 0.5);
+    margin-bottom: 4px;
+}
+
+.tj-wishlist-stock {
+    font-size: 11.5px;
+    color: #51E2FF;
+    margin-bottom: 15px;
+}
+
+.tj-wishlist-price {
+    font-size: 16px;
+    font-weight: 800;
+    color: #fff;
+    margin-bottom: 15px;
+}
+
+/* Action Buttons */
+.tj-add-to-cart-btn {
+    background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
+    color: #fff;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px;
+    font-size: 12.5px;
+    font-weight: 700;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    margin-bottom: 10px;
+    box-shadow: 0 4px 15px rgba(125, 53, 232, 0.3);
+    display: block;
+}
+
+.tj-add-to-cart-btn:hover {
+    opacity: 0.9;
+    color: #fff;
+    box-shadow: 0 6px 20px rgba(233, 54, 167, 0.4);
+}
+
+.tj-remove-btn {
+    background: transparent;
+    color: rgba(255, 255, 255, 0.6);
+    border: 1px solid var(--tj-border);
+    border-radius: 50px;
+    padding: 8px 20px;
+    font-size: 12px;
+    font-weight: 600;
+    width: 100%;
+    cursor: pointer;
+    transition: 0.3s;
+    text-align: center;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 6px;
+}
+
+.tj-remove-btn:hover {
+    background: rgba(255, 23, 68, 0.1);
+    border-color: #ff1744;
+    color: #ff1744;
+}

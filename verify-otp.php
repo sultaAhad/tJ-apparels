@@ -3,128 +3,11 @@
 <!-- App Include Here -->
 
 <style>
-    :root {
-        --tj-border: rgba(135, 120, 255, 0.16);
-        --tj-purple: #7d35e8;
-        --tj-pink: #e936a7;
-    }
-
-    .tj-auth-section {
-        background-color: #0b0b1a;
-        min-height: 85vh;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        position: relative;
-        overflow: hidden;
-        padding: 60px 0;
-    }
-
-    .tj-auth-glow {
-        position: absolute;
-        width: 350px;
-        height: 350px;
-        border-radius: 50%;
-        filter: blur(100px);
-        z-index: 1;
-        opacity: 0.15;
-    }
-    .tj-auth-glow-1 { top: 10%; left: 20%; background: var(--tj-purple); }
-    .tj-auth-glow-2 { bottom: 10%; right: 20%; background: var(--tj-pink); }
-
-    .tj-auth-card {
-        background: linear-gradient(145deg, rgba(17, 17, 43, 0.9), rgba(10, 10, 26, 0.95));
-        border: 1px solid var(--tj-border);
-        border-radius: 24px;
-        padding: 45px 35px;
-        width: 100%;
-        max-width: 440px;
-        position: relative;
-        z-index: 2;
-        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
-    }
-
-    .tj-auth-title {
-        color: #fff;
-        font-size: 22px;
-        font-weight: 800;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        margin-bottom: 8px;
-    }
-
-    .tj-auth-desc {
-        color: rgba(255, 255, 255, 0.55);
-        font-size: 13px;
-        line-height: 1.5;
-        margin-bottom: 30px;
-    }
-
-    /* OTP Inputs Grid Style */
-    .tj-otp-inputs {
-        display: flex;
-        gap: 12px;
-        justify-content: center;
-        margin-bottom: 25px;
-    }
-
-    .tj-otp-input {
-        width: 50px;
-        height: 55px;
-        background: rgba(10, 10, 26, 0.6);
-        border: 1px solid var(--tj-border);
-        border-radius: 12px;
-        color: #fff;
-        font-size: 20px;
-        font-weight: 700;
-        text-align: center;
-        outline: none;
-        transition: 0.3s;
-    }
-
-    .tj-otp-input:focus {
-        border-color: var(--tj-pink);
-        box-shadow: 0 0 15px rgba(233, 54, 167, 0.2);
-    }
-
-    .tj-gradient-btn {
-        background: linear-gradient(135deg, var(--tj-purple), var(--tj-pink));
-        border: none;
-        border-radius: 50px;
-        padding: 13px;
-        color: #fff;
-        font-size: 12.5px;
-        font-weight: 700;
-        letter-spacing: 1px;
-        text-transform: uppercase;
-        width: 100%;
-        cursor: pointer;
-        transition: 0.3s;
-        box-shadow: 0 4px 15px rgba(125, 53, 232, 0.3);
-        margin-bottom: 20px;
-    }
-
-    .tj-gradient-btn:hover {
-        opacity: 0.9;
-        transform: translateY(-2px);
-        box-shadow: 0 6px 20px rgba(233, 54, 167, 0.4);
-    }
-
-    .tj-resend-text {
-        text-align: center;
-        color: rgba(255, 255, 255, 0.5);
-        font-size: 11.5px;
-    }
-
-    .tj-resend-text a {
-        color: var(--tj-pink);
-        font-weight: 700;
+    /* Optional: Disabled state style for resend link */
+    .tj-resend-text a.disabled {
+        color: #6c757d;
+        pointer-events: none;
         text-decoration: none;
-        margin-left: 4px;
-    }
-
-    .tj-resend-text a:hover {
-        color: #fff;
     }
 </style>
 
@@ -152,7 +35,7 @@
             </form>
 
             <div class="tj-resend-text">
-                Didn't receive code? <a href="#">Resend Code</a>
+                Didn't receive code? <a href="#" id="resendBtn">Resend Code</a> <span id="timerText">in <strong id="countdown">60</strong>s</span>
             </div>
 
         </div>
@@ -160,9 +43,10 @@
 </section>
 <!-- Body Content End Here -->
 
-<!-- Auto jump script for OTP inputs -->
+<!-- Auto jump script & Timer script for OTP inputs -->
 <script>
     document.addEventListener("DOMContentLoaded", function() {
+        // 1. Auto jump script for OTP inputs
         const inputs = document.querySelectorAll(".tj-otp-input");
         inputs.forEach((input, index) => {
             input.addEventListener("input", (e) => {
@@ -175,6 +59,41 @@
                     inputs[index - 1].focus();
                 }
             });
+        });
+
+        // 2. Resend Timer Script
+        let timeLeft = 60;
+        const countdownEl = document.getElementById("countdown");
+        const resendBtn = document.getElementById("resendBtn");
+        const timerText = document.getElementById("timerText");
+
+        // Initially disable resend link
+        resendBtn.classList.add("disabled");
+
+        let timer = setInterval(function() {
+            if (timeLeft <= 0) {
+                clearInterval(timer);
+                resendBtn.classList.remove("disabled");
+                timerText.style.display = "none"; // Hide timer text or customize as needed
+            } else {
+                countdownEl.textContent = timeLeft;
+                timeLeft -= 1;
+            }
+        }, 1000);
+
+        // Resend click event handler (Optional AJAX trigger can be added here)
+        resendBtn.addEventListener("click", function(e) {
+            e.preventDefault();
+            if(!resendBtn.classList.contains("disabled")) {
+                // Reset timer
+                timeLeft = 60;
+                timerText.style.display = "inline";
+                resendBtn.classList.add("disabled");
+                
+                // Restart timer interval
+                timer = setInterval(arguments.callee, 1000); // simplified restart or recreate interval logic
+                location.reload(); // Simple reload or fetch API call to trigger backend OTP resend
+            }
         });
     });
 </script>

@@ -258,19 +258,19 @@ $products = [
                     </div>
                 </div>
 
-             <!-- Products Grid (Shop Page with Sidebar) -->
-<div class="row g-4" id="tjProductsGrid">
-    <?php foreach ($products as $prod) {
+                <!-- Products Grid (Shop Page with Sidebar) -->
+                <div class="row g-4" id="tjProductsGrid">
+                    <?php foreach ($products as $prod) {
         // Set 3 columns layout for shop page grid view alongside sidebar
         $colClass = "col-lg-4 col-md-6 tj-product-col";
         include 'inc/product-card.php';
     } ?>
-</div>
                 </div>
-
             </div>
 
         </div>
+
+    </div>
     </div>
 </main>
 <!-- Body Content End Here -->

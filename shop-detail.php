@@ -415,10 +415,10 @@ include 'inc/inner-banner.php';
 }
 
 .tj-feature-card {
-    background: linear-gradient(145deg, rgba(15, 15, 40, 0.8), rgba(8, 8, 25, 0.9));
+    background: #101141;
     border: 1px solid var(--tj-border);
     padding: 15px;
-    border-radius: 12px;
+    border-radius: 22px;
 }
 
 .tj-feature-card i {
