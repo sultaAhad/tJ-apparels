@@ -159,7 +159,7 @@ include 'inc/inner-banner.php';
                                             <td>
                                                 <div class="d-flex align-items-center gap-3">
                                                     <div class="prod-thumb">
-                                                        <img src="assets/images/product-1.jpg" alt="Airplane Kite" class="img-fluid">
+                                                        <img src="img/cart.png" alt="Airplane Kite" class="img-fluid">
                                                     </div>
                                                     <div>
                                                         <span class="fw-bold text-white d-block">Airplane Kite</span>
@@ -178,7 +178,7 @@ include 'inc/inner-banner.php';
                                             <td>
                                                 <div class="d-flex align-items-center gap-3">
                                                     <div class="prod-thumb">
-                                                        <img src="assets/images/product-2.jpg" alt="3D Giant Octopus Kite" class="img-fluid">
+                                                        <img src="img/cart1.png" alt="3D Giant Octopus Kite" class="img-fluid">
                                                     </div>
                                                     <div>
                                                         <span class="fw-bold text-white d-block">3D Giant Octopus Kite</span>
@@ -197,7 +197,7 @@ include 'inc/inner-banner.php';
                                             <td>
                                                 <div class="d-flex align-items-center gap-3">
                                                     <div class="prod-thumb">
-                                                        <img src="assets/images/product-3.jpg" alt="Eagle Wings Kids Kite" class="img-fluid">
+                                                        <img src="img/cart.png" alt="Eagle Wings Kids Kite" class="img-fluid">
                                                     </div>
                                                     <div>
                                                         <span class="fw-bold text-white d-block">Eagle Wings Kids Kite</span>

@@ -37,7 +37,6 @@
                 <button type="submit" class="tj-gradient-btn">Sign In <i class="fa-solid fa-arrow-right ms-1"></i></button>
             </form>
 
-            <a href="#" class="tj-google-btn my-3">Continue with Google</a>
 
             <div class="tj-auth-footer-text">
                 New here? <a href="register.php">Create Account</a>

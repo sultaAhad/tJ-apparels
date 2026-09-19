@@ -63,8 +63,8 @@ include 'inc/inner-banner.php';
                             </div>
                             <div class="tj-order-body">
                                 <div class="tj-order-products">
-                                    <div class="tj-product-thumb"><img src="assets/images/product-1.jpg" alt="Product"></div>
-                                    <div class="tj-product-thumb"><img src="assets/images/product-2.jpg" alt="Product"></div>
+                                    <div class="tj-product-thumb"><img src="img/cart.png" alt="Product"></div>
+                                    <div class="tj-product-thumb"><img src="img/cart1.png" alt="Product"></div>
                                 </div>
                                 <div class="tj-order-price">$248.38</div>
                             </div>
@@ -85,7 +85,7 @@ include 'inc/inner-banner.php';
                             </div>
                             <div class="tj-order-body">
                                 <div class="tj-order-products">
-                                    <div class="tj-product-thumb"><img src="assets/images/product-3.jpg" alt="Product"></div>
+                                    <div class="tj-product-thumb"><img src="img/cart.png" alt="Product"></div>
                                 </div>
                                 <div class="tj-order-price">$197.19</div>
                             </div>
@@ -106,8 +106,8 @@ include 'inc/inner-banner.php';
                             </div>
                             <div class="tj-order-body">
                                 <div class="tj-order-products">
-                                    <div class="tj-product-thumb"><img src="assets/images/product-4.jpg" alt="Product"></div>
-                                    <div class="tj-product-thumb"><img src="assets/images/product-5.jpg" alt="Product"></div>
+                                      <div class="tj-product-thumb"><img src="img/cart.png" alt="Product"></div>
+                                    <div class="tj-product-thumb"><img src="img/cart1.png" alt="Product"></div>
                                 </div>
                                 <div class="tj-order-price">$291.87</div>
                             </div>
@@ -127,7 +127,7 @@ include 'inc/inner-banner.php';
                             </div>
                             <div class="tj-order-body">
                                 <div class="tj-order-products">
-                                    <div class="tj-product-thumb"><img src="assets/images/product-6.jpg" alt="Product"></div>
+                                    <div class="tj-product-thumb"><img src="img/cart1.png" alt="Product"></div>
                                 </div>
                                 <div class="tj-order-price">$75.59</div>
                             </div>
@@ -150,8 +150,8 @@ include 'inc/inner-banner.php';
                             </div>
                             <div class="tj-order-body">
                                 <div class="tj-order-products">
-                                    <div class="tj-product-thumb"><img src="assets/images/product-4.jpg" alt="Product"></div>
-                                    <div class="tj-product-thumb"><img src="assets/images/product-5.jpg" alt="Product"></div>
+                                      <div class="tj-product-thumb"><img src="img/cart.png" alt="Product"></div>
+                                    <div class="tj-product-thumb"><img src="img/cart1.png" alt="Product"></div>
                                 </div>
                                 <div class="tj-order-price">$291.87</div>
                             </div>
@@ -173,7 +173,7 @@ include 'inc/inner-banner.php';
                             </div>
                             <div class="tj-order-body">
                                 <div class="tj-order-products">
-                                    <div class="tj-product-thumb"><img src="assets/images/product-3.jpg" alt="Product"></div>
+                                    <div class="tj-product-thumb"><img src="img/cart1.png" alt="Product"></div>
                                 </div>
                                 <div class="tj-order-price">$197.19</div>
                             </div>
@@ -196,8 +196,8 @@ include 'inc/inner-banner.php';
                             </div>
                             <div class="tj-order-body">
                                 <div class="tj-order-products">
-                                    <div class="tj-product-thumb"><img src="assets/images/product-1.jpg" alt="Product"></div>
-                                    <div class="tj-product-thumb"><img src="assets/images/product-2.jpg" alt="Product"></div>
+                                     <div class="tj-product-thumb"><img src="img/cart.png" alt="Product"></div>
+                                    <div class="tj-product-thumb"><img src="img/cart1.png" alt="Product"></div>
                                 </div>
                                 <div class="tj-order-price">$248.38</div>
                             </div>
@@ -220,7 +220,7 @@ include 'inc/inner-banner.php';
                             </div>
                             <div class="tj-order-body">
                                 <div class="tj-order-products">
-                                    <div class="tj-product-thumb"><img src="assets/images/product-6.jpg" alt="Product"></div>
+                                    <div class="tj-product-thumb"><img src="img/cart1.png" alt="Product"></div>
                                 </div>
                                 <div class="tj-order-price">$75.59</div>
                             </div>
