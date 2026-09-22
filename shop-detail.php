@@ -532,7 +532,7 @@ include 'inc/inner-banner.php';
                             <div class="tj-option-label mb-0">Size</div>
                             <!-- Size Guide Trigger Button Added Here -->
                             <button type="button" class="btn btn-link text-decoration-none bg-transparent text-warning" style="font-size: 11px;" data-bs-toggle="modal" data-bs-target="#sizeGuideModal">
-                                Size Guide <i class="fa-solid fa-arrow-right"></i>
+                                Size Guide <i class="fa-solid ms-2 fa-arrow-right"></i>
                             </button>
                         </div>
                         <div class="tj-size-selector mt-2">
