@@ -531,7 +531,7 @@ include 'inc/inner-banner.php';
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="tj-option-label mb-0">Size</div>
                             <!-- Size Guide Trigger Button Added Here -->
-                            <button type="button" class="btn btn-link text-decoration-none p-0 text-warning" style="font-size: 11px;" data-bs-toggle="modal" data-bs-target="#sizeGuideModal">
+                            <button type="button" class="btn btn-link text-decoration-none bg-transparent text-warning" style="font-size: 11px;" data-bs-toggle="modal" data-bs-target="#sizeGuideModal">
                                 Size Guide <i class="fa-solid fa-arrow-right"></i>
                             </button>
                         </div>
