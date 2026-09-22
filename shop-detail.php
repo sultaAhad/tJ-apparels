@@ -126,23 +126,22 @@ $products = [
 $productId = isset($_GET['id']) ? intval($_GET['id']) : 1;
 $product = null;
 
-foreach ($products as $p) {
-    if ($p['id'] === $productId) {
-        $product = $p;
+foreach ($products as$p) {
+    if ($p['id'] ===$productId) {
+        $product =$p;
         break;
     }
 }
 
 if (!$product) {
-    $product = $products[0];
+    $product =$products[0];
 }
 ?>
 
 <!-- banner Include Here  -->
 <?php 
 $subtitle = "Product Detail";
-$title = $product['title'];
-$desc = "Explore complete details, size, and color options for this piece.";
+$title = $product['title'];$desc = "Explore complete details, size, and color options for this piece.";
 $currentPage = "Shop Detail";
 
 include 'inc/inner-banner.php'; 
@@ -464,7 +463,7 @@ include 'inc/inner-banner.php';
                     <!-- Main Swiper with Zoom Container -->
                     <div class="swiper swiper-main">
                         <div class="swiper-wrapper">
-                            <?php foreach($product['images'] as $img): ?>
+                            <?php foreach($product['images'] as$img): ?>
                             <div class="swiper-slide">
                                 <div class="img-zoom-container">
                                     <img src="<?php echo $img; ?>" alt="<?php echo htmlspecialchars($product['title']); ?>">
@@ -477,7 +476,7 @@ include 'inc/inner-banner.php';
                     <!-- Thumbs Swiper -->
                     <div class="swiper swiper-thumbs">
                         <div class="swiper-wrapper">
-                            <?php foreach($product['images'] as $img): ?>
+                            <?php foreach($product['images'] as$img): ?>
                             <div class="swiper-slide">
                                 <img src="<?php echo $img; ?>" alt="Thumbnail">
                             </div>
@@ -519,7 +518,7 @@ include 'inc/inner-banner.php';
                     <div class="mb-3">
                         <div class="tj-option-label">Colour : <span id="selectedColorName"><?php echo $product['colors'][0]['name']; ?></span></div>
                         <div class="tj-color-swatches">
-                            <?php foreach($product['colors'] as $index => $color): ?>
+                            <?php foreach($product['colors'] as $index =>$color): ?>
                             <div class="tj-color-btn <?php echo $index === 0 ? 'active' : ''; ?>"
                                 style="background-color: <?php echo $color['hex']; ?>;"
                                 onclick="selectColor(this, '<?php echo $color['name']; ?>')"></div>
@@ -531,10 +530,13 @@ include 'inc/inner-banner.php';
                     <div class="mb-4">
                         <div class="d-flex justify-content-between align-items-center">
                             <div class="tj-option-label mb-0">Size</div>
-                            <a href="#" class="text-muted text-decoration-none" style="font-size: 11px;">Size Guide <i class="fa-solid fa-arrow-right"></i></a>
+                            <!-- Size Guide Trigger Button Added Here -->
+                            <button type="button" class="btn btn-link text-decoration-none p-0 text-warning" style="font-size: 11px;" data-bs-toggle="modal" data-bs-target="#sizeGuideModal">
+                                Size Guide <i class="fa-solid fa-arrow-right"></i>
+                            </button>
                         </div>
                         <div class="tj-size-selector mt-2">
-                            <?php foreach($product['sizes'] as $index => $size): ?>
+                            <?php foreach($product['sizes'] as $index =>$size): ?>
                             <button type="button" class="tj-size-btn <?php echo $index === 0 ? 'active' : ''; ?>"
                                 onclick="selectSize(this)"><?php echo $size; ?></button>
                             <?php endforeach; ?>
@@ -738,7 +740,7 @@ $collection_products = [
 
 // Related Products Filter Logic
 $related_products = array_filter($collection_products, function($p) use ($productId) {
-    return $p['id'] !== $productId;
+    return $p['id'] !==$productId;
 });
 $related_products = array_slice($related_products, 0, 4);
 ?>
@@ -758,8 +760,7 @@ $related_products = array_slice($related_products, 0, 4);
         <div class="row g-4">
             <?php 
             if (!empty($related_products)) {
-                foreach ($related_products as $prod) {
-                    $colClass = "col-xl-3 col-lg-4 col-md-6 tj-product-col";
+                foreach ($related_products as $prod) {$colClass = "col-xl-3 col-lg-4 col-md-6 tj-product-col";
                     include 'inc/product-card.php'; 
                 }
             } else {
@@ -772,6 +773,9 @@ $related_products = array_slice($related_products, 0, 4);
 <!-- =========================================
      TJ YOU MAY ALSO LIKE SECTION END
 ========================================= -->
+
+<!-- Include Size Guide Component Here -->
+<?php include 'inc/size-guide-modal.php'; ?>
 
 <!-- Swiper JS & Custom Zoom Script -->
 <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
