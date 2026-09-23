@@ -110,6 +110,22 @@ $products = [
 ];
 ?>
 
+<!-- Custom CSS for Checkbox Controlled Subcategories Grid -->
+<style>
+    .tj-subcategories-box {
+        display: none;
+        padding-left: 20px;
+        margin-top: 8px;
+        margin-bottom: 12px;
+        border-left: 1px dashed rgba(255, 255, 255, 0.2);
+    }
+    .tj-accordion-grid {
+        display: grid;
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+        gap: 6px 10px;
+    }
+</style>
+
 <!-- Body Content Start Here -->
 <main class="tj-product-parent py-5">
     <div class="container">
@@ -120,86 +136,180 @@ $products = [
                 <div class="tj-filter-sidebar p-4 rounded-4 position-relative">
 
                     <!-- Filters Header -->
-                    <div
-                        class="d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom border-secondary border-opacity-25">
+                    <div class="d-flex align-items-center justify-content-between mb-4 pb-3 border-bottom border-secondary border-opacity-25">
                         <h5 class="text-white fw-bold mb-0 text-uppercase tracking-wider fs-6">Filters</h5>
-                        <button type="button" id="tjResetFilters"
-                            class="btn btn-link text-white-50 text-decoration-none p-0"
-                            style="font-size: 12px;">Reset</button>
+                        <button type="button" id="tjResetFilters" class="btn btn-link text-white-50 text-decoration-none p-0" style="font-size: 12px;">Reset</button>
                     </div>
 
-                    <!-- Category Filter -->
+                    <!-- Category Checkboxes with Dynamic Subcategories Toggle -->
                     <div class="tj-filter-group mb-4">
-                        <h6 class="text-white text-uppercase fw-bold mb-3"
-                            style="font-size: 11px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6);">Category</h6>
+                        <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 11px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6);">Categories</h6>
+                        
                         <div class="d-flex flex-column gap-2">
-                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50"
-                                style="font-size: 13px; cursor: pointer;">
-                                <input type="checkbox"
-                                    class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox"
-                                    data-filter-type="category" value="women"> Women
-                            </label>
-                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50"
-                                style="font-size: 13px; cursor: pointer;">
-                                <input type="checkbox"
-                                    class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox"
-                                    data-filter-type="category" value="men"> Men
-                            </label>
-                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50"
-                                style="font-size: 13px; cursor: pointer;">
-                                <input type="checkbox"
-                                    class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox"
-                                    data-filter-type="category" value="kids"> Kids
-                            </label>
-                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50"
-                                style="font-size: 13px; cursor: pointer;">
-                                <input type="checkbox"
-                                    class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox"
-                                    data-filter-type="category" value="accessories"> Accessories
-                            </label>
+
+                            <!-- WOMEN CATEGORY -->
+                            <div>
+                                <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white" style="font-size: 13px; cursor: pointer; font-weight: 600;">
+                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-parent-checkbox" data-target="tjWomenSub" data-filter-type="category" value="women"> Women
+                                </label>
+                                <div id="tjWomenSub" class="tj-subcategories-box">
+                                    <div class="tj-accordion-grid">
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="women"> Blouses
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="women"> Bottoms
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="women"> Cargos
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="women"> Dresses
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="women"> Jeans
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="women"> Jumpsuits
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="women"> Shirts
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="women"> Skirts
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="women"> Tops
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- MEN CATEGORY -->
+                            <div>
+                                <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white" style="font-size: 13px; cursor: pointer; font-weight: 600;">
+                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-parent-checkbox" data-target="tjMenSub" data-filter-type="category" value="men"> Men
+                                </label>
+                                <div id="tjMenSub" class="tj-subcategories-box">
+                                    <div class="tj-accordion-grid">
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="men"> Cargos
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="men"> Jeans
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="men"> Polos
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="men"> Shorts
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="men"> T-shirts
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="men"> Trousers
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- KIDS CATEGORY -->
+                            <div>
+                                <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white" style="font-size: 13px; cursor: pointer; font-weight: 600;">
+                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-parent-checkbox" data-target="tjKidsSub" data-filter-type="category" value="kids"> Kids
+                                </label>
+                                <div id="tjKidsSub" class="tj-subcategories-box">
+                                    <div class="d-flex flex-column gap-3">
+                                        <div>
+                                            <span class="d-block text-white mb-1" style="font-size: 12px; font-weight: 600;">Girls</span>
+                                            <div class="tj-accordion-grid">
+                                                <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="kids"> Skirts
+                                                </label>
+                                                <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="kids"> Shorts
+                                                </label>
+                                                <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="kids"> Shirts
+                                                </label>
+                                                <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="kids"> Pants
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <span class="d-block text-white mb-1" style="font-size: 12px; font-weight: 600;">Boys</span>
+                                            <div class="tj-accordion-grid">
+                                                <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="kids"> T-Shirts
+                                                </label>
+                                                <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="kids"> Shorts
+                                                </label>
+                                                <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="kids"> Pants
+                                                </label>
+                                                <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="kids"> Button-UPs
+                                                </label>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- ACCESSORIES CATEGORY -->
+                            <div>
+                                <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white" style="font-size: 13px; cursor: pointer; font-weight: 600;">
+                                    <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-parent-checkbox" data-target="tjAccSub" data-filter-type="category" value="accessories"> Accessories
+                                </label>
+                                <div id="tjAccSub" class="tj-subcategories-box">
+                                    <div class="tj-accordion-grid">
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="accessories"> Bags
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="accessories"> Belts
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="accessories"> Hats
+                                        </label>
+                                        <label class="d-flex align-items-center gap-2 text-white-50" style="font-size: 12px; cursor: pointer;">
+                                            <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="category" value="accessories"> Wallets
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+
                         </div>
                     </div>
 
                     <!-- Edit Filter -->
                     <div class="tj-filter-group mb-4">
-                        <h6 class="text-white text-uppercase fw-bold mb-3"
-                            style="font-size: 11px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6);">Edit</h6>
+                        <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 11px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6);">Edit</h6>
                         <div class="d-flex flex-column gap-2">
-                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50"
-                                style="font-size: 13px; cursor: pointer;">
-                                <input type="checkbox"
-                                    class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox"
-                                    data-filter-type="edit" value="featured"> Featured
+                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50" style="font-size: 13px; cursor: pointer;">
+                                <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="edit" value="featured"> Featured
                             </label>
-                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50"
-                                style="font-size: 13px; cursor: pointer;">
-                                <input type="checkbox"
-                                    class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox"
-                                    data-filter-type="edit" value="trending"> Trending
+                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50" style="font-size: 13px; cursor: pointer;">
+                                <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="edit" value="trending"> Trending
                             </label>
-                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50"
-                                style="font-size: 13px; cursor: pointer;">
-                                <input type="checkbox"
-                                    class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox"
-                                    data-filter-type="edit" value="new in"> New In
+                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50" style="font-size: 13px; cursor: pointer;">
+                                <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="edit" value="new in"> New In
                             </label>
-                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50"
-                                style="font-size: 13px; cursor: pointer;">
-                                <input type="checkbox"
-                                    class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox"
-                                    data-filter-type="edit" value="essentials"> Essentials
+                            <label class="tj-checkbox-label d-flex align-items-center gap-2 text-white-50" style="font-size: 13px; cursor: pointer;">
+                                <input type="checkbox" class="form-check-input mt-0 bg-transparent border-secondary tj-filter-checkbox" data-filter-type="edit" value="essentials"> Essentials
                             </label>
                         </div>
                     </div>
 
                     <!-- Size Filter -->
                     <div class="tj-filter-group mb-4">
-                        <h6 class="text-white text-uppercase fw-bold mb-3"
-                            style="font-size: 11px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6);">Size</h6>
+                        <h6 class="text-white text-uppercase fw-bold mb-3" style="font-size: 11px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6);">Size</h6>
                         <div class="d-flex flex-wrap gap-2">
                             <?php foreach(['XS', 'S', 'M', 'L', 'XL', 'XXL'] as $size): ?>
-                            <span class="tj-size-badge tj-size-filter"
-                                data-size="<?php echo $size; ?>"><?php echo $size; ?></span>
+                            <span class="tj-size-badge tj-size-filter" data-size="<?php echo $size; ?>"><?php echo $size; ?></span>
                             <?php endforeach; ?>
                             <span class="tj-size-badge tj-size-filter px-3" data-size="one size">One size</span>
                         </div>
@@ -208,13 +318,10 @@ $products = [
                     <!-- Max Price Filter -->
                     <div class="tj-filter-group">
                         <div class="d-flex justify-content-between align-items-center mb-2">
-                            <h6 class="text-white text-uppercase fw-bold mb-0"
-                                style="font-size: 11px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6);">Max Price
-                            </h6>
+                            <h6 class="text-white text-uppercase fw-bold mb-0" style="font-size: 11px; letter-spacing: 1.5px; color: rgba(255,255,255,0.6);">Max Price</h6>
                             <span class="text-white fw-bold" id="tjPriceOutput" style="font-size: 12px;">$200.00</span>
                         </div>
-                        <input type="range" id="tjPriceRange" class="form-range custom-range" min="0" max="200"
-                            value="200">
+                        <input type="range" id="tjPriceRange" class="form-range custom-range" min="0" max="200" value="200">
                     </div>
 
                 </div>
@@ -227,22 +334,16 @@ $products = [
                 <div class="d-flex align-items-center justify-content-between flex-wrap gap-3 mb-4">
                     <div class="tj-search-bar flex-grow-1" style="max-width: 400px;">
                         <div class="position-relative">
-                            <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3 text-white-50"
-                                style="font-size: 13px;"></i>
-                            <input type="text" id="tjProductSearch" class="form-control tj-collection-input ps-5"
-                                placeholder="Search products...">
+                            <i class="fa-solid fa-magnifying-glass position-absolute top-50 start-0 translate-middle-y ms-3 text-white-50" style="font-size: 13px;"></i>
+                            <input type="text" id="tjProductSearch" class="form-control tj-collection-input ps-5" placeholder="Search products...">
                         </div>
                     </div>
 
                     <!-- Controls: Product Count, Dropdown Select, and View Buttons -->
                     <div class="d-flex align-items-center gap-3 flex-wrap">
-                        <span class="text-white-50" id="tjProductCount" style="font-size: 13px;">Showing
-                            <?php echo count($products); ?> of <?php echo count($products); ?> products</span>
+                        <span class="text-white-50" id="tjProductCount" style="font-size: 13px;">Showing <?php echo count($products); ?> of <?php echo count($products); ?> products</span>
 
-                        <!-- Product Select Dropdown Added Here -->
-                        <select id="tjProductSortSelect"
-                            class="form-select tj-collection-select text-white bg-transparent border-secondary"
-                            style="font-size: 13px; width: auto; cursor: pointer;">
+                        <select id="tjProductSortSelect" class="form-select tj-collection-select text-style bg-transparent border-secondary text-white" style="font-size: 13px; width: auto; cursor: pointer;">
                             <option value="default" class="bg-dark text-white">Default Sorting</option>
                             <option value="price-low" class="bg-dark text-white">Price: Low to High</option>
                             <option value="price-high" class="bg-dark text-white">Price: High to Low</option>
@@ -250,32 +351,52 @@ $products = [
                         </select>
 
                         <div class="d-flex gap-1">
-                            <button type="button" id="tjGridViewBtn" class="tj-view-btn active"><i
-                                    class="fa-solid fa-table-cells-large"></i></button>
-                            <button type="button" id="tjListViewBtn" class="tj-view-btn"><i
-                                    class="fa-solid fa-list"></i></button>
+                            <button type="button" id="tjGridViewBtn" class="tj-view-btn active"><i class="fa-solid fa-table-cells-large"></i></button>
+                            <button type="button" id="tjListViewBtn" class="tj-view-btn"><i class="fa-solid fa-list"></i></button>
                         </div>
                     </div>
                 </div>
 
-                <!-- Products Grid (Shop Page with Sidebar) -->
+                <!-- Products Grid -->
                 <div class="row g-4" id="tjProductsGrid">
                     <?php foreach ($products as $prod) {
-        // Set 3 columns layout for shop page grid view alongside sidebar
-        $colClass = "col-lg-4 col-md-6 tj-product-col";
-        include 'inc/product-card.php';
-    } ?>
+                        $colClass = "col-lg-4 col-md-6 tj-product-col";
+                        include 'inc/product-card.php';
+                    } ?>
                 </div>
             </div>
 
         </div>
-
-    </div>
     </div>
 </main>
 <!-- Body Content End Here -->
 
+<!-- Script to Toggle Subcategories on Parent Checkbox Change -->
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        const parentCheckboxes = document.querySelectorAll('.tj-parent-checkbox');
 
+        parentCheckboxes.forEach(function(checkbox) {
+            checkbox.addEventListener('change', function() {
+                const targetId = this.getAttribute('data-target');
+                const subBox = document.getElementById(targetId);
+
+                if (!subBox) return;
+
+                if (this.checked) {
+                    subBox.style.display = "block";
+                } else {
+                    subBox.style.display = "none";
+                    // Optional: Uncheck all inner checkboxes when parent is unchecked
+                    const innerCheckboxes = subBox.querySelectorAll('input[type="checkbox"]');
+                    innerCheckboxes.forEach(function(inner) {
+                        inner.checked = false;
+                    });
+                }
+            });
+        });
+    });
+</script>
 
 <!-- Footer Include Here -->
 <?php include 'inc/footer.php'; ?>
