@@ -4,7 +4,18 @@ $bodyClass = 'home-page';
 include 'inc/app.php'; ?>
 
 <!-- Body Content Start Here -->
+<style>
+    .ah-apparel-category-circle {
+    overflow: hidden;
+    border-radius: 50%;
+}
 
+
+
+.ah-apparel-category {
+    will-change: transform, opacity;
+}
+</style>
 <!-- =========================================
      APPAREL HERO BANNER START
 ========================================= -->
@@ -49,64 +60,64 @@ include 'inc/app.php'; ?>
                 <div class="ah-apparel-categories">
 
                     <!-- Category 1 -->
-                    <a href="#" class="ah-apparel-category">
+                    <div class="ah-apparel-category">
                         <div class="ah-apparel-category-circle">
                             <img 
                                 src="img/banner-card5.png"
                                 alt="Category"
                             >
                         </div>
-                    </a>
+                    </div>
 
                     <!-- Category 2 -->
-                    <a href="#" class="ah-apparel-category">
+                    <div  class="ah-apparel-category">
                         <div class="ah-apparel-category-circle">
                             <img 
                                 src="img/banner-card4.png"
                                 alt="Category"
                             >
                         </div>
-                    </a>
+                    </div>
 
                     <!-- Category 3 -->
-                    <a href="#" class="ah-apparel-category">
+                    <div class="ah-apparel-category">
                         <div class="ah-apparel-category-circle">
                             <img 
                                 src="img/banner-card3.png"
                                 alt="Category"
                             >
                         </div>
-                    </a>
+                    </div>
 
                     <!-- Category 4 -->
-                    <a href="#" class="ah-apparel-category">
+                    <div class="ah-apparel-category">
                         <div class="ah-apparel-category-circle">
                             <img 
                                 src="img/banner-card2.png"
                                 alt="Category"
                             >
                         </div>
-                    </a>
+                    </div>
 
                     <!-- Category 5 -->
-                    <a href="#" class="ah-apparel-category">
+                    <div class="ah-apparel-category">
                         <div class="ah-apparel-category-circle">
                             <img 
                                 src="img/banner-card5.png"
                                 alt="Category"
                             >
                         </div>
-                    </a>
+                    </div>
 
                     <!-- Category 6 -->
-                    <a href="#" class="ah-apparel-category">
+                    <div class="ah-apparel-category">
                         <div class="ah-apparel-category-circle">
                             <img 
                                 src="img/banner-card.png"
                                 alt="Category"
                             >
                         </div>
-                    </a>
+                    </div>
 
                 </div>
 
@@ -1075,5 +1086,57 @@ document.addEventListener("DOMContentLoaded", function () {
             }
         });
     });
+});
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function () {
+
+    gsap.registerPlugin(ScrollTrigger);
+
+    const categories = gsap.utils.toArray(".ah-apparel-category");
+
+    // Entrance animation (slow, staggered)
+    gsap.from(categories, {
+        y: 50,
+        opacity: 0,
+        scale: 0.8,
+        duration: 1.5,
+        ease: "power3.out",
+        stagger: 0.25,
+        scrollTrigger: {
+            trigger: ".ah-apparel-categories",
+            start: "top 65%",
+            once: true  
+        },
+        onComplete: startFloating
+    });
+
+    // Continuous slow floating animation
+    function startFloating() {
+        categories.forEach((item, i) => {
+            gsap.to(item, {
+                y: i % 2 === 0 ? -10 : 15,   // alternate up/down
+                duration: 2 + (i * 0.2),      // har ek ki speed thodi alag
+                ease: "sine.inOut",
+                repeat: -1,
+                yoyo: true
+            });
+        });
+    }
+
+    // Slow hover zoom on image
+    document.querySelectorAll(".ah-apparel-category-circle").forEach(circle => {
+        const img = circle.querySelector("img");
+
+        circle.addEventListener("mouseenter", () => {
+            gsap.to(img, { scale: 1.12, duration: 1.2, ease: "power2.out" });
+        });
+
+        circle.addEventListener("mouseleave", () => {
+            gsap.to(img, { scale: 1, duration: 1.2, ease: "power2.out" });
+        });
+    });
+
 });
 </script>

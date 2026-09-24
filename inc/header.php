@@ -38,7 +38,7 @@
                             <a href="shop" class="tj-apparel-nav-link">Shop</a>
                         </li>
                         <li class="tj-apparel-nav-item">
-                            <a href="blog" class="tj-apparel-nav-link">Featured</a>
+                            <a href="shop" class="tj-apparel-nav-link">Featured</a>
                         </li>
                         <li class="tj-apparel-nav-item">
                             <a href="about" class="tj-apparel-nav-link">About</a>
@@ -69,17 +69,6 @@
                                                 <li><a href="shop">Activewear Sets</a></li>
                                             </ul>
                                         </div>
-                                        <div class="tj-mega-col tj-mega-banner-col">
-                                            <div class="tj-mega-promo-card">
-                                                <img src="img/logo.png" alt="Women Promo">
-                                                <div class="promo-content">
-                                                    <span>New Collection</span>
-                                                    <h5>Spring Women Edit</h5>
-                                                    <a href="shop" class="tj-promo-link">Explore <i
-                                                            class="fa-solid fa-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -109,17 +98,6 @@
                                                 <li><a href="shop">Leather Jackets</a></li>
                                             </ul>
                                         </div>
-                                        <div class="tj-mega-col tj-mega-banner-col">
-                                            <div class="tj-mega-promo-card">
-                                                <img src="img/logo.png" alt="Men Promo">
-                                                <div class="promo-content">
-                                                    <span>Trending Now</span>
-                                                    <h5>Men Streetwear</h5>
-                                                    <a href="shop" class="tj-promo-link">Explore <i
-                                                            class="fa-solid fa-arrow-right"></i></a>
-                                                </div>
-                                            </div>
-                                        </div>
                                     </div>
                                 </div>
                             </div>
@@ -146,17 +124,6 @@
                                                 <li><a href="shop">Frocks &amp; Dresses</a></li>
                                                 <li><a href="shop">Casual Wear</a></li>
                                             </ul>
-                                        </div>
-                                        <div class="tj-mega-col tj-mega-banner-col">
-                                            <div class="tj-mega-promo-card">
-                                                <img src="img/logo.png" alt="Kids Promo">
-                                                <div class="promo-content">
-                                                    <span>Special Offer</span>
-                                                    <h5>Kids Funwear</h5>
-                                                    <a href="shop" class="tj-promo-link">Explore <i
-                                                            class="fa-solid fa-arrow-right"></i></a>
-                                                </div>
-                                            </div>
                                         </div>
                                     </div>
                                 </div>
@@ -520,7 +487,7 @@
 ========================================= */
 .tj-mega-menu-grid {
     display: grid;
-    grid-template-columns: repeat(3, 1fr);
+    grid-template-columns: repeat(2, 1fr);
     gap: 30px;
     box-sizing: border-box;
 }
@@ -564,6 +531,7 @@
     margin: 0 0 18px 0;
     padding-bottom: 8px;
     border-bottom: 1px solid rgba(168, 85, 247, 0.2);
+        width: max-content;
 }
 
 /* =========================================
